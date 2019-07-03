@@ -1,0 +1,378 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16654,        368]
+NotebookOptionsPosition[     16017,        348]
+NotebookOutlinePosition[     16353,        363]
+CellTagsIndexPosition[     16310,        360]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Home Work in the Bathroom", "Section",
+ CellChangeTimes->{{3.665915673539503*^9, 3.665915692325199*^9}, {
+   3.6659178905463343`*^9, 3.665917890930435*^9}, 
+   3.770804177783266*^9},ExpressionUUID->"ebb6dabb-cd96-4c65-a2a7-\
+fdfed9fa5b09"],
+
+Cell["\<\
+Let:
+a = number of extra tiles if each tile would be m inches smaller than the \
+existing one.
+b = number of tiles less if each tile would be m inches bigger than the \
+existing one.
+length = length of each tile in terms of a, and b.
+numberOfTiles length = length of arrow of tiles = length of a row along the \
+wall.
+\
+\>", "Text",
+ CellChangeTimes->{{3.665915811467327*^9, 3.665916102059477*^9}, {
+   3.665916248185473*^9, 3.66591624986512*^9}, {3.665916621334672*^9, 
+   3.665916629126967*^9}, 
+   3.770541533314994*^9},ExpressionUUID->"238290ee-6844-4bb1-b794-\
+04e3c9236760"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Framed", "[", 
+   RowBox[{
+    RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"numberOfTiles", "=", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"2", "a", " ", "b"}], " ", ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{"a", " ", "-", "b"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"length", "=", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"a", " ", "+", " ", "b"}], " ", ")"}], "/", 
+         RowBox[{"(", 
+          RowBox[{"a", " ", "-", " ", "b"}], ")"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"lengthOfRow", "=", 
+        RowBox[{"2", " ", "a", " ", "b", " ", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"a", " ", "+", " ", "b"}], " ", ")"}], "/", 
+          RowBox[{"(", 
+           RowBox[{"12", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{"a", " ", "-", " ", "b"}], " ", ")"}], "2"]}], 
+           ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Item", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Row", "[", 
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{"answer", ",", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Spacer", "[", "30", "]"}], ",", 
+                   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\< \\n Number of tiles = \>\"", ",", "18", ",", "Blue",
+                     ",", "Italic"}], "]"}], ",", "numberOfTiles", ",", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\\nlength of each tile = \>\"", ",", "18", ",", 
+                    "Blue", ",", "Italic"}], "]"}], ",", " ", "length", ",", 
+                   "\"\< inches\\n\>\"", ",", "\"\<\\nLength of a row = \>\"",
+                    ",", "lengthOfRow", ",", "\"\< feet\\n\>\""}], "}"}], 
+                 "]"}], ",", "24", ",", "Purple", ",", "Italic"}], "]"}], ",", 
+              RowBox[{"Row", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<\\n\>\"", ",", "20"}], "]"}], ",", 
+                 RowBox[{"Spacer", "[", "60", "]"}], ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<Home Work in the bathroom! \\n\>\"", ",", "20", ",", 
+                   "Red", ",", "Italic"}], "]"}]}], "\[IndentingNewLine]", 
+                "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", 
+             "]"}], "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+            RowBox[{"Row", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "\"\<\\nWhat are you doing so long in the bath room?\\n asked \
+the mother her little boy.\\n\\nThe boy replied that he was doing his \
+assignment.\\n What?!, Your assignment in the bathroom.  Come out now!.\\n \
+The boy explained that he was trying to figure out the length of a row of \
+that wall\\n\>\"", ",", "12", ",", "Black", ",", "Italic"}], "]"}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "\"\< If each tile were an inch smaller, there would have to \
+be \>\"", ",", "12", ",", "Purple", ",", "Italic"}], "]"}], ",", 
+               RowBox[{"Style", "[", " ", 
+                RowBox[{"a", " ", ",", "14", ",", "Blue"}], "]"}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "\"\< more tiles to the row along that wall:  but if each \
+tile were an inch bigger there would be \>\"", ",", "12", ",", "Purple", ",", 
+                 "Italic"}], "]"}], ",", 
+               RowBox[{"Style", "[", " ", 
+                RowBox[{"b", ",", "14", ",", "Blue"}], "]"}], ",", 
+               RowBox[{"Style", "[", " ", 
+                RowBox[{
+                "\"\< tiles less\\n\>\"", ",", "12", ",", "Purple", ",", 
+                 "Italic"}], "]"}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "\"\<How long was that wall\\n\\n Can you help the boy before \
+going to the bathroom?\\n\>\"", ",", " ", "12", ",", "Red", ",", "Italic"}], 
+                "]"}]}], "\[IndentingNewLine]", "}"}], "]"}]}], 
+           "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"Alignment", "\[Rule]", 
+          RowBox[{"{", "Left", "}"}]}], ",", 
+         RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+         RowBox[{"ItemSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"60", ",", "6"}], "}"}]}]}], "]"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Row", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Control", "[", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"a", ",", "6", ",", "\"\<more tiles\>\""}], "}"}], ",", 
+            "3", ",", "60", ",", "3", ",", 
+            RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+         RowBox[{"Spacer", "[", "30", "]"}], ",", 
+         RowBox[{"Control", "[", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"b", ",", "4", ",", "\"\<Less tiles\>\""}], "}"}], ",", 
+            "2", ",", 
+            RowBox[{"Dynamic", "[", 
+             RowBox[{"2", " ", 
+              RowBox[{"a", "/", "3"}]}], "]"}], ",", "2", ",", 
+            RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+         RowBox[{"Spacer", "[", "30", "]"}], ",", 
+         RowBox[{"Control", "[", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"answer", ",", "False", ",", "\"\<answer\>\""}], "}"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{"False", ",", "True"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+       "]"}], ",", 
+      RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+       RowBox[{"{", 
+        RowBox[{"a", ",", "b", ",", "answer"}], "}"}]}]}], "]"}], ",", 
+    RowBox[{"Background", "\[Rule]", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"0.1", ",", "0.6", ",", "1"}], "]"}]}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.665915708023728*^9, 3.665915724678151*^9}, {
+   3.66591575758545*^9, 3.6659157695059137`*^9}, {3.665916305450548*^9, 
+   3.665916340657243*^9}, {3.665916390247944*^9, 3.6659163988977737`*^9}, {
+   3.665916444617523*^9, 3.665916458443778*^9}, {3.665916615977234*^9, 
+   3.665916642663478*^9}, {3.665916682756905*^9, 3.6659169436903877`*^9}, {
+   3.665917074930387*^9, 3.665917083223812*^9}, {3.6659172586233597`*^9, 
+   3.6659173185359507`*^9}, {3.66591743513307*^9, 3.665917513759488*^9}, {
+   3.665917558902499*^9, 3.665917806589682*^9}, {3.6659178956356573`*^9, 
+   3.66591814314316*^9}, {3.665918177089316*^9, 3.6659181804562607`*^9}, {
+   3.6659182151806*^9, 3.665918324040783*^9}, {3.665918355119793*^9, 
+   3.665918421183322*^9}, {3.665918455998822*^9, 3.665918464439136*^9}, {
+   3.665918587571946*^9, 3.665918612163947*^9}, {3.665918670742217*^9, 
+   3.665918894425281*^9}, {3.665919001367154*^9, 3.665919061459701*^9}, {
+   3.6659191465444937`*^9, 3.665919156720809*^9}, {3.665919191584227*^9, 
+   3.665919283811018*^9}, 3.66591934850813*^9, {3.665919383267519*^9, 
+   3.665919507009816*^9}, {3.6659196233731813`*^9, 3.665919624235003*^9}, {
+   3.665919676336769*^9, 3.6659197983346443`*^9}, {3.6659198571109657`*^9, 
+   3.665919917727355*^9}, {3.665919981755102*^9, 3.665920008347456*^9}, {
+   3.665920055004381*^9, 3.665920119596833*^9}, {3.6659202895150642`*^9, 
+   3.6659202972571697`*^9}, {3.665920380805019*^9, 3.66592045171859*^9}, {
+   3.665920562777276*^9, 3.665920563990676*^9}, {3.6659206016342688`*^9, 
+   3.665920602535612*^9}, {3.6659217540413313`*^9, 3.66592176215548*^9}, {
+   3.667231813128186*^9, 3.66723181634032*^9}, 3.668084880500251*^9, {
+   3.668085012143379*^9, 3.6680850413900833`*^9}, {3.66808507270221*^9, 
+   3.668085081064248*^9}, 3.66808539428349*^9, 3.7708042018808393`*^9, 
+   3.77080428426647*^9, 3.7708043267899733`*^9},
+ CellLabel->
+  "In[619]:=",ExpressionUUID->"d0038df0-010c-4a85-8b7d-57578f2c9509"],
+
+Cell[BoxData[
+ FrameBox[
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`a$$ = 6, $CellContext`answer$$ = 
+     False, $CellContext`b$$ = 4, Typeset`show$$ = True, 
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+     "\"untitled\"", Typeset`specs$$ = {{{
+        Hold[$CellContext`a$$], 6, "more tiles"}, 3, 60, 3}, {{
+        Hold[$CellContext`b$$], 4, "Less tiles"}, 2, 
+       Dynamic[2 ($CellContext`a$$/3)], 2}, {{
+        Hold[$CellContext`answer$$], False, "answer"}, {False, True}}, {
+       Hold[
+        Row[{
+          Manipulate`Place[1], 
+          Spacer[30], 
+          Manipulate`Place[2], 
+          Spacer[30], 
+          Manipulate`Place[3]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+     Typeset`size$$ = {454.2, {341.54893493652344`, 12.791915893554688`}}, 
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+     True, $CellContext`a$170398$$ = 0, $CellContext`b$170399$$ = 
+     0, $CellContext`answer$170400$$ = False}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      2, StandardForm, 
+       "Variables" :> {$CellContext`a$$ = 6, $CellContext`answer$$ = 
+         False, $CellContext`b$$ = 4}, "ControllerVariables" :> {
+         Hold[$CellContext`a$$, $CellContext`a$170398$$, 0], 
+         Hold[$CellContext`b$$, $CellContext`b$170399$$, 0], 
+         Hold[$CellContext`answer$$, $CellContext`answer$170400$$, False]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, 
+       "Body" :> ($CellContext`numberOfTiles = ((
+            2 $CellContext`a$$) $CellContext`b$$)/($CellContext`a$$ - \
+$CellContext`b$$); $CellContext`length = ($CellContext`a$$ + \
+$CellContext`b$$)/($CellContext`a$$ - $CellContext`b$$); \
+$CellContext`lengthOfRow = ((
+            2 $CellContext`a$$) $CellContext`b$$) (($CellContext`a$$ + \
+$CellContext`b$$)/(12 ($CellContext`a$$ - $CellContext`b$$)^2)); Item[
+          Row[{
+            If[$CellContext`answer$$, 
+             Style[
+              Row[{
+                Spacer[30], 
+                Style[
+                " \n Number of tiles = ", 18, Blue, 
+                 Italic], $CellContext`numberOfTiles, 
+                Style[
+                "\nlength of each tile = ", 18, Blue, 
+                 Italic], $CellContext`length, " inches\n", 
+                "\nLength of a row = ", $CellContext`lengthOfRow, " feet\n"}],
+               24, Purple, Italic], 
+             Row[{
+               Style["\n", 20], 
+               Spacer[60], 
+               Style["Home Work in the bathroom! \n", 20, Red, Italic]}]], 
+            Row[{
+              Style[
+              "\nWhat are you doing so long in the bath room?\n asked the \
+mother her little boy.\n\nThe boy replied that he was doing his assignment.\n \
+What?!, Your assignment in the bathroom.  Come out now!.\n The boy explained \
+that he was trying to figure out the length of a row of that wall\n", 12, 
+               Black, Italic], 
+              Style[
+              " If each tile were an inch smaller, there would have to be ", 
+               12, Purple, Italic], 
+              Style[$CellContext`a$$, 14, Blue], 
+              Style[
+              " more tiles to the row along that wall:  but if each tile were \
+an inch bigger there would be ", 12, Purple, Italic], 
+              Style[$CellContext`b$$, 14, Blue], 
+              Style[" tiles less\n", 12, Purple, Italic], 
+              Style[
+              "How long was that wall\n\n Can you help the boy before going \
+to the bathroom?\n", 12, Red, Italic]}]}], Alignment -> {Left}, Frame -> True,
+           ItemSize -> {60, 6}]), 
+       "Specifications" :> {{{$CellContext`a$$, 6, "more tiles"}, 3, 60, 3, 
+          Appearance -> "Labeled", ImageSize -> Tiny, ControlPlacement -> 
+          1}, {{$CellContext`b$$, 4, "Less tiles"}, 2, 
+          Dynamic[2 ($CellContext`a$$/3)], 2, Appearance -> "Labeled", 
+          ImageSize -> Tiny, ControlPlacement -> 
+          2}, {{$CellContext`answer$$, False, "answer"}, {False, True}, 
+          ControlPlacement -> 3}, 
+         Row[{
+           Manipulate`Place[1], 
+           Spacer[30], 
+           Manipulate`Place[2], 
+           Spacer[30], 
+           Manipulate`Place[3]}]}, 
+       "Options" :> {
+        TrackedSymbols :> {$CellContext`a$$, $CellContext`b$$, \
+$CellContext`answer$$}}, "DefaultOptions" :> {}],
+      ImageSizeCache->{500., {218., 224.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  Background->RGBColor[0.1, 0.6, 1],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{
+  3.6659189344008408`*^9, 3.665919068872806*^9, {3.6659192233897667`*^9, 
+   3.665919250871944*^9}, 3.665919286212929*^9, 3.665919510005788*^9, 
+   3.6659198147265987`*^9, 3.6659199575052843`*^9, 3.665920024091002*^9, {
+   3.665920055940878*^9, 3.665920077746586*^9}, 3.665920122193906*^9, 
+   3.665920299971542*^9, {3.665920401723385*^9, 3.6659204549158382`*^9}, {
+   3.665920556939233*^9, 3.665920610068563*^9}, 3.6659217701342916`*^9, 
+   3.667231822294088*^9, 3.6680851080480337`*^9, 3.668085396329034*^9, 
+   3.6684230268805113`*^9, {3.770804309253702*^9, 3.770804330050775*^9}},
+ CellLabel->
+  "Out[619]=",ExpressionUUID->"0f15d57b-9ac7-4853-8c05-d287fdf20f80"]
+}, {2}]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{52, Automatic}, {0, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 245, 4, 67, "Section",ExpressionUUID->"ebb6dabb-cd96-4c65-a2a7-fdfed9fa5b09"],
+Cell[828, 28, 590, 15, 150, "Text",ExpressionUUID->"238290ee-6844-4bb1-b794-04e3c9236760"],
+Cell[CellGroupData[{
+Cell[1443, 47, 8738, 176, 70, "Input",ExpressionUUID->"d0038df0-010c-4a85-8b7d-57578f2c9509"],
+Cell[10184, 225, 5808, 119, 471, "Output",ExpressionUUID->"0f15d57b-9ac7-4853-8c05-d287fdf20f80"]
+}, {2}]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
