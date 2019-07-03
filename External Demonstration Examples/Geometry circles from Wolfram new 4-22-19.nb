@@ -1,0 +1,320 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13939,        310]
+NotebookOptionsPosition[     13052,        285]
+NotebookOutlinePosition[     13537,        304]
+CellTagsIndexPosition[     13494,        301]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"RandomInstance", "[", 
+  RowBox[{"GeometricScene", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}], ",", 
+      RowBox[{"{", "r", "}"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"EuclideanDistance", "[", 
+        RowBox[{"a", ",", "b"}], "]"}], "\[Equal]", "357"}], ",", 
+      RowBox[{
+       RowBox[{"EuclideanDistance", "[", 
+        RowBox[{"b", ",", "c"}], "]"}], "\[Equal]", "221"}], ",", 
+      RowBox[{
+       RowBox[{"EuclideanDistance", "[", 
+        RowBox[{"a", ",", "c"}], "]"}], "\[Equal]", "340"}], ",", 
+      RowBox[{"GeometricAssertion", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Circle", "[", 
+           RowBox[{"a", ",", "238"}], "]"}], ",", 
+          RowBox[{"Circle", "[", 
+           RowBox[{"b", ",", "119"}], "]"}], ",", 
+          RowBox[{"Circle", "[", 
+           RowBox[{"c", ",", "102"}], "]"}], ",", 
+          RowBox[{"Circle", "[", 
+           RowBox[{"d", ",", "r"}], "]"}]}], "}"}], ",", 
+        "\"\<PairwiseTangent\>\""}], "]"}]}], "}"}]}], "]"}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.764970572344474*^9, 3.764970572349153*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"1081c0eb-459d-4334-9f0d-6a9f0a060bf8"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[
+   {GrayLevel[0.7], AbsoluteThickness[2], EdgeForm[{GrayLevel[0.7], Thickness[
+    Large]}], CircleBox[{-84.79678475850523, 243.01358490945623}, 238], 
+    CircleBox[{-86.44636587239287, -113.98260398077369}, 119], 
+    CircleBox[{117.94421375866412, -29.926129167226147}, 102], 
+    CircleBox[{-1.9297469096077755, -2.3719361716669267}, 
+     20.999999849396094], {
+     {Hue[0.58, 1, 1], AbsolutePointSize[17], Opacity[1], 
+      PointBox[{-84.79678475850523, 243.01358490945623`}]}, InsetBox[
+      StyleBox["\<\" a \"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontSize->11,
+       FontColor->GrayLevel[1]], {-84.79678475850523, 243.01358490945623}], 
+     {AbsolutePointSize[17], Opacity[0], 
+      PointBox[{-84.79678475850523, 243.01358490945623`}]}}, {
+     {Hue[0.58, 1, 1], AbsolutePointSize[17], Opacity[1], 
+      PointBox[{-86.44636587239287, -113.98260398077369`}]}, InsetBox[
+      StyleBox["\<\" b \"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontSize->11,
+       FontColor->GrayLevel[1]], {-86.44636587239287, -113.98260398077369}], 
+     {AbsolutePointSize[17], Opacity[0], 
+      PointBox[{-86.44636587239287, -113.98260398077369`}]}}, {
+     {Hue[0.58, 1, 1], AbsolutePointSize[17], Opacity[1], 
+      PointBox[{117.94421375866412`, -29.926129167226147`}]}, InsetBox[
+      StyleBox["\<\" c \"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontSize->11,
+       FontColor->GrayLevel[1]], {117.94421375866412, -29.926129167226147}], 
+     {AbsolutePointSize[17], Opacity[0], 
+      PointBox[{117.94421375866412`, -29.926129167226147`}]}}, {
+     {Hue[0.58, 1, 1], AbsolutePointSize[17], Opacity[1], 
+      PointBox[{-1.9297469096077755`, -2.3719361716669267`}]}, InsetBox[
+      StyleBox["\<\" d \"\>",
+       StripOnInput->False,
+       LineColor->RGBColor[0, 0, 1],
+       FrontFaceColor->RGBColor[0, 0, 1],
+       BackFaceColor->RGBColor[0, 0, 1],
+       GraphicsColor->RGBColor[0, 0, 1],
+       FontSize->11,
+       FontColor->GrayLevel[
+        1]], {-1.9297469096077755, -2.3719361716669267}], 
+     {AbsolutePointSize[17], Opacity[0], 
+      PointBox[{-1.9297469096077755`, -2.3719361716669267`}]}}},
+   BoxForm`SceneTag[{{$CellContext`a -> {-84.79678475850523, 
+       243.01358490945623`}, $CellContext`b -> {-86.44636587239287, \
+-113.98260398077369`}, $CellContext`c -> {
+       117.94421375866412`, -29.926129167226147`}, $CellContext`d -> \
+{-1.9297469096077755`, -2.3719361716669267`}, C["GeometricPoint"][
+        C["Unspecified"][
+        "tan", "{CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"\
+ref\", \"{4, 1, 1, 0}\", 1]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 1, 0}\", 2]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 1, 0}\", 3]]}, \
+C[\"GeometricPoint\"][a], 238], \
+CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 2, \
+0}\", 1]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 2, \
+0}\", 2]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 2, \
+0}\", 3]]}, C[\"GeometricPoint\"][b], 119]}"]] -> {-85.89650550107928, 
+       5.016125653137979}, C["GeometricPoint"][
+        C["Unspecified"][
+        "tan", "{CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"\
+ref\", \"{4, 1, 1, 0}\", 1]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 1, 0}\", 2]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 1, 0}\", 3]]}, \
+C[\"GeometricPoint\"][a], 238], \
+CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 3, \
+0}\", 1]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 3, \
+0}\", 2]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 3, \
+0}\", 3]]}, C[\"GeometricPoint\"][c], 102]}"]] -> {57.12191420144794, 
+       51.955785058559066`}, C["GeometricPoint"][
+        C["Unspecified"][
+        "tan", "{CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"\
+ref\", \"{4, 1, 1, 0}\", 1]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 1, 0}\", 2]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 1, 0}\", 3]]}, \
+C[\"GeometricPoint\"][a], 238], \
+CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 4, \
+0}\", 1]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 4, \
+0}\", 2]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 4, \
+0}\", 3]]}, C[\"GeometricPoint\"][d], C[\"GeometricQuantity\"][r]]}"]] -> \
+{-8.648695880244823, 17.52418702853037}, C["GeometricPoint"][
+        C["Unspecified"][
+        "tan", "{CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"\
+ref\", \"{4, 1, 2, 0}\", 1]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 2, 0}\", 2]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 2, 0}\", 3]]}, \
+C[\"GeometricPoint\"][b], 119], \
+CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 3, \
+0}\", 1]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 3, \
+0}\", 2]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 3, \
+0}\", 3]]}, C[\"GeometricPoint\"][c], 102]}"]] -> {
+       23.6101000834796, -68.72142523473441}, C["GeometricPoint"][
+        C["Unspecified"][
+        "tan", "{CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"\
+ref\", \"{4, 1, 2, 0}\", 1]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 2, 0}\", 2]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 2, 0}\", 3]]}, \
+C[\"GeometricPoint\"][b], 119], \
+CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 4, \
+0}\", 1]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 4, \
+0}\", 2]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 4, \
+0}\", 3]]}, C[\"GeometricPoint\"][d], C[\"GeometricQuantity\"][r]]}"]] -> \
+{-14.607239836869889`, -19.11353645243362}, C["GeometricPoint"][
+        C["Unspecified"][
+        "tan", "{CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"\
+ref\", \"{4, 1, 3, 0}\", 1]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 3, 0}\", 2]], \
+C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 3, 0}\", 3]]}, \
+C[\"GeometricPoint\"][c], 102], \
+CircleThrough[{C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 4, \
+0}\", 1]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 4, \
+0}\", 2]], C[\"GeometricPoint\"][C[\"Unspecified\"][\"ref\", \"{4, 1, 4, \
+0}\", 3]]}, C[\"GeometricPoint\"][d], C[\"GeometricQuantity\"][r]]}"]] -> {
+       18.536539042478623`, -7.076310581941742}, C["GeometricPoint"][
+        C["Unspecified"]["ref", "{4, 1, 1, 0}", 1]] -> {-6.414343389186503, 
+       18.291105208025698`}, C["GeometricPoint"][
+        C["Unspecified"]["ref", "{4, 1, 1, 0}", 2]] -> {-7.300060845925217, 
+       17.98412510254132}, C["GeometricPoint"][
+        C["Unspecified"]["ref", "{4, 1, 1, 0}", 3]] -> {-5.366053500306964, 
+       18.659492167731486`}, C["GeometricPoint"][
+        C["Unspecified"][
+        "ref", "{4, 1, 2, 0}", 
+         1]] -> {-14.17426566004077, -19.44296397824078}, 
+      C["GeometricPoint"][
+        C["Unspecified"][
+        "ref", "{4, 1, 2, 0}", 
+         2]] -> {-12.731472592336115`, -20.56357749460974}, 
+      C["GeometricPoint"][
+        C["Unspecified"][
+        "ref", "{4, 1, 2, 0}", 
+         3]] -> {-13.567986132647642`, -19.909537870317468`}, 
+      C["GeometricPoint"][
+        C["Unspecified"]["ref", "{4, 1, 3, 0}", 1]] -> {
+       18.479032371077427`, -7.327950208703764}, C["GeometricPoint"][
+        C["Unspecified"]["ref", "{4, 1, 3, 0}", 2]] -> {
+       18.39632688954562, -7.695109833868892}, C["GeometricPoint"][
+        C["Unspecified"]["ref", "{4, 1, 3, 0}", 3]] -> {
+       19.266190303289832`, -4.1066077222564115`}, C["GeometricPoint"][
+        C["Unspecified"]["ref", "{4, 1, 4, 0}", 1]] -> {-7.924092819931092, 
+       17.75436032756114}, C["GeometricPoint"][
+        C["Unspecified"]["ref", "{4, 1, 4, 0}", 2]] -> {-7.16047724743575, 
+       17.966191908379514`}, C["GeometricPoint"][
+        C["Unspecified"]["ref", "{4, 1, 4, 0}", 3]] -> {-7.533057266302597, 
+       17.866712664508015`}}, {$CellContext`r -> 20.999999849396094`}}, {
+    EuclideanDistance[$CellContext`a, $CellContext`b] == 357, 
+     EuclideanDistance[$CellContext`b, $CellContext`c] == 221, 
+     EuclideanDistance[$CellContext`a, $CellContext`c] == 340, 
+     GeometricAssertion[{
+       Circle[$CellContext`a, 238], 
+       Circle[$CellContext`b, 119], 
+       Circle[$CellContext`c, 102], 
+       Circle[$CellContext`d, $CellContext`r]}, "PairwiseTangent"]}, {}],
+   Editable->False]]], "Output",
+ CellChangeTimes->{3.764970934535027*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"c86c95b9-f943-403a-96c9-0bba6a61fc6b"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7649708649871893`*^9, 3.764970874192184*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"dd377bff-6aa1-4589-b628-4371518bbac8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"RandomInstance", "[", 
+   RowBox[{"GeometricScene", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", "b", ",", "c", ",", "d"}], "}"}], ",", 
+       RowBox[{"{", "r", "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"EuclideanDistance", "[", 
+         RowBox[{"a", ",", "b"}], "]"}], "\[Equal]", "357"}], ",", 
+       RowBox[{
+        RowBox[{"EuclideanDistance", "[", 
+         RowBox[{"b", ",", "c"}], "]"}], "\[Equal]", "221"}], ",", 
+       RowBox[{
+        RowBox[{"EuclideanDistance", "[", 
+         RowBox[{"a", ",", "c"}], "]"}], "\[Equal]", "340"}], ",", 
+       RowBox[{"GeometricAssertion", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Circle", "[", 
+            RowBox[{"a", ",", "238"}], "]"}], ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{"b", ",", "119"}], "]"}], ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{"c", ",", "102"}], "]"}], ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{"d", ",", "r"}], "]"}]}], "}"}], ",", 
+         "\"\<PairwiseTangent\>\""}], "]"}]}], "}"}]}], "]"}], "]"}], 
+  ";"}], "\n", 
+ RowBox[{"Replace", "[", 
+  RowBox[{"r", ",", 
+   RowBox[{"%", "[", "\"\<Quantities\>\"", "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.764970669501816*^9, 3.7649706695077143`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"08ed0db6-0126-452a-832b-a68cbeeef6a3"],
+
+Cell[BoxData["21.000000622360446`"], "Output",
+ CellChangeTimes->{3.764970917114481*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"e38feba9-3199-4687-9ed4-3c020f3e6d3d"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{163, Automatic}, {Automatic, 53}},
+TaggingRules->{
+ "WBTDraftSectionsDirectory" -> "/Users/a_gadalla/Documents/", 
+  "SlideshowSettings" -> {"Toolbar" -> True}},
+Magnification->1.5,
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1329, 35, 233, "Input",ExpressionUUID->"1081c0eb-459d-4334-9f0d-6a9f0a060bf8"],
+Cell[1912, 59, 9179, 169, 708, "Output",ExpressionUUID->"c86c95b9-f943-403a-96c9-0bba6a61fc6b"]
+}, Open  ]],
+Cell[11106, 231, 240, 4, 46, "Input",ExpressionUUID->"dd377bff-6aa1-4589-b628-4371518bbac8"],
+Cell[CellGroupData[{
+Cell[11371, 239, 1496, 39, 264, "Input",ExpressionUUID->"08ed0db6-0126-452a-832b-a68cbeeef6a3"],
+Cell[12870, 280, 166, 2, 52, "Output",ExpressionUUID->"e38feba9-3199-4687-9ed4-3c020f3e6d3d"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

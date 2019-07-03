@@ -1,0 +1,557 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     28873,        547]
+NotebookOptionsPosition[     28324,        528]
+NotebookOutlinePosition[     28661,        543]
+CellTagsIndexPosition[     28618,        540]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["3 - 4 - 5 Triangle and others", "Section",
+ CellChangeTimes->{{3.517746471573861*^9, 
+  3.517746488895473*^9}},ExpressionUUID->"c1639343-2faf-46fa-bbfd-\
+944af2430f59"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "DynamicModule[{a,b,c,xi,yi}, Manipulate[\n\
+diag1=Sqrt[(a-xi[c,a,b])^2+(yi[c,a,b])^2];\t\n\ndiag2=Sqrt[(2 a \
++b-xi[c,a,b])^2+(yi[c,a,b])^2];\n \t\t\t \n(*Crdwnlft[k_,a_,b_]:= \
+mycircle[{xi[k,a,b], -yi[k,a,b]},\n\t\t\t\t R[k,a,b], {0,2*Pi}]*)\t\n\t(* Do \
+the same for a circle tangent to the right hand \n\t * radius b circle *)\n(*\
+\tcirright[k_,a_,b_] := mycircle[{2*(a+b) - xi[k,a,b],\n\t\t\t\tyi[k,a,b]}, \
+R[k,a,b], {0, 2 Pi}]; \n\ncrdwnrt[k_,a_,b_] := mycircle[{2*(a+b) - xi[k,a,b],\
+\n\t\t\t\t-yi[k,a,b]}, R[k,a,b], {0, 2 Pi}]; *)\t\t\t\n\t\t\t\t\nColumn[{\n\
+Item[\nIf[Answer,\nRow[{\n\t\n\tStyle[Row[{\"\\nRatio BN : MN : MB = \
+\",Rationalize[ Abs[a-xi[c,a,b]]],\" : \",\n\t\tRationalize[yi[c,a,b]], \" : \
+\",  Rationalize[diag1],\"\\n\\n\"}],\n\t\t16,Bold,RGBColor[0.5,0.1,0.6]],\n\t\
+(*Style[Row[{\"Ratio BN, MN, MB = \
+\",Ratios[{Abs[a-xi[c,a,b]],Abs[a-xi[c,a,b]],\n\t\
+yi[c,a,b],diag1}],\"\\n\"}],16,Bold],*)\n\tStyle[Row[{\"Ratio  ND : MN : MD = \
+\",Rationalize[ (2 a+b-xi[c,a,b])],\" : \",\n\t\tRationalize[ (yi[c,a,b])], \
+\" : \", Rationalize[ diag2],\"\\n\\n\"}],\n\t\t16,Bold,Blue]\n\t\t}],\n\t\t\n\
+\n\nRow[{Style[\"\\nCalculate the Ratio BN : NM : MB \
+\\n\\n\",16,Bold,RGBColor[0.5,0.1,0.6]],\nStyle[\"         And the Ratio  ND \
+: MN : MD  \\n\\n\",16,Bold,Blue]\n\t\t}]],Alignment->{Center},Frame->True],\n\
+\nItem[\n\nShow[Graphics[{\n\n",
+ StyleBox["(*  Write the coordinate of point M *)",
+  Background->RGBColor[1, 1, 0]],
+ "\nInset[Style[Row[{ \"( \",NumberForm[xi[c,a,b],3],\" , \
+\",NumberForm[yi[c,a,b],3],\" ) \"}],14,Bold,Blue]\n\
+,{xi[c,a,b],yi[c,a,b]+.55}],\n\n\
+{Yellow,Polygon[{{xi[c,a,b],0},{xi[c,a,b],yi[c,a,b]},{2 a+b,0}}]},\n\
+{RGBColor[0.5,0.1,0.6],Polygon[{{xi[c,a,b],0},{xi[c,a,b],yi[c,a,b]},{ \
+a,0}}]},\n\n\n\t{Thick,\n\t\n\tLine[{{xi[c,a,b],0},{xi[c,a,b],yi[c,a,b]}}],\n\
+\t\n\tLine[{{0,0}, {2*(a+b), 0}}],\n\tLine[{{xi[c,a,b],yi[c,a,b]},{2 \
+a+b,0}}],\n\t\n\tmycircle[{a,0},a, {0, Pi}],\n\tmycircle[{a + b,0},(a +b), \
+{0,Pi}],\n\tTable[Cir[k,a,b],{k,1,c}],\n\tmycircle[{2*a+b,0},b,{0, Pi}]},\n\t\
+\n\tText[Style[\"A\",{\"Times-Bold\",16}],{0,-.2}],\n\t\
+Text[Style[\"B\",{\"Times-Bold\",16}],{a,-.2}],\n\t\
+Text[Style[\"C\",{\"Times-Bold\",16}],{2 a,-.2}],\n\t\
+Text[Style[\"D\",{\"Times-Bold\",16}],{2 a+b,-.2}],\n\t\
+Text[Style[\"E\",{\"Times-Bold\",16}],{2 (a+b),-.2}],\n\t\
+Text[Style[\"M\",{\"Times-Bold\",16}],{xi[c,a,b],yi[c,a,b]+.25}],\n\t\
+Text[Style[\"N\",{\"Times-Bold\",16}],{xi[c,a,b],-0.4}],\n\t\
+Text[Style[Row[{\"radius1 = \",a}],{\"Times-Bold\",14}],{a/2,0.15}],\n\t\
+Text[Style[Row[{\"radius2 = \",b}],{\"Times-Bold\",14}],{2a +3 b/2,0.15}]\n\t\
+\n\t},(*PlotRange->{{-2,2 \
+(a+b)},{-1,a+b+1}},*)ImageSize->Large,AspectRatio->Automatic],\n\t\
+AspectRatio->Automatic, PlotRange->All],Alignment->{Center},Frame->True]\n\t\
+}],\n\tRow[{\n\tControl[\n\t\
+{{a,3,\"radius1\"},1,4,1,Appearance->\"Labeled\",ImageSize->Tiny}],Spacer[10],\
+Control[\n\t\
+{{b,3,\"radius2\"},1,3,1,Appearance->\"Labeled\",ImageSize->Tiny}],Spacer[10],\
+Control[\n\t{{c,1,\"# \
+circles\"},1,6,1,Appearance->\"Labeled\",ImageSize->Tiny}],Spacer[10],Control[\
+\n\t{{Answer,False,\"Answer\"},{False,True}}]}],TrackedSymbols->{a,b,c,Answer}\
+,SaveDefinitions->True,\n\t\n\tInitialization->{ R[k_,a_,b_]:= a b (a+b)/(a^2 \
++a b + (k b)^2);\n xi[k_,a_,b_; a > b]:= (2 a + b)*R[k,a,b]/b;\n \
+xi[k_,a_,b_]:= (2 a + b)*R[k,a,b]/b;\n xi[k_,a_,b_; a < b]:= 2 (a + b) - (a + \
+2 b )*R[k,a,b]/a;\n yi[k_,a_,b_]:= 2 k R[k,a,b];\n\n(* Which[a > b , \
+xi[k_,a_,b_]:=(a b (a + b ))/ (a^2 + a b + (k b )^2)), \n a == b, \
+xi[k_,a_,b_]:= (2 a + b)*R[k,a,b]/b, True, xi{k_,a_,b_]:= 2 (a + b) - (a + 2 \
+b )*R[k,a,b]/a];*)\n\n \
+mycircle[center_,radius_,angle_]:={Circle[center,radius,{0,2\[Pi]}],{Red,\
+PointSize[0.02],Point[center]}};\n\n\t(* Generate a circle tangent to the \
+left hand *) \n\t(* radius a *)  \nCir[k_,a_,b_]:= mycircle[{xi[k,a,b], \
+yi[k,a,b]},\n\t\t\t\t R[k,a,b], {0,2*Pi}];}]]"
+}], "Input",
+ CellChangeTimes->{{3.517735138394392*^9, 3.517735150790807*^9}, {
+   3.5177352034694567`*^9, 3.5177352055344667`*^9}, {3.517735353948884*^9, 
+   3.5177354406924877`*^9}, {3.517735479959248*^9, 3.5177355159885798`*^9}, 
+   3.5177355668371696`*^9, 3.51773560516156*^9, 3.517735662433744*^9, {
+   3.5177357552828817`*^9, 3.517735772508236*^9}, {3.517735821586787*^9, 
+   3.51773586490934*^9}, {3.517735953795594*^9, 3.5177360155137243`*^9}, {
+   3.517736162569317*^9, 3.5177362268591833`*^9}, {3.517736262608465*^9, 
+   3.5177364544696217`*^9}, {3.51773667860005*^9, 3.517736716918236*^9}, 
+   3.5177367696812077`*^9, {3.517736812172673*^9, 3.517736908232608*^9}, {
+   3.517737061438191*^9, 3.517737067378212*^9}, {3.517738385105488*^9, 
+   3.5177385110963287`*^9}, {3.517738559893161*^9, 3.5177386276704597`*^9}, {
+   3.517738718415255*^9, 3.5177387200681868`*^9}, {3.5177387788193693`*^9, 
+   3.517738796965665*^9}, {3.517738945580852*^9, 3.5177389496760893`*^9}, {
+   3.517739129460433*^9, 3.517739139566214*^9}, 3.517739191807645*^9, {
+   3.5177392499467163`*^9, 3.517739282727466*^9}, {3.517739337690115*^9, 
+   3.517739345060495*^9}, {3.517739386950673*^9, 3.5177394188549147`*^9}, {
+   3.5177394678030043`*^9, 3.517739488441846*^9}, {3.5177395853452168`*^9, 
+   3.5177397345792427`*^9}, {3.517739783458181*^9, 3.517739801473084*^9}, 
+   3.51773983496774*^9, {3.517739877456423*^9, 3.5177398801470337`*^9}, {
+   3.5177399121657133`*^9, 3.5177399188051653`*^9}, {3.517739987365403*^9, 
+   3.517739987797389*^9}, {3.517740069745297*^9, 3.517740096700152*^9}, {
+   3.517740131609796*^9, 3.517740170535121*^9}, {3.5177402140605497`*^9, 
+   3.517740225723914*^9}, 3.5177402610219803`*^9, {3.517740384183723*^9, 
+   3.517740492571527*^9}, {3.517740526361663*^9, 3.517740577615343*^9}, {
+   3.517740660177857*^9, 3.5177406737231827`*^9}, {3.517740895656261*^9, 
+   3.517740900727498*^9}, {3.517740930881373*^9, 3.517740933503353*^9}, {
+   3.517740991439517*^9, 3.517741072119749*^9}, {3.517741144181665*^9, 
+   3.517741187606044*^9}, {3.51774156746836*^9, 3.51774161575282*^9}, {
+   3.517741679384342*^9, 3.5177416997196074`*^9}, {3.517741737327297*^9, 
+   3.517741741004469*^9}, {3.517741775031453*^9, 3.517741785521299*^9}, {
+   3.51774182236271*^9, 3.5177418245267897`*^9}, {3.517741885575193*^9, 
+   3.5177418920957327`*^9}, {3.517741922810802*^9, 3.5177419330481787`*^9}, {
+   3.517741989992545*^9, 3.517742023517591*^9}, {3.517742094299159*^9, 
+   3.5177421118575697`*^9}, {3.517742183270135*^9, 3.517742197345826*^9}, {
+   3.5177422384303617`*^9, 3.517742239231739*^9}, 3.5177422729396667`*^9, {
+   3.517742336222027*^9, 3.51774271810955*^9}, {3.517742755550241*^9, 
+   3.517742791700012*^9}, 3.517743042738431*^9, {3.517743118528885*^9, 
+   3.517743128469253*^9}, {3.5177432463725653`*^9, 3.517743302943172*^9}, {
+   3.5177437531773033`*^9, 3.51774377016988*^9}, {3.517743821744298*^9, 
+   3.517743837330117*^9}, {3.517743880946509*^9, 3.5177440967600603`*^9}, {
+   3.517744134873802*^9, 3.517744163750757*^9}, {3.517744380071817*^9, 
+   3.517744401607665*^9}, {3.5177444874715242`*^9, 3.517744501745501*^9}, {
+   3.5177445425676126`*^9, 3.517744543053327*^9}, 3.5177448826416197`*^9, {
+   3.517778760395578*^9, 3.517778787592472*^9}, {3.517778837885396*^9, 
+   3.517778966984922*^9}, {3.517779135842201*^9, 3.517779207580496*^9}, {
+   3.517779243012096*^9, 3.5177792825666103`*^9}, {3.517779343857957*^9, 
+   3.517779350547637*^9}, 3.517779396330583*^9, {3.517779469659896*^9, 
+   3.517779526515025*^9}, 3.517779623502406*^9, {3.5177796718634*^9, 
+   3.517779675184733*^9}, {3.517779730820269*^9, 3.517779738926784*^9}, {
+   3.5177798687232437`*^9, 3.517779872604134*^9}, {3.517779935789166*^9, 
+   3.517779938014716*^9}, 3.517779969807848*^9, {3.517780000041479*^9, 
+   3.51778001300943*^9}, 3.517780075651197*^9, {3.517780212729548*^9, 
+   3.517780259889889*^9}, {3.5177803098929234`*^9, 3.517780334862105*^9}, {
+   3.517780366744938*^9, 3.517780580845531*^9}, {3.517780693231641*^9, 
+   3.5177806944617*^9}, {3.517780744984524*^9, 3.517780786261758*^9}, {
+   3.517780830921115*^9, 3.517780833296809*^9}, {3.5177810061515713`*^9, 
+   3.5177810460515203`*^9}, 3.5177810862258368`*^9, {3.51778112574721*^9, 
+   3.517781370092422*^9}, {3.5177815960488358`*^9, 3.517781605569064*^9}, {
+   3.5177816467354803`*^9, 3.517781677751733*^9}, 3.51778181288566*^9, {
+   3.517781858893828*^9, 3.517781892008651*^9}, 3.517782021151322*^9, {
+   3.5177822318566427`*^9, 3.5177822645057707`*^9}, {3.517782299264455*^9, 
+   3.517782310590123*^9}, 3.517782370043408*^9, {3.517782443470725*^9, 
+   3.517782478769874*^9}, {3.517782539921393*^9, 3.517782553625992*^9}, {
+   3.517782621207334*^9, 3.517782652035842*^9}, {3.5177827052428303`*^9, 
+   3.5177828060056868`*^9}, {3.517782911384776*^9, 3.5177829922607183`*^9}, {
+   3.517783055657938*^9, 3.517783084182075*^9}, {3.517783131794538*^9, 
+   3.5177832011959877`*^9}, {3.517783237265081*^9, 3.517783299245294*^9}, {
+   3.517783342318789*^9, 3.517783522037469*^9}, 3.5177835718526382`*^9, 
+   3.517783603215623*^9, 3.5177836774986963`*^9, 3.51778370899986*^9, {
+   3.517783837667528*^9, 3.517783890392805*^9}, 3.517783930351894*^9, {
+   3.5177839801553383`*^9, 3.517784135357658*^9}, {3.517784315793233*^9, 
+   3.5177843572694607`*^9}, {3.5177845144697113`*^9, 3.517784595105545*^9}, {
+   3.5177846665993958`*^9, 3.517784677993895*^9}, {3.5177850137240057`*^9, 
+   3.5177850517250643`*^9}, {3.517785082295372*^9, 3.517785113693783*^9}, {
+   3.51778525854007*^9, 3.517785315093708*^9}, 3.517785345534461*^9, {
+   3.517785414687661*^9, 3.5177854672275467`*^9}, {3.51778552305832*^9, 
+   3.517785534897276*^9}, 3.517785615420391*^9, {3.517785661448002*^9, 
+   3.5177856904594393`*^9}, {3.5177857593482103`*^9, 3.517785764283567*^9}, {
+   3.517785833391748*^9, 3.517785848521542*^9}, {3.517785933931921*^9, 
+   3.5177860710306263`*^9}, 3.5177864346678457`*^9, {3.5177866755849752`*^9, 
+   3.517786680203856*^9}, {3.517787225779303*^9, 3.517787356764017*^9}, {
+   3.5177873914018393`*^9, 3.517787407380227*^9}, {3.5177874840870867`*^9, 
+   3.517787502833457*^9}, {3.517787552461871*^9, 3.517787565800572*^9}, {
+   3.517787780837908*^9, 3.517787787363052*^9}, {3.517787899435093*^9, 
+   3.517787935836389*^9}, {3.517788029106576*^9, 3.5177881010368443`*^9}, {
+   3.517788134525845*^9, 3.5177881400145063`*^9}, {3.517788411876388*^9, 
+   3.517788420426507*^9}, 3.517788585356879*^9, {3.517788652939452*^9, 
+   3.517788672649797*^9}, {3.517788713641622*^9, 3.5177887172108173`*^9}, {
+   3.517788785524947*^9, 3.517788786594428*^9}, 3.5177889776294928`*^9, {
+   3.5177896311271553`*^9, 3.517789762072874*^9}, {3.517789792273266*^9, 
+   3.51778985400451*^9}, 3.517789953402361*^9, 3.517790064918377*^9, {
+   3.5177902249003696`*^9, 3.517790252523835*^9}, {3.517790288448773*^9, 
+   3.517790298988667*^9}, {3.5177904630057497`*^9, 3.517790513709873*^9}, {
+   3.517790625586276*^9, 3.517790660226261*^9}, {3.517790889393379*^9, 
+   3.517790979018244*^9}, {3.517791063300054*^9, 3.517791089035162*^9}, {
+   3.517791123276614*^9, 3.5177911458769293`*^9}, {3.517791253232723*^9, 
+   3.5177912550609493`*^9}, {3.5177912883803377`*^9, 3.517791290062807*^9}, {
+   3.517792417217032*^9, 3.517792572057309*^9}, {3.5178465433080482`*^9, 
+   3.5178465447346582`*^9}, {3.517846615270672*^9, 3.517846616761694*^9}, {
+   3.656065746942293*^9, 3.6560658729502*^9}, {3.656065910368555*^9, 
+   3.656065955687443*^9}, {3.65606610543827*^9, 3.6560661336792707`*^9}, {
+   3.656066168766116*^9, 3.656066243602689*^9}, 3.656066383624209*^9, {
+   3.658186067027186*^9, 3.658186087272428*^9}, {3.658837881027269*^9, 
+   3.6588378967718973`*^9}, {3.658837963521686*^9, 3.6588381010966673`*^9}, {
+   3.6588382267679377`*^9, 3.658838266991012*^9}, {3.658838305498268*^9, 
+   3.65883832756194*^9}, {3.658838494722405*^9, 3.6588385031620073`*^9}, {
+   3.65883864590368*^9, 3.658838646864442*^9}, {3.6588387618821077`*^9, 
+   3.658838942525518*^9}, {3.658839031606406*^9, 3.658839067224391*^9}, {
+   3.658839108848789*^9, 3.658839186686955*^9}, {3.658839301679405*^9, 
+   3.658839308568447*^9}, {3.6623314335902157`*^9, 3.662331466795656*^9}, {
+   3.662331507576194*^9, 3.662331531125963*^9}, {3.6623315923302813`*^9, 
+   3.662331608666913*^9}, {3.664919627892251*^9, 3.6649196473247232`*^9}, {
+   3.665151192368834*^9, 3.665151383625143*^9}, {3.66515147163729*^9, 
+   3.665151499386943*^9}, {3.665151555199155*^9, 3.6651515581651297`*^9}, {
+   3.6651516112385683`*^9, 3.665151614758511*^9}, 3.665151686027216*^9, 
+   3.665151716737372*^9, {3.665152348867313*^9, 3.665152357497613*^9}, {
+   3.665152401009754*^9, 3.665152441123335*^9}, {3.665152472665715*^9, 
+   3.66515247526372*^9}, {3.6651525076174*^9, 3.665152512287546*^9}, {
+   3.665152548299526*^9, 3.665152579644148*^9}, {3.665240042742187*^9, 
+   3.665240045908038*^9}, {3.666637213567068*^9, 3.666637226837346*^9}, {
+   3.6742211815294857`*^9, 3.6742211853218718`*^9}, {3.770878341041936*^9, 
+   3.770878600791741*^9}, {3.770878636309142*^9, 3.770878667610676*^9}, {
+   3.770878721834608*^9, 3.7708788348813066`*^9}, {3.7708788691362543`*^9, 
+   3.770878891628017*^9}, {3.770878970059198*^9, 3.7708790144842873`*^9}, {
+   3.770879155336831*^9, 3.7708792431898327`*^9}, {3.770879278622451*^9, 
+   3.770879336830003*^9}, 3.771105306883974*^9},
+ AspectRatioFixed->True,
+ CellLabel->"In[2]:=",ExpressionUUID->"44342e7a-a9d3-46ae-a61f-946817fcf391"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`a$$, $CellContext`b$$, $CellContext`c$$, \
+$CellContext`xi$$, $CellContext`yi$$}, 
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`Answer$$ = False, $CellContext`a$$ = 
+     3, $CellContext`b$$ = 3, $CellContext`c$$ = 1, Typeset`show$$ = True, 
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+     "\"untitled\"", Typeset`specs$$ = {{{
+        Hold[$CellContext`a$$], 3, "radius1"}, 1, 4, 1}, {{
+        Hold[$CellContext`b$$], 3, "radius2"}, 1, 3, 1}, {{
+        Hold[$CellContext`c$$], 1, "# circles"}, 1, 6, 1}, {{
+        Hold[$CellContext`Answer$$], False, "Answer"}, {False, True}}, {
+       Hold[
+        Row[{
+          Manipulate`Place[1], 
+          Spacer[10], 
+          Manipulate`Place[2], 
+          Spacer[10], 
+          Manipulate`Place[3], 
+          Spacer[10], 
+          Manipulate`Place[4]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+     Typeset`size$$ = {589., {353.134033203125, 358.865966796875}}, 
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+     False, $CellContext`a$$$3635$$ = 0, $CellContext`b$$$3636$$ = 
+     0, $CellContext`c$$$3637$$ = 0, $CellContext`Answer$3638$$ = False}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      2, StandardForm, 
+       "Variables" :> {$CellContext`Answer$$ = False, $CellContext`a$$ = 
+         3, $CellContext`b$$ = 3, $CellContext`c$$ = 1}, 
+       "ControllerVariables" :> {
+         Hold[$CellContext`a$$, $CellContext`a$$$3635$$, 0], 
+         Hold[$CellContext`b$$, $CellContext`b$$$3636$$, 0], 
+         Hold[$CellContext`c$$, $CellContext`c$$$3637$$, 0], 
+         Hold[$CellContext`Answer$$, $CellContext`Answer$3638$$, False]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, 
+       "Body" :> ($CellContext`diag1 = 
+         Sqrt[($CellContext`a$$ - $CellContext`xi$$[$CellContext`c$$, \
+$CellContext`a$$, $CellContext`b$$])^2 + $CellContext`yi$$[$CellContext`c$$, \
+$CellContext`a$$, $CellContext`b$$]^2]; $CellContext`diag2 = 
+         Sqrt[(2 $CellContext`a$$ + $CellContext`b$$ - \
+$CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, $CellContext`b$$])^2 + \
+$CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, $CellContext`b$$]^2]; 
+        Column[{
+           Item[
+            If[$CellContext`Answer$$, 
+             Row[{
+               Style[
+                Row[{"\nRatio BN : MN : MB = ", 
+                  Rationalize[
+                   
+                   Abs[$CellContext`a$$ - $CellContext`xi$$[$CellContext`c$$, \
+$CellContext`a$$, $CellContext`b$$]]], " : ", 
+                  Rationalize[
+                   $CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$]], " : ", 
+                  Rationalize[$CellContext`diag1], "\n\n"}], 16, Bold, 
+                RGBColor[0.5, 0.1, 0.6]], 
+               Style[
+                Row[{"Ratio  ND : MN : MD = ", 
+                  Rationalize[
+                  2 $CellContext`a$$ + $CellContext`b$$ - \
+$CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, $CellContext`b$$]], 
+                  " : ", 
+                  Rationalize[
+                   $CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$]], " : ", 
+                  Rationalize[$CellContext`diag2], "\n\n"}], 16, Bold, 
+                Blue]}], 
+             Row[{
+               Style["\nCalculate the Ratio BN : NM : MB \n\n", 16, Bold, 
+                RGBColor[0.5, 0.1, 0.6]], 
+               Style[
+               "         And the Ratio  ND : MN : MD  \n\n", 16, Bold, 
+                Blue]}]], Alignment -> {Center}, Frame -> True], 
+           Item[
+            Show[
+             Graphics[{
+               Inset[
+                Style[
+                 Row[{"( ", 
+                   NumberForm[
+                    $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], 3], " , ", 
+                   NumberForm[
+                    $CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], 3], " ) "}], 14, Bold, Blue], {
+                 $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], $CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$] + 0.55}], {Yellow, 
+                Polygon[{{
+                   $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], 0}, {
+                   $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], 
+                   $CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$]}, {2 $CellContext`a$$ + $CellContext`b$$, 0}}]}, {
+                RGBColor[0.5, 0.1, 0.6], 
+                Polygon[{{
+                   $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], 0}, {
+                   $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], 
+                   $CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$]}, {$CellContext`a$$, 0}}]}, {Thick, 
+                Line[{{
+                   $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], 0}, {
+                   $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], 
+                   $CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$]}}], 
+                Line[{{0, 0}, {2 ($CellContext`a$$ + $CellContext`b$$), 0}}], 
+                
+                Line[{{
+                   $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], 
+                   $CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$]}, {2 $CellContext`a$$ + $CellContext`b$$, 0}}], 
+                $CellContext`mycircle[{$CellContext`a$$, 
+                  0}, $CellContext`a$$, {0, Pi}], 
+                $CellContext`mycircle[{$CellContext`a$$ + $CellContext`b$$, 
+                  0}, $CellContext`a$$ + $CellContext`b$$, {0, Pi}], 
+                Table[
+                 $CellContext`Cir[$CellContext`k, $CellContext`a$$, \
+$CellContext`b$$], {$CellContext`k, 1, $CellContext`c$$}], 
+                $CellContext`mycircle[{
+                 2 $CellContext`a$$ + $CellContext`b$$, 
+                  0}, $CellContext`b$$, {0, Pi}]}, 
+               Text[
+                Style["A", {"Times-Bold", 16}], {0, -0.2}], 
+               Text[
+                Style["B", {"Times-Bold", 16}], {$CellContext`a$$, -0.2}], 
+               Text[
+                Style["C", {"Times-Bold", 16}], {2 $CellContext`a$$, -0.2}], 
+               Text[
+                Style["D", {"Times-Bold", 16}], {
+                2 $CellContext`a$$ + $CellContext`b$$, -0.2}], 
+               Text[
+                Style["E", {"Times-Bold", 16}], {
+                2 ($CellContext`a$$ + $CellContext`b$$), -0.2}], 
+               Text[
+                Style["M", {"Times-Bold", 16}], {
+                 $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], $CellContext`yi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$] + 0.25}], 
+               Text[
+                Style["N", {"Times-Bold", 16}], {
+                 $CellContext`xi$$[$CellContext`c$$, $CellContext`a$$, \
+$CellContext`b$$], -0.4}], 
+               Text[
+                Style[
+                 Row[{"radius1 = ", $CellContext`a$$}], {
+                 "Times-Bold", 14}], {$CellContext`a$$/2, 0.15}], 
+               Text[
+                Style[
+                 Row[{"radius2 = ", $CellContext`b$$}], {"Times-Bold", 14}], {
+                2 $CellContext`a$$ + 3 $CellContext`b$$/2, 0.15}]}, ImageSize -> 
+              Large, AspectRatio -> Automatic], AspectRatio -> Automatic, 
+             PlotRange -> All], Alignment -> {Center}, Frame -> True]}]), 
+       "Specifications" :> {{{$CellContext`a$$, 3, "radius1"}, 1, 4, 1, 
+          Appearance -> "Labeled", ImageSize -> Tiny, ControlPlacement -> 
+          1}, {{$CellContext`b$$, 3, "radius2"}, 1, 3, 1, Appearance -> 
+          "Labeled", ImageSize -> Tiny, ControlPlacement -> 
+          2}, {{$CellContext`c$$, 1, "# circles"}, 1, 6, 1, Appearance -> 
+          "Labeled", ImageSize -> Tiny, ControlPlacement -> 
+          3}, {{$CellContext`Answer$$, False, "Answer"}, {False, True}, 
+          ControlPlacement -> 4}, 
+         Row[{
+           Manipulate`Place[1], 
+           Spacer[10], 
+           Manipulate`Place[2], 
+           Spacer[10], 
+           Manipulate`Place[3], 
+           Spacer[10], 
+           Manipulate`Place[4]}]}, 
+       "Options" :> {
+        TrackedSymbols -> {$CellContext`a$$, $CellContext`b$$, \
+$CellContext`c$$, $CellContext`Answer$$}}, "DefaultOptions" :> {}],
+      ImageSizeCache->{634., {397., 403.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     Initialization:>({{$CellContext`diag1 = 5, $CellContext`diag2 = 
+          5, $CellContext`mycircle[
+            Pattern[$CellContext`center, 
+             Blank[]], 
+            Pattern[$CellContext`radius, 
+             Blank[]], 
+            Pattern[$CellContext`angle, 
+             Blank[]]] := {
+            Circle[$CellContext`center, $CellContext`radius, {0, 2 Pi}], {Red, 
+             PointSize[0.02], 
+             Point[$CellContext`center]}}, $CellContext`Cir[
+            Pattern[$CellContext`k$, 
+             Blank[]], 
+            Pattern[$CellContext`a$, 
+             Blank[]], 
+            Pattern[$CellContext`b$, 
+             Blank[]]] := $CellContext`mycircle[{
+             $CellContext`xi$3626[$CellContext`k$, $CellContext`a$, \
+$CellContext`b$], 
+             $CellContext`yi$3626[$CellContext`k$, $CellContext`a$, \
+$CellContext`b$]}, 
+            $CellContext`R[$CellContext`k$, $CellContext`a$, \
+$CellContext`b$], {0, 2 Pi}], Attributes[$CellContext`k$] = {Temporary}, 
+          Attributes[$CellContext`a$] = {Temporary}, 
+          Attributes[$CellContext`b$] = {Temporary}, 
+          Attributes[$CellContext`xi$3626] = {Temporary}, $CellContext`xi$3626[
+            Pattern[$CellContext`k$, 
+             Blank[]], 
+            Pattern[$CellContext`a$, 
+             Blank[]], $CellContext`a$3626 > $CellContext`b$3626] := ((
+             2 $CellContext`a$ + $CellContext`b$$) \
+$CellContext`R[$CellContext`k$, $CellContext`a$, \
+$CellContext`b$$])/$CellContext`b$$, $CellContext`xi$3626[
+            Pattern[$CellContext`k$, 
+             Blank[]], 
+            Pattern[$CellContext`a$, 
+             Blank[]], $CellContext`a$3626 < $CellContext`b$3626] := 
+          2 ($CellContext`a$ + $CellContext`b$$) - (($CellContext`a$ + 
+             2 $CellContext`b$$) $CellContext`R[$CellContext`k$, \
+$CellContext`a$, $CellContext`b$$])/$CellContext`a$, $CellContext`xi$3626[
+            Pattern[$CellContext`k, 
+             Blank[]], 
+            Pattern[$CellContext`a, 
+             Blank[]], 
+            Pattern[$CellContext`b, 
+             Blank[]]] := ((
+             2 $CellContext`a + $CellContext`b) \
+$CellContext`R[$CellContext`k, $CellContext`a, \
+$CellContext`b])/$CellContext`b, 
+          Attributes[$CellContext`a$3626] = {Temporary}, 
+          Attributes[$CellContext`b$3626] = {Temporary}, $CellContext`R[
+            Pattern[$CellContext`k, 
+             Blank[]], 
+            Pattern[$CellContext`a, 
+             Blank[]], 
+            Pattern[$CellContext`b, 
+             
+             Blank[]]] := ($CellContext`a $CellContext`b ($CellContext`a + \
+$CellContext`b))/($CellContext`a^2 + $CellContext`a $CellContext`b + \
+($CellContext`k $CellContext`b)^2), 
+          Attributes[$CellContext`yi$3626] = {Temporary}, $CellContext`yi$3626[
+            Pattern[$CellContext`k, 
+             Blank[]], 
+            Pattern[$CellContext`a, 
+             Blank[]], 
+            Pattern[$CellContext`b, 
+             Blank[]]] := 
+          2 $CellContext`k $CellContext`R[$CellContext`k, $CellContext`a, \
+$CellContext`b], Attributes[PlotRange] = {ReadProtected}}; {Null}}; 
+      Typeset`initDone$$ = True),
+     SynchronousInitialization->True,
+     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  DynamicModuleValues:>{{DownValues[$CellContext`xi$$] = {HoldPattern[
+         $CellContext`xi$$[
+          Pattern[$CellContext`k$, 
+           Blank[]], 
+          Pattern[$CellContext`a$, 
+           Blank[]], $CellContext`a$$ > $CellContext`b$$]] :> (
+         2 $CellContext`a$ + $CellContext`b$$) \
+$CellContext`R[$CellContext`k$, $CellContext`a$, \
+$CellContext`b$$]/$CellContext`b$$, HoldPattern[
+         $CellContext`xi$$[
+          Pattern[$CellContext`k$, 
+           Blank[]], 
+          Pattern[$CellContext`a$, 
+           Blank[]], $CellContext`a$$ < $CellContext`b$$]] :> 
+       2 ($CellContext`a$ + $CellContext`b$$) - ($CellContext`a$ + 
+         2 $CellContext`b$$) $CellContext`R[$CellContext`k$, $CellContext`a$, \
+$CellContext`b$$]/$CellContext`a$, HoldPattern[
+         $CellContext`xi$$[
+          Pattern[$CellContext`k, 
+           Blank[]], 
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]]] :> (
+         2 $CellContext`a + $CellContext`b) $CellContext`R[$CellContext`k, \
+$CellContext`a, $CellContext`b]/$CellContext`b}}, {
+    DownValues[$CellContext`yi$$] = {HoldPattern[
+         $CellContext`yi$$[
+          Pattern[$CellContext`k, 
+           Blank[]], 
+          Pattern[$CellContext`a, 
+           Blank[]], 
+          Pattern[$CellContext`b, 
+           Blank[]]]] :> 
+       2 $CellContext`k $CellContext`R[$CellContext`k, $CellContext`a, \
+$CellContext`b]}}}]], "Output",
+ CellChangeTimes->{{3.770879343615994*^9, 3.770879353883613*^9}, 
+   3.7711053129166117`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"1e2a17c4-8900-4d02-8221-2176f8725622"]
+}, {2}]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{84, Automatic}, {53, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 174, 3, 67, "Section",ExpressionUUID->"c1639343-2faf-46fa-bbfd-944af2430f59"],
+Cell[CellGroupData[{
+Cell[779, 29, 13359, 190, 1722, "Input",ExpressionUUID->"44342e7a-a9d3-46ae-a61f-946817fcf391"],
+Cell[14141, 221, 14158, 303, 819, "Output",ExpressionUUID->"1e2a17c4-8900-4d02-8221-2176f8725622"]
+}, {2}]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

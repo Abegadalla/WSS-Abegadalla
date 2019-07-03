@@ -1,0 +1,491 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20836,        481]
+NotebookOptionsPosition[     20290,        462]
+NotebookOutlinePosition[     20627,        477]
+CellTagsIndexPosition[     20584,        474]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Largest Tubes below and above a board", "Section",
+ CellChangeTimes->{{3.6745785144839354`*^9, 
+  3.674578545760839*^9}},ExpressionUUID->"85dd1328-94ba-4ec6-8f2b-\
+5ca032ffe9f6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c", ",", "answer"}], "}"}], ",", 
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"c", "=", 
+       RowBox[{"Sqrt", "[", 
+        RowBox[{
+         RowBox[{"a", "^", "2"}], "+", 
+         RowBox[{"b", "^", "2"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"radiusUb", ":=", " ", 
+       RowBox[{"FullSimplify", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"a", "+", "b", "-", "c"}], ")"}], "/", "2."}], "]"}]}], ";", 
+      RowBox[{"radiusAb", ":=", 
+       RowBox[{"FullSimplify", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"a", " ", "+", " ", "b", " ", "+", " ", "c"}], " ", ")"}], 
+         "/", "2."}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Column", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Item", "[", 
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{"answer", ",", 
+             RowBox[{"Row", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                  RowBox[{"Row", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"\"\<\\nThe radius of the inner Tube = \>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{"radiusUb", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}], ",", 
+                    "\"\<\\n\>\""}], "}"}], "]"}], ",", "14", ",", "Blue"}], 
+                 "]"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                  RowBox[{"Row", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"\"\<\\nThe radius of the upper Tube = \>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{"radiusAb", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}], ",", 
+                    "\"\<\\n\>\""}], "}"}], "]"}], ",", "14", ",", "Purple"}],
+                  "]"}]}], "}"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+              "\"\<\\nShow that the radius of the largest tube\\n that fit \
+below the board AB is (a + b - c)/2\\nand the largest one above the board\\n \
+that are tangent to the wall, the board,\\n and to the floor is {a + b + c)/2\
+\\nCalculate the radii\>\"", ",", "14", ",", "Black"}], "]"}]}], "]"}], ",", 
+           RowBox[{"Alignment", "\[Rule]", 
+            RowBox[{"{", "Left", "}"}]}], ",", 
+           RowBox[{"Frame", "\[Rule]", "True"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Item", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Graphics", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"Thick", ",", 
+                 RowBox[{"Line", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", "0"}], "}"}]}], "}"}], "]"}], ",", 
+                 RowBox[{"Line", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "b"}], "}"}]}], "}"}], "]"}], ",", 
+                 RowBox[{"Line", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "b"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"Inset", "[", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<A\>\"", ",", "16", ",", "Bold", ",", "Black"}],
+                   "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "0.2"}], " ", "b"}], ",", " ", "b"}], 
+                  "}"}]}], "]"}], ",", 
+               RowBox[{"Inset", "[", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<B\>\"", ",", "16", ",", "Bold", ",", "Black"}],
+                   "]"}], ",", 
+                 RowBox[{"{", " ", 
+                  RowBox[{"a", ",", 
+                   RowBox[{
+                    RowBox[{"-", "0.2"}], " ", "a"}]}], "}"}]}], "]"}], ",", 
+               RowBox[{"Inset", "[", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<C\>\"", ",", "16", ",", "Bold", ",", "Black"}],
+                   "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "0.2"}], " ", "b"}], ",", 
+                   RowBox[{
+                    RowBox[{"-", "0.1"}], " ", "a"}]}], "}"}]}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Inset", "[", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<a = \>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{"a", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"2", ",", "1"}], "}"}]}], "]"}]}], "}"}], "]"}], 
+                   ",", "13", ",", "Black"}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"a", "/", "2"}], ",", 
+                   RowBox[{
+                    RowBox[{"-", "0.2"}], " ", "a"}]}], "}"}]}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Inset", "[", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<b = \>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{"b", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"2", ",", "1"}], "}"}]}], "]"}]}], "}"}], "]"}], 
+                   ",", "13", ",", "Black"}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "0.8"}], " ", "b"}], ",", 
+                   RowBox[{"b", "/", "2"}]}], "}"}]}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"Thick", ",", "Blue", ",", 
+                 RowBox[{"Circle", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"radiusUb", ",", "radiusUb"}], "}"}], ",", 
+                   "radiusUb"}], "]"}], ",", 
+                 RowBox[{"PointSize", "[", "0.02", "]"}], ",", 
+                 RowBox[{"Point", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"radiusUb", ",", "radiusUb"}], "}"}], "]"}], ",", 
+                 "Purple", ",", 
+                 RowBox[{"Circle", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"radiusAb", ",", "radiusAb"}], "}"}], ",", 
+                   "radiusAb"}], "]"}], ",", 
+                 RowBox[{"Point", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"radiusAb", ",", "radiusAb"}], "}"}], "]"}]}], 
+                "}"}]}], "}"}], ",", 
+             RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+             RowBox[{"AxesLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                 "\"\<x\>\"", ",", "Large", ",", "Bold", ",", "Italic"}], 
+                 "]"}], ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                 "\"\<y\>\"", ",", "Large", ",", "Bold", ",", "Italic"}], 
+                 "]"}]}], "}"}]}], ",", 
+             RowBox[{"GridLines", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], ",", 
+                  RowBox[{"a", "+", "b", "+", "c"}], ",", "1"}], "]"}], ",", 
+                RowBox[{"Range", "[", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], ",", 
+                  RowBox[{"a", "+", "b", "+", "c"}], ",", "1"}], "]"}]}], 
+               "}"}]}], ",", 
+             RowBox[{"GridLinesStyle", "\[Rule]", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"GrayLevel", "[", "0.8", "]"}], "]"}]}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "300"}]}], "]"}], ",", 
+           RowBox[{"Alignment", "\[Rule]", 
+            RowBox[{"{", "Center", "}"}]}], ",", 
+           RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+           RowBox[{"ItemSize", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"30", ",", "5"}], "}"}]}]}], "]"}]}], 
+        "\[IndentingNewLine]", "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"Row", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Control", "[", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"a", ",", "12", ",", "\"\< a\>\""}], "}"}], ",", "1", ",",
+            "12", ",", "1", ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+           RowBox[{"ImageSize", "->", "Tiny"}]}], "}"}], "]"}], ",", 
+        RowBox[{"Spacer", "[", "30", "]"}], ",", 
+        RowBox[{"Control", "[", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"b", ",", "5", ",", "\"\< b\>\""}], "}"}], ",", "3", ",", 
+           "13", ",", "1", ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+           RowBox[{"ImageSize", "->", "Tiny"}]}], "}"}], "]"}], ",", 
+        RowBox[{"Spacer", "[", "30", "]"}], ",", 
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"answer", ",", "False", ",", "\"\<answer\>\""}], "}"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"False", ",", "True"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+      "]"}], ",", 
+     RowBox[{"TrackedSymbols", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"a", ",", "b", ",", "answer"}], "}"}]}], ",", 
+     RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.674597936559486*^9, 3.674598016340107*^9}, {
+   3.674598096549633*^9, 3.674598118516479*^9}, {3.6745982354158783`*^9, 
+   3.674598243079728*^9}, 3.674598313786604*^9, {3.674598361539083*^9, 
+   3.674598373701561*^9}, 3.6745984414773827`*^9, {3.674598524559148*^9, 
+   3.674598581646035*^9}, {3.67459861295186*^9, 3.674598657049512*^9}, {
+   3.67459873877418*^9, 3.674598741131117*^9}, {3.674598797218638*^9, 
+   3.67459882164948*^9}, {3.674598874924634*^9, 3.674598875153*^9}, {
+   3.674604293574172*^9, 3.6746050142583523`*^9}, {3.674605044690481*^9, 
+   3.674605084883994*^9}, {3.674605115391519*^9, 3.67460531695856*^9}, {
+   3.6746053615210667`*^9, 3.674605711017784*^9}, {3.674605752628039*^9, 
+   3.674606150390276*^9}, {3.6746062094338837`*^9, 3.6746063490822353`*^9}, 
+   3.674606414717462*^9, {3.67460646812983*^9, 3.674606480338028*^9}, {
+   3.674606515258171*^9, 3.6746065437777567`*^9}, {3.674606587881974*^9, 
+   3.674606588698328*^9}, {3.674606623019744*^9, 3.674606627315906*^9}, {
+   3.674606702368094*^9, 3.674606714454018*^9}, {3.674681778520008*^9, 
+   3.674681932692059*^9}, {3.6746819793647346`*^9, 3.674682047343347*^9}, 
+   3.674682081662168*^9, {3.6746821222088013`*^9, 3.674682238557291*^9}, {
+   3.6746822793855247`*^9, 3.674682279926654*^9}, {3.674682345721081*^9, 
+   3.6746824585377817`*^9}, {3.674682545344541*^9, 3.674682573155506*^9}, {
+   3.674682604927153*^9, 3.674682628605205*^9}, {3.6746826811410427`*^9, 
+   3.6746826857468*^9}, {3.674682731197901*^9, 3.674682744451035*^9}, {
+   3.674682792359893*^9, 3.674682800674521*^9}, 3.674682832767496*^9, {
+   3.674682893025907*^9, 3.6746829458247843`*^9}, {3.674682983025999*^9, 
+   3.674682986519329*^9}, 3.6746830237307673`*^9, {3.6746831136442347`*^9, 
+   3.674683120115507*^9}, {3.6746831590124683`*^9, 3.674683161737734*^9}, {
+   3.6746832515265903`*^9, 
+   3.674683256051456*^9}},ExpressionUUID->"4fbdce98-8749-47d1-bb08-\
+30a7ff23233f"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`answer$2993$$ = 
+    False, $CellContext`a$2993$$ = 12, $CellContext`b$2993$$ = 5, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`a$2993$$], 12, " a"}, 1, 12, 1}, {{
+       Hold[$CellContext`b$2993$$], 5, " b"}, 3, 13, 1}, {{
+       Hold[$CellContext`answer$2993$$], False, "answer"}, {False, True}}, {
+      Hold[
+       Row[{
+         Manipulate`Place[1], 
+         Spacer[30], 
+         Manipulate`Place[2], 
+         Spacer[30], 
+         Manipulate`Place[3]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+    Typeset`size$$ = {435., {225.634033203125, 231.365966796875}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`a$2993$2995$$ = 0, $CellContext`b$2993$2996$$ = 
+    0, $CellContext`answer$2993$2997$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`answer$2993$$ = 
+        False, $CellContext`a$2993$$ = 12, $CellContext`b$2993$$ = 5}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`a$2993$$, $CellContext`a$2993$2995$$, 0], 
+        Hold[$CellContext`b$2993$$, $CellContext`b$2993$2996$$, 0], 
+        Hold[$CellContext`answer$2993$$, $CellContext`answer$2993$2997$$, 
+         False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`c$2993 = 
+        Sqrt[$CellContext`a$2993$$^2 + $CellContext`b$2993$$^2]; \
+$CellContext`radiusUb := 
+        FullSimplify[($CellContext`a$2993$$ + $CellContext`b$2993$$ - \
+$CellContext`c$2993)/2.]; $CellContext`radiusAb := 
+        FullSimplify[($CellContext`a$2993$$ + $CellContext`b$2993$$ + \
+$CellContext`c$2993)/2.]; Column[{
+          Item[
+           If[$CellContext`answer$2993$$, 
+            Row[{
+              Style[
+               Row[{"\nThe radius of the inner Tube = ", 
+                 NumberForm[$CellContext`radiusUb, {3, 2}], "\n"}], 14, Blue], 
+              Style[
+               Row[{"\nThe radius of the upper Tube = ", 
+                 NumberForm[$CellContext`radiusAb, {3, 2}], "\n"}], 14, 
+               Purple]}], 
+            Style[
+            "\nShow that the radius of the largest tube\n that fit below the \
+board AB is (a + b - c)/2\nand the largest one above the board\n that are \
+tangent to the wall, the board,\n and to the floor is {a + b + c)/2\n\
+Calculate the radii", 14, Black]], Alignment -> {Left}, Frame -> True], 
+          Item[
+           Graphics[{{Thick, 
+              Line[{{0, 0}, {$CellContext`a$2993$$, 0}}], 
+              Line[{{$CellContext`a$2993$$, 0}, {0, $CellContext`b$2993$$}}], 
+              
+              Line[{{0, 0}, {0, $CellContext`b$2993$$}}]}, 
+             Inset[
+              Style[
+              "A", 16, Bold, 
+               Black], {(-0.2) $CellContext`b$2993$$, $CellContext`b$2993$$}], 
+             Inset[
+              Style[
+              "B", 16, Bold, 
+               Black], {$CellContext`a$2993$$, (-0.2) $CellContext`a$2993$$}], 
+             Inset[
+              Style[
+              "C", 16, Bold, 
+               Black], {(-0.2) $CellContext`b$2993$$, (-0.1) \
+$CellContext`a$2993$$}], 
+             Inset[
+              Style[
+               Row[{"a = ", 
+                 NumberForm[$CellContext`a$2993$$, {2, 1}]}], 13, 
+               Black], {$CellContext`a$2993$$/
+               2, (-0.2) $CellContext`a$2993$$}], 
+             Inset[
+              Style[
+               Row[{"b = ", 
+                 NumberForm[$CellContext`b$2993$$, {2, 1}]}], 13, 
+               Black], {(-0.8) $CellContext`b$2993$$, $CellContext`b$2993$$/
+               2}], {Thick, Blue, 
+              
+              Circle[{$CellContext`radiusUb, $CellContext`radiusUb}, \
+$CellContext`radiusUb], 
+              PointSize[0.02], 
+              Point[{$CellContext`radiusUb, $CellContext`radiusUb}], Purple, 
+              
+              Circle[{$CellContext`radiusAb, $CellContext`radiusAb}, \
+$CellContext`radiusAb], 
+              Point[{$CellContext`radiusAb, $CellContext`radiusAb}]}}, Axes -> 
+            True, AxesLabel -> {
+              Style["x", Large, Bold, Italic], 
+              Style["y", Large, Bold, Italic]}, GridLines -> {
+              
+              Range[-1, $CellContext`a$2993$$ + $CellContext`b$2993$$ + \
+$CellContext`c$2993, 1], 
+              
+              Range[-1, $CellContext`a$2993$$ + $CellContext`b$2993$$ + \
+$CellContext`c$2993, 1]}, GridLinesStyle -> Directive[
+              GrayLevel[0.8]], PlotRange -> All, ImageSize -> 300], 
+           Alignment -> {Center}, Frame -> True, ItemSize -> {30, 5}]}]), 
+      "Specifications" :> {{{$CellContext`a$2993$$, 12, " a"}, 1, 12, 1, 
+         Appearance -> "Labeled", ImageSize -> Tiny, ControlPlacement -> 
+         1}, {{$CellContext`b$2993$$, 5, " b"}, 3, 13, 1, Appearance -> 
+         "Labeled", ImageSize -> Tiny, ControlPlacement -> 
+         2}, {{$CellContext`answer$2993$$, False, "answer"}, {False, True}, 
+         ControlPlacement -> 3}, 
+        Row[{
+          Manipulate`Place[1], 
+          Spacer[30], 
+          Manipulate`Place[2], 
+          Spacer[30], 
+          Manipulate`Place[3]}]}, 
+      "Options" :> {
+       TrackedSymbols -> {$CellContext`a$2993$$, $CellContext`b$2993$$, \
+$CellContext`answer$2993$$}}, "DefaultOptions" :> {}],
+     ImageSizeCache->{480., {270., 276.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({
+      Attributes[$CellContext`c$2993] = {Temporary}, 
+       Attributes[$CellContext`a$2993$$] = {Temporary}, 
+       Attributes[$CellContext`b$2993$$] = {Temporary}, 
+       Attributes[$CellContext`answer$2993$$] = {Temporary}, 
+       Attributes[PlotRange] = {ReadProtected}}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.6746838163105383`*^9},ExpressionUUID->"dd516e1f-7146-4c42-a2b3-\
+45616ec0f9b9"]
+}, {2}]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{68, Automatic}, {Automatic, 24}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 184, 3, 67, "Section",ExpressionUUID->"85dd1328-94ba-4ec6-8f2b-5ca032ffe9f6"],
+Cell[CellGroupData[{
+Cell[789, 29, 12903, 284, 70, "Input",ExpressionUUID->"4fbdce98-8749-47d1-bb08-30a7ff23233f"],
+Cell[13695, 315, 6570, 143, 565, "Output",ExpressionUUID->"dd516e1f-7146-4c42-a2b3-45616ec0f9b9"]
+}, {2}]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
