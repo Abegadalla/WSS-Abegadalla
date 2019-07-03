@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     59475,       1344]
+NotebookDataLength[     59477,       1344]
 NotebookOptionsPosition[     58455,       1316]
-NotebookOutlinePosition[     58941,       1335]
-CellTagsIndexPosition[     58898,       1332]
+NotebookOutlinePosition[     58943,       1335]
+CellTagsIndexPosition[     58900,       1332]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1315,7 +1315,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{884, 998},
-WindowMargins->{{Automatic, 307}, {Automatic, 64}},
+WindowMargins->{{Automatic, 289}, {-119, Automatic}},
 TaggingRules->{
  "WBTDraftSectionsDirectory" -> "/Users/a_gadalla/Documents/", 
   "SlideshowSettings" -> {"Toolbar" -> True}},
