@@ -1,0 +1,243 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9067,        235]
+NotebookOptionsPosition[      8521,        216]
+NotebookOutlinePosition[      8857,        231]
+CellTagsIndexPosition[      8814,        228]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Ratio between areas of two squares", "Section",
+ CellChangeTimes->{{3.771133730598481*^9, 
+  3.771133766798223*^9}},ExpressionUUID->"d888476d-4da1-4974-a0a8-\
+5869b10602ae"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "[", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Text", "[", 
+          RowBox[{
+           RowBox[{"Framed", "[", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{
+              "\"\<\\nA square with side length 2 cm. is inscribed in a \
+semi-circle.\\n Find the ratio between its area and the area of the square\\n \
+whose side length = the diameter of the semi-circle\\n\>\"", ",", "12", ",", 
+               "Black"}], "]"}], ",", 
+             RowBox[{"Background", "\[Rule]", " ", "Yellow"}], ",", 
+             RowBox[{"RoundingRadius", "\[Rule]", "10"}]}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "6"}], "}"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"Thick", ",", 
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}], ",", 
+             SqrtBox["5"], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "\[Pi]"}], "}"}]}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Red", ",", 
+           RowBox[{"PointSize", "[", "0.025", "]"}], ",", 
+           RowBox[{"Point", "[", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"Thick", ",", "Blue", ",", 
+           RowBox[{"Line", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", 
+                 SqrtBox["5"]}], ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                SqrtBox["5"], ",", "0"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                SqrtBox["5"], ",", 
+                RowBox[{"2", 
+                 SqrtBox["5"]}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", 
+                 SqrtBox["5"]}], ",", 
+                RowBox[{"2", 
+                 SqrtBox["5"]}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", 
+                 SqrtBox["5"]}], ",", "0"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+         ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"FaceForm", "[", "Yellow", "]"}], ",", 
+           RowBox[{"EdgeForm", "[", 
+            RowBox[{"{", 
+             RowBox[{"Thick", ",", "Red"}], "}"}], "]"}], ",", 
+           RowBox[{"Rectangle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "2"}], "}"}]}], "]"}]}], "}"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{"answer", ",", 
+           RowBox[{"Text", "[", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{
+              "\"\<\\nThe Ratio is  1 : 5 \\n\>\"", ",", "16", ",", "Red"}], 
+              "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "5"}], "}"}]}], "]"}]}], "]"}]}], 
+        "\[IndentingNewLine]", "}"}], ",", 
+       RowBox[{"Axes", "\[Rule]", "False"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"answer", ",", "False", ",", 
+         RowBox[{"Style", "[", 
+          RowBox[{"\"\<answer\>\"", ",", "16"}], "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"False", ",", "True"}], "}"}]}], "}"}], ",", 
+     RowBox[{"TrackedSymbols", "\[Rule]", 
+      RowBox[{"{", "answer", "}"}]}]}], "]"}], ",", 
+   RowBox[{"FrameStyle", "\[Rule]", 
+    RowBox[{"Directive", "[", 
+     RowBox[{"Purple", ",", "Thick"}], "]"}]}], ",", 
+   RowBox[{"RoundingRadius", "\[Rule]", "10"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.771133798528289*^9, 3.771133811556727*^9}, {
+   3.771133847353118*^9, 3.771134347674243*^9}, {3.771134378030898*^9, 
+   3.771134917015036*^9}, {3.771135126144466*^9, 3.771135200283923*^9}, {
+   3.77113523783142*^9, 3.771135307798038*^9}, {3.771135338405169*^9, 
+   3.7711353712783012`*^9}, {3.771135465191938*^9, 3.771135608574848*^9}, 
+   3.771135744117413*^9, 3.7711357867194757`*^9, {3.771135822522686*^9, 
+   3.771135823304018*^9}, {3.771135861669155*^9, 3.771135862360037*^9}, {
+   3.7711359073629723`*^9, 3.771135931235323*^9}},
+ CellLabel->"In[65]:=",ExpressionUUID->"145c71f5-28f6-4362-8ac0-17a7ea9b16b7"],
+
+Cell[BoxData[
+ FrameBox[
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`answer$$ = False, Typeset`show$$ = True, 
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+     "\"untitled\"", Typeset`specs$$ = {{{
+        Hold[$CellContext`answer$$], False, 
+        Style["answer", 16]}, {False, True}}}, Typeset`size$$ = {
+     327., {214., 218.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+     Typeset`skipInitDone$$ = True, $CellContext`answer$118290$$ = False}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      1, StandardForm, "Variables" :> {$CellContext`answer$$ = False}, 
+       "ControllerVariables" :> {
+         Hold[$CellContext`answer$$, $CellContext`answer$118290$$, False]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Graphics[{
+          Text[
+           Framed[
+            Style[
+            "\nA square with side length 2 cm. is inscribed in a semi-circle.\
+\n Find the ratio between its area and the area of the square\n whose side \
+length = the diameter of the semi-circle\n", 12, Black], Background -> Yellow,
+             RoundingRadius -> 10], {0, 6}], {Thick, 
+           Circle[{0, 0}, 
+            Sqrt[5], {0, Pi}]}, {Red, 
+           PointSize[0.025], 
+           Point[{0, 0}]}, {Thick, Blue, 
+           Line[{{-Sqrt[5], 0}, {
+              Sqrt[5], 0}, {
+              Sqrt[5], 2 Sqrt[5]}, {-Sqrt[5], 2 Sqrt[5]}, {-Sqrt[5], 0}}]}, {
+           FaceForm[Yellow], 
+           EdgeForm[{Thick, Red}], 
+           Rectangle[{-1, 0}, {1, 2}]}, 
+          If[$CellContext`answer$$, 
+           Text[
+            Style["\nThe Ratio is  1 : 5 \n", 16, Red], {0, 5}]]}, Axes -> 
+         False], "Specifications" :> {{{$CellContext`answer$$, False, 
+           Style["answer", 16]}, {False, True}}}, 
+       "Options" :> {TrackedSymbols -> {$CellContext`answer$$}}, 
+       "DefaultOptions" :> {}],
+      ImageSizeCache->{372., {256., 262.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  FrameStyle->Directive[
+    RGBColor[0.5, 0, 0.5], 
+    Thickness[Large]],
+  RoundingRadius->10,
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{{3.771135318187469*^9, 3.771135386968783*^9}, 
+   3.771135546946979*^9, {3.7711356155153313`*^9, 3.771135640799765*^9}, 
+   3.771135791317371*^9, 3.771135838458336*^9, 3.77113587787435*^9, {
+   3.771135909529451*^9, 3.771135940111117*^9}},
+ CellLabel->"Out[65]=",ExpressionUUID->"7a1701e9-8659-4479-afc7-26e0ba2ca36d"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{63, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 179, 3, 67, "Section",ExpressionUUID->"d888476d-4da1-4974-a0a8-5869b10602ae"],
+Cell[CellGroupData[{
+Cell[784, 29, 4640, 116, 430, "Input",ExpressionUUID->"145c71f5-28f6-4362-8ac0-17a7ea9b16b7"],
+Cell[5427, 147, 3066, 65, 549, "Output",ExpressionUUID->"7a1701e9-8659-4479-afc7-26e0ba2ca36d"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

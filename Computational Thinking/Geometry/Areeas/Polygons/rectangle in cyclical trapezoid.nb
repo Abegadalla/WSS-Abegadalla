@@ -1,0 +1,667 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     28948,        657]
+NotebookOptionsPosition[     28169,        634]
+NotebookOutlinePosition[     28506,        649]
+CellTagsIndexPosition[     28463,        646]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Find the maximum area of a rectangle in a cyclic trapezoid", "Section",
+ CellChangeTimes->{{3.630096742974959*^9, 
+  3.630096786369927*^9}},ExpressionUUID->"27933c2a-6b19-400f-abe5-\
+5750ee44fcc6"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Given a trapezoid in a circle, find the dimensions of the rectangle that \
+gives maximum area\
+\>", "Subsection",
+ CellChangeTimes->{{3.6300967926327963`*^9, 
+  3.630096861368464*^9}},ExpressionUUID->"af0565c9-3799-4cb5-b7af-\
+387c436e5225"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x1", ":=", "0.5"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"x2", "\[GreaterEqual]", "x1"}], ",", 
+      RowBox[{"arearectangle", "=", 
+       RowBox[{"2", " ", "x2", " ", 
+        FractionBox[
+         SqrtBox[
+          RowBox[{"1", "-", 
+           RowBox[{"x1", "^", "2"}]}]], 
+         RowBox[{"x1", "-", "1"}]], 
+        RowBox[{"(", 
+         RowBox[{"x2", "-", "1"}], ")"}]}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"arearectangle", "=", 
+       RowBox[{"2", " ", "x2", " ", 
+        SqrtBox[
+         RowBox[{"1", "-", 
+          RowBox[{"x1", "^", "2"}]}]]}]}]}], "]"}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"x1", "\[LessEqual]", "0.5"}], ",", 
+      RowBox[{"maximumarea", "=", 
+       FractionBox[
+        SqrtBox[
+         RowBox[{"1", "-", 
+          SuperscriptBox["x1", "2"]}]], 
+        RowBox[{"2", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", "x1"}], ")"}]}]]}], ",", 
+      RowBox[{"maximumarea", "=", 
+       SqrtBox[
+        RowBox[{"1", "-", 
+         SuperscriptBox["x1", "2"]}]]}]}], "]"}], ";", "\[IndentingNewLine]", 
+    
+    RowBox[{"areainsiderectangle", "=", 
+     RowBox[{"2", " ", "x1", " ", 
+      SqrtBox[
+       RowBox[{"1", "-", 
+        RowBox[{"x1", "^", "2"}]}]]}]}], ";", "\[IndentingNewLine]", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Column", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Item", "[", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{"showmax", ",", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"Row", "[", 
+              RowBox[{"{", 
+               RowBox[{"\"\<\\nmaximum area of rectangle = \>\"", ",", 
+                RowBox[{"NumberForm", "[", 
+                 RowBox[{"maximumarea", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"5", ",", "3"}], "}"}]}], "]"}], ",", "\"\<  \>\"",
+                 ",", 
+                RowBox[{"Superscript", "[", 
+                 RowBox[{"in", ",", "2"}], "]"}], ",", "\"\<\\n\>\""}], "}"}],
+               "]"}], ",", "12", ",", "Purple"}], "]"}], ",", 
+           RowBox[{"If", "[", 
+            RowBox[{"answer", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Row", "[", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<\\narea of rectangle = \>\"", ",", 
+                  RowBox[{"NumberForm", "[", 
+                   RowBox[{"arearectangle", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}], ",", 
+                  "\"\<  \>\"", ",", 
+                  RowBox[{"Superscript", "[", 
+                   RowBox[{"in", ",", "2"}], "]"}], ",", "\"\<\\n\>\""}], 
+                 "}"}], "]"}], ",", "12", ",", "Purple"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+              "\"\<\\nCalculate the area of the rectangle inscribed in the \
+trapezoid\\n\>\"", ",", "12", ",", "Italic"}], "]"}]}], "\[IndentingNewLine]",
+             "]"}]}], "]"}], ",", 
+         RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+         RowBox[{"Alignment", "\[Rule]", 
+          RowBox[{"{", "Center", "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Item", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"areaPlot", "=", 
+           RowBox[{"Plot", "[", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"x2", "\[GreaterEqual]", "x1"}], ",", 
+               RowBox[{"2", " ", "x", 
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  RowBox[{"x1", "^", "2"}]}]], " ", 
+                FractionBox[
+                 RowBox[{"(", 
+                  RowBox[{"x", "-", "1"}], ")"}], 
+                 RowBox[{"(", 
+                  RowBox[{"x1", "-", "1"}], ")"}]]}], ",", 
+               RowBox[{"2", " ", "x", 
+                SqrtBox[
+                 RowBox[{"1", "-", 
+                  RowBox[{"x1", "^", "2"}]}]]}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "0.07", ",", "0.96"}], "}"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Thick", ",", "Blue"}], "}"}]}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "1"}], "}"}], ",", "Automatic"}], "}"}]}], 
+             ",", 
+             RowBox[{"AxesLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Style", "[", " ", 
+                 RowBox[{
+                  RowBox[{"half", " ", "width"}], " ", ",", "12"}], "]"}], 
+                ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<Content Area\>\"", ",", "12"}], "]"}]}], 
+               "}"}]}], ",", 
+             RowBox[{"PlotLabel", "\[Rule]", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", "\"\<Area of Rectangle\>\"", "}"}], "]"}], ",", 
+                "18"}], "]"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"pointOnCurve", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{"showmax", ",", 
+             RowBox[{"Graphics", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"PointSize", "[", "0.035", "]"}], ",", "Red", ",", 
+                RowBox[{"Point", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"0.5", ",", "maximumarea"}], "}"}], "]"}]}], "}"}], 
+              "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Graphics", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"PointSize", "[", "Large", "]"}], ",", "Orange", ",", 
+                
+                RowBox[{"Point", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"x2", ",", "arearectangle"}], "}"}], "]"}]}], "}"}],
+               "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"polygon", "=", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"Thick", ",", 
+                 RowBox[{"Circle", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", "1", ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "\[Pi]"}], "}"}]}], "]"}], ",", 
+                 RowBox[{"PointSize", "[", "0.015", "]"}], ",", 
+                 RowBox[{"Point", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"EdgeForm", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"Thick", ",", "Red"}], "}"}], "]"}], ",", 
+                 RowBox[{"FaceForm", "[", "Yellow", "]"}], ",", 
+                 RowBox[{"Polygon", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "x1"}], ",", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    RowBox[{"x1", "^", "2"}]}]]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x1", ",", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    RowBox[{"x1", "^", "2"}]}]]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"x2", "\[GreaterEqual]", "x1"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                   RowBox[{"FaceForm", "[", "Orange", "]"}], ",", 
+                   RowBox[{"Opacity", "[", "0.6", "]"}], ",", 
+                   RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "x2"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "x2"}], ",", 
+                    RowBox[{
+                    FractionBox[
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    RowBox[{"x1", "^", "2"}]}]], 
+                    RowBox[{"x1", "-", "1"}]], 
+                    RowBox[{"(", 
+                    RowBox[{"x2", "-", "1"}], ")"}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x2", ",", 
+                    RowBox[{
+                    FractionBox[
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    RowBox[{"x1", "^", "2"}]}]], 
+                    RowBox[{"x1", "-", "1"}]], 
+                    RowBox[{"(", 
+                    RowBox[{"x2", "-", "1"}], ")"}]}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x2", ",", "0"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+                 ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                   RowBox[{"FaceForm", "[", "Orange", "]"}], ",", 
+                   RowBox[{"Opacity", "[", "0.6", "]"}], ",", 
+                   RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "x2"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "x2"}], ",", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    RowBox[{"x1", "^", "2"}]}]]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x2", ",", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    RowBox[{"x1", "^", "2"}]}]]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"x2", ",", "0"}], "}"}]}], "}"}], "]"}]}], 
+                  "}"}]}], "\[IndentingNewLine]", "]"}]}], 
+              "\[IndentingNewLine]", "}"}], ",", 
+             RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"maxrectangle", "=", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"x1", "\[LessEqual]", "0.5"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"EdgeForm", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                 RowBox[{"FaceForm", "[", "Pink", "]"}], ",", 
+                 RowBox[{"Rectangle", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "0.5"}], ",", "0"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0.5", ",", 
+                    FractionBox[
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    RowBox[{"x1", "^", "2"}]}]], 
+                    RowBox[{"2", 
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", "x1"}], ")"}]}]]}], "}"}]}], "]"}]}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"EdgeForm", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                 RowBox[{"FaceForm", "[", "Pink", "]"}], ",", 
+                 RowBox[{"Rectangle", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "0.5"}], ",", "0"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0.5", ",", 
+                    SqrtBox[
+                    RowBox[{"1", "-", 
+                    RowBox[{"x1", "^", "2"}]}]]}], "}"}]}], "]"}]}], "}"}]}], 
+              "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "}"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Row", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{"showmax", ",", 
+               RowBox[{"Show", "[", 
+                RowBox[{"polygon", ",", "maxrectangle"}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Show", "[", "polygon", "]"}]}], "]"}], ",", 
+             RowBox[{"Show", "[", 
+              RowBox[{"areaPlot", ",", "pointOnCurve"}], "]"}]}], "}"}], 
+           "]"}]}], ",", 
+         RowBox[{"Frame", "\[Rule]", "True"}]}], "]"}]}], 
+      "\[IndentingNewLine]", "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Row", "[", 
+    RowBox[{"{", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"Control", "[", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"x1", ",", "0.3", ",", "\"\<x1\>\""}], "}"}], ",", "0.1", 
+          ",", "0.95", ",", 
+          RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+       RowBox[{"Spacer", "[", "30", "]"}], ","}], "*)"}], 
+     RowBox[{
+      RowBox[{"Control", "[", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"x2", ",", "0.55", ",", "\"\<x2\>\""}], "}"}], ",", "0.5", 
+         ",", "0.9", ",", 
+         RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "30", "]"}], ",", 
+      RowBox[{"Control", "[", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"answer", ",", "False", ",", "\"\<answer\>\""}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"False", ",", "True"}], "}"}]}], "}"}], "]"}], ",", 
+      RowBox[{"Spacer", "[", "30", "]"}], ",", 
+      RowBox[{"Control", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"showmax", ",", "False", ",", "\"\<showmax\>\""}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"False", ",", "True"}], "}"}]}], "}"}], "]"}]}], 
+     "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+    RowBox[{"{", 
+     RowBox[{"x1", ",", "x2", ",", "answer", ",", "showmax"}], "}"}]}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.630096867930416*^9, 3.630096986921892*^9}, {
+   3.630097020682918*^9, 3.630097505762423*^9}, {3.630097588565433*^9, 
+   3.6300975995397863`*^9}, {3.630098055798221*^9, 3.630098322056909*^9}, {
+   3.630098352249941*^9, 3.6300983669377327`*^9}, 3.630098421063469*^9, {
+   3.630098466710782*^9, 3.630098469980007*^9}, {3.630098521518203*^9, 
+   3.630098524605398*^9}, {3.6300989179801407`*^9, 3.630099051191942*^9}, {
+   3.630099116184125*^9, 3.630099251264669*^9}, {3.630099323799255*^9, 
+   3.6300994266901617`*^9}, {3.630099503516184*^9, 3.630099519572988*^9}, 
+   3.630099568658393*^9, {3.630099600116877*^9, 3.630099636899418*^9}, {
+   3.630099671034994*^9, 3.6300997490139723`*^9}, 3.630099804014439*^9, {
+   3.6300999261433573`*^9, 3.630100012892619*^9}, {3.630100170660407*^9, 
+   3.630100303186348*^9}, {3.63010034286838*^9, 3.630100600834218*^9}, {
+   3.630100639820032*^9, 3.630100671136114*^9}, {3.630100706321973*^9, 
+   3.6301009936656446`*^9}, {3.630101050266205*^9, 3.630101053576939*^9}, {
+   3.630101143787294*^9, 3.630101147745009*^9}, {3.6301012149526052`*^9, 
+   3.6301012161124163`*^9}, {3.63010142894601*^9, 3.630101441248945*^9}, {
+   3.630101498599614*^9, 3.630101501917489*^9}, 3.6301015393112307`*^9, {
+   3.630101656230403*^9, 3.6301016665466022`*^9}, {3.630101738479245*^9, 
+   3.630101752039526*^9}, {3.6301018086572447`*^9, 3.630101912848322*^9}, {
+   3.6301020286520557`*^9, 3.630102142029233*^9}, {3.630102187009227*^9, 
+   3.630102262655786*^9}, {3.630102415515418*^9, 3.630102471579637*^9}, {
+   3.630102532982171*^9, 3.6301025457009573`*^9}, {3.630102599546421*^9, 
+   3.630102657359858*^9}, {3.630102786393556*^9, 3.630102945609028*^9}, {
+   3.63010300329108*^9, 3.6301030535207653`*^9}, 3.6301030972679567`*^9, {
+   3.6301032102248297`*^9, 3.6301032117578573`*^9}, 3.630103288290081*^9, {
+   3.630110388146659*^9, 3.630110441356348*^9}, {3.630110510766655*^9, 
+   3.63011065011059*^9}, {3.630110691824525*^9, 3.630110834422245*^9}, {
+   3.630110901310763*^9, 3.6301109394927597`*^9}, {3.630110993975306*^9, 
+   3.630111024581757*^9}, {3.6301110862557917`*^9, 3.630111201594595*^9}, 
+   3.630111275927099*^9, {3.6301113079630613`*^9, 3.630111313836816*^9}, {
+   3.630111413598914*^9, 3.6301114525822973`*^9}, {3.630111582661529*^9, 
+   3.630111625729609*^9}, {3.63011186771529*^9, 3.630111871906898*^9}, {
+   3.630111962583857*^9, 3.630112003172126*^9}, {3.630112201057704*^9, 
+   3.6301122543251133`*^9}, {3.6301123046859407`*^9, 3.630112321676938*^9}, {
+   3.630112357483123*^9, 3.6301123823533983`*^9}, {3.630112592511335*^9, 
+   3.630112630535694*^9}, {3.630112670325602*^9, 3.630112677998043*^9}, {
+   3.6301127505528593`*^9, 3.630112818768733*^9}, {3.6301128497166233`*^9, 
+   3.630112850281673*^9}, {3.630113132641067*^9, 3.6301131342226677`*^9}, {
+   3.630113227937675*^9, 3.6301132854205914`*^9}, {3.6301133168851852`*^9, 
+   3.630113397328755*^9}, {3.630113617714342*^9, 3.6301136183435926`*^9}, {
+   3.6301137645564423`*^9, 3.6301137694238987`*^9}, 3.630114060944665*^9, {
+   3.6301141768807507`*^9, 3.630114194593378*^9}, {3.63011426369029*^9, 
+   3.630114336530547*^9}, {3.6301145543846197`*^9, 3.6301145625120993`*^9}, {
+   3.630114645634852*^9, 3.630114800627348*^9}, {3.630114843815996*^9, 
+   3.630114924323172*^9}, {3.630198964692185*^9, 3.6301989734787827`*^9}, {
+   3.630199026186553*^9, 3.630199047310553*^9}, 3.630199093390718*^9, {
+   3.630199128220175*^9, 3.630199149531103*^9}},
+ CellLabel->
+  "In[109]:=",ExpressionUUID->"d09dcfc1-3058-4028-a042-3d784aa765cb"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{CloudObject`Private`answer$$ = False, 
+    CloudObject`Private`showmax$$ = False, $CellContext`x2$$ = 0.55, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`x2$$], 0.55, "x2"}, 0.5, 0.9}, {{
+       Hold[CloudObject`Private`answer$$], False, "answer"}, {False, True}}, {{
+       Hold[CloudObject`Private`showmax$$], False, "showmax"}, {
+      False, True}}, {
+      Hold[
+       Row[{
+         Manipulate`Place[1], 
+         Spacer[30], 
+         Manipulate`Place[2], 
+         Spacer[30], 
+         Manipulate`Place[3]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+    Typeset`size$$ = {466., {253.134033203125, 258.865966796875}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`x2$42848$$ = 0, CloudObject`Private`answer$42849$$ = 
+    False, CloudObject`Private`showmax$42850$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {
+       CloudObject`Private`answer$$ = False, CloudObject`Private`showmax$$ = 
+        False, $CellContext`x2$$ = 0.55}, "ControllerVariables" :> {
+        Hold[$CellContext`x2$$, $CellContext`x2$42848$$, 0], 
+        Hold[
+        CloudObject`Private`answer$$, CloudObject`Private`answer$42849$$, 
+         False], 
+        Hold[
+        CloudObject`Private`showmax$$, CloudObject`Private`showmax$42850$$, 
+         False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`x1 := 0.5; 
+       If[$CellContext`x2$$ >= $CellContext`x1, $CellContext`arearectangle = 
+         2 $CellContext`x2$$ (Sqrt[1 - $CellContext`x1^2]/($CellContext`x1 - 
+           1)) ($CellContext`x2$$ - 1), $CellContext`arearectangle = 
+         2 $CellContext`x2$$ Sqrt[1 - $CellContext`x1^2]]; 
+       If[$CellContext`x1 <= 0.5, $CellContext`maximumarea = 
+         Sqrt[1 - $CellContext`x1^2]/(
+          2 (1 - $CellContext`x1)), $CellContext`maximumarea = 
+         Sqrt[1 - $CellContext`x1^2]]; $CellContext`areainsiderectangle = 
+        2 $CellContext`x1 Sqrt[1 - $CellContext`x1^2]; Column[{
+          Item[
+           If[CloudObject`Private`showmax$$, 
+            Style[
+             Row[{"\nmaximum area of rectangle = ", 
+               NumberForm[$CellContext`maximumarea, {5, 3}], "  ", 
+               Superscript[$CellContext`in, 2], "\n"}], 12, Purple], 
+            If[CloudObject`Private`answer$$, 
+             Style[
+              Row[{"\narea of rectangle = ", 
+                NumberForm[$CellContext`arearectangle, {5, 3}], "  ", 
+                Superscript[$CellContext`in, 2], "\n"}], 12, Purple], 
+             Style[
+             "\nCalculate the area of the rectangle inscribed in the \
+trapezoid\n", 12, Italic]]], Frame -> True, Alignment -> {Center}], 
+          Item[$CellContext`areaPlot = Plot[
+              
+              If[$CellContext`x2$$ >= $CellContext`x1, 2 $CellContext`x 
+               Sqrt[1 - $CellContext`x1^2] (($CellContext`x - 
+                 1)/($CellContext`x1 - 1)), 2 $CellContext`x 
+               Sqrt[1 - $CellContext`x1^2]], {$CellContext`x, 0.07, 0.96}, 
+              PlotStyle -> {Thick, Blue}, PlotRange -> {{0, 1}, Automatic}, 
+              AxesLabel -> {
+                Style[$CellContext`half $CellContext`width, 12], 
+                Style["Content Area", 12]}, PlotLabel -> Style[
+                Row[{"Area of Rectangle"}], 18], ImageSize -> 
+              Medium]; $CellContext`pointOnCurve = 
+            If[CloudObject`Private`showmax$$, 
+              Graphics[{
+                PointSize[0.035], Red, 
+                Point[{0.5, $CellContext`maximumarea}]}], 
+              Graphics[{
+                PointSize[Large], Orange, 
+                
+                Point[{$CellContext`x2$$, $CellContext`arearectangle}]}]]; \
+$CellContext`polygon = Graphics[{{Thick, 
+                Circle[{0, 0}, 1, {0, Pi}], 
+                PointSize[0.015], 
+                Point[{0, 0}]}, {
+                EdgeForm[{Thick, Red}], 
+                FaceForm[Yellow], 
+                Polygon[{{-1, 0}, {-$CellContext`x1, 
+                   Sqrt[1 - $CellContext`x1^2]}, {$CellContext`x1, 
+                   Sqrt[1 - $CellContext`x1^2]}, {1, 0}}]}, 
+               If[$CellContext`x2$$ >= $CellContext`x1, {
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[Orange], 
+                 Opacity[0.6], 
+                 
+                 Polygon[{{-$CellContext`x2$$, 
+                    0}, {-$CellContext`x2$$, (
+                    Sqrt[1 - $CellContext`x1^2]/($CellContext`x1 - 
+                    1)) ($CellContext`x2$$ - 1)}, {$CellContext`x2$$, (
+                    Sqrt[1 - $CellContext`x1^2]/($CellContext`x1 - 
+                    1)) ($CellContext`x2$$ - 1)}, {$CellContext`x2$$, 0}}]}, {
+                
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[Orange], 
+                 Opacity[0.6], 
+                 Polygon[{{-$CellContext`x2$$, 0}, {-$CellContext`x2$$, 
+                    Sqrt[1 - $CellContext`x1^2]}, {$CellContext`x2$$, 
+                    Sqrt[1 - $CellContext`x1^2]}, {$CellContext`x2$$, 0}}]}]},
+               Axes -> True, ImageSize -> Medium]; $CellContext`maxrectangle = 
+            Graphics[{
+               If[$CellContext`x1 <= 0.5, {
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[Pink], 
+                 
+                 Rectangle[{-0.5, 0}, {
+                  0.5, Sqrt[1 - $CellContext`x1^2]/(
+                   2 (1 - $CellContext`x1))}]}, {
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[Pink], 
+                 Rectangle[{-0.5, 0}, {0.5, 
+                   Sqrt[1 - $CellContext`x1^2]}]}]}]; Row[{
+              If[CloudObject`Private`showmax$$, 
+               Show[$CellContext`polygon, $CellContext`maxrectangle], 
+               Show[$CellContext`polygon]], 
+              Show[$CellContext`areaPlot, $CellContext`pointOnCurve]}], Frame -> 
+           True]}]), 
+      "Specifications" :> {{{$CellContext`x2$$, 0.55, "x2"}, 0.5, 0.9, 
+         Appearance -> "Labeled", ImageSize -> Tiny, ControlPlacement -> 
+         1}, {{CloudObject`Private`answer$$, False, "answer"}, {False, True}, 
+         ControlPlacement -> 2}, {{
+         CloudObject`Private`showmax$$, False, "showmax"}, {False, True}, 
+         ControlPlacement -> 3}, 
+        Row[{
+          Manipulate`Place[1], 
+          Spacer[30], 
+          Manipulate`Place[2], 
+          Spacer[30], 
+          Manipulate`Place[3]}]}, 
+      "Options" :> {
+       TrackedSymbols :> {$CellContext`x1, $CellContext`x2$$, 
+          CloudObject`Private`answer$$, CloudObject`Private`showmax$$}}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{511., {297., 303.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.771172839686884*^9},
+ CellLabel->
+  "Out[109]=",ExpressionUUID->"985a82ec-b57b-4961-8d0b-be8be61d803c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "Subsection",ExpressionUUID->"4badf425-a81e-4456-838d-98c4d7bace03"]
+}, Open  ]]
+},
+WindowSize->{808, 974},
+WindowMargins->{{97, Automatic}, {69, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 203, 3, 67, "Section",ExpressionUUID->"27933c2a-6b19-400f-abe5-5750ee44fcc6"],
+Cell[CellGroupData[{
+Cell[808, 29, 251, 6, 81, "Subsection",ExpressionUUID->"af0565c9-3799-4cb5-b7af-387c436e5225"],
+Cell[CellGroupData[{
+Cell[1084, 39, 19325, 428, 1615, "Input",ExpressionUUID->"d09dcfc1-3058-4028-a042-3d784aa765cb"],
+Cell[20412, 469, 7637, 158, 677, "Output",ExpressionUUID->"985a82ec-b57b-4961-8d0b-be8be61d803c"]
+}, Open  ]]
+}, Open  ]],
+Cell[28076, 631, 77, 0, 54, "Subsection",ExpressionUUID->"4badf425-a81e-4456-838d-98c4d7bace03"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

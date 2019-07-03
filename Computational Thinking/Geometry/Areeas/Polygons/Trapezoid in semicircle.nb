@@ -1,0 +1,821 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     38894,        811]
+NotebookOptionsPosition[     38321,        791]
+NotebookOutlinePosition[     38659,        806]
+CellTagsIndexPosition[     38616,        803]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Area of a Trapezoid in a semicircle", "Section",
+ CellChangeTimes->{{3.6301909040848293`*^9, 3.63019090408908*^9}, 
+   3.771171783838738*^9},ExpressionUUID->"480eb09e-2bdd-48b5-9c50-\
+c5db3ef010cb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"areaT", "[", "\[Beta]_", "]"}], ":=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"1", "+", 
+         RowBox[{"Cos", "[", "\[Beta]", "]"}]}], ")"}], " ", 
+       RowBox[{"Sin", "[", "\[Beta]", "]"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Column", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Item", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{"answerT", ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Row", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<\\nThe trapezoid has maximum area at \[Theta] = \
+\!\(\*FractionBox[\(\[Pi]\), \(3\)]\)\\nIts Maximum area = \>\"", ",", " ", 
+                 RowBox[{"area", "[", 
+                  RowBox[{"\[Pi]", "/", "3"}], "]"}], ",", 
+                 "\"\< sq. units\\n\>\""}], "}"}], "]"}], ",", "15", ",", 
+              "Purple", ",", "Italic"}], "]"}], ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+             "\"\<\\nAt what central angle does the trapezoid has maximum \
+area ?\\n What is its maximum area ?\\n\>\"", ",", "15", ",", "Black", ",", 
+              "Italic"}], "]"}]}], "]"}], ",", 
+          RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+          RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+          RowBox[{"ItemSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"40", ",", "3"}], "}"}]}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Item", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"gr", "=", 
+            RowBox[{"Graphics", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"Thick", ",", "Blue", ",", 
+                RowBox[{"Circle", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "0"}], "}"}], ",", "1", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "\[Pi]"}], "}"}]}], "]"}], ",", 
+                RowBox[{"If", "[", 
+                 RowBox[{"answerT", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                    RowBox[{"FaceForm", "[", "Pink", "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"\[Pi]", "/", "3"}], "]"}], ",", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"\[Pi]", "/", "3"}], "]"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"\[Pi]", "/", "3"}], "]"}]}], ",", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"2", 
+                    RowBox[{"\[Pi]", "/", "3"}]}], "]"}]}], "}"}]}], "}"}], 
+                    "]"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Black"}], "}"}], "]"}], ",", 
+                    RowBox[{"FaceForm", "[", "Yellow", "]"}], ",", 
+                    RowBox[{"Disk", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", "0.2", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"\[Pi]", "/", "3"}]}], "}"}]}], "]"}]}], "}"}]}], 
+                   "}"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Black"}], "}"}], "]"}], ",", 
+                    RowBox[{"FaceForm", "[", "Yellow", "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "}"}]}], "}"}], 
+                    "]"}]}], "}"}]}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"Thick", ",", "Blue", ",", 
+                  RowBox[{"Line", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{"Green", ",", 
+                  RowBox[{"PointSize", "[", "0.03", "]"}], ",", 
+                  RowBox[{"Point", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+                "Black", ",", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                   "\"\<A\>\"", ",", "14", ",", "Bold", ",", 
+                    "\"\<Label\>\""}], "]"}], ",", 
+                  RowBox[{"1.1", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}]}]}], "]"}], ",", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                   "\"\<B\>\"", ",", "14", ",", "Bold", ",", 
+                    "\"\<Label\>\""}], "]"}], ",", 
+                  RowBox[{"1.1", 
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}]}]}], "]"}], ",", 
+                RowBox[{"If", "[", 
+                 RowBox[{"answerT", ",", 
+                  RowBox[{"Text", "[", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<C\>\"", ",", "14", ",", "Bold", ",", 
+                    "\"\<Label\>\""}], "]"}], ",", 
+                    RowBox[{"1.11", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"\[Pi]", "/", "3"}], "]"}], ",", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"\[Pi]", "/", "3"}], "]"}]}], "}"}]}]}], "]"}], 
+                  ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                  RowBox[{"Text", "[", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<C\>\"", ",", "14", ",", "Bold", ",", 
+                    "\"\<Label\>\""}], "]"}], ",", 
+                    RowBox[{"1.11", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "}"}]}]}], 
+                   "]"}]}], "]"}], ",", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                   "\"\<D\>\"", ",", "14", ",", "Bold", ",", 
+                    "\"\<Label\>\""}], "]"}], ",", 
+                  RowBox[{"1.11", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}]}], ",", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "}"}]}]}], "]"}],
+                 ",", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                   "\"\<M\>\"", ",", "14", ",", "Bold", ",", 
+                    "\"\<Label\>\""}], "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", 
+                    RowBox[{"-", "0.10"}]}], "}"}]}], "]"}], ",", 
+                RowBox[{"If", "[", 
+                 RowBox[{"answerT", ",", 
+                  RowBox[{"Line", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", 
+                    RowBox[{"\[Pi]", "/", "3"}], "]"}], ",", 
+                    RowBox[{"Sin", "[", 
+                    RowBox[{"\[Pi]", "/", "3"}], "]"}]}], "}"}]}], "}"}], 
+                   "]"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"Line", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", 
+                    RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "}"}]}], "}"}], 
+                   "]"}]}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"Thick", ",", 
+                  RowBox[{"Circle", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", "0.2", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "\[Theta]"}], "}"}]}], "]"}]}], "}"}], 
+                ",", 
+                RowBox[{"If", "[", 
+                 RowBox[{"answerT", ",", 
+                  RowBox[{"Inset", "[", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{"60", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "2"}], "}"}]}], "]"}], ",", 
+                    "\"\<\[Degree]\>\""}], "}"}], "]"}], ",", "14", ",", 
+                    "Bold"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.27", ",", "0.1"}], "}"}]}], "]"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"Inset", "[", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"\[Theta]", " ", 
+                    RowBox[{"180.", "/", "\[Pi]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "2"}], "}"}]}], "]"}], ",", 
+                    "\"\<\[Degree]\>\""}], "}"}], "]"}], ",", "14", ",", 
+                    "Bold"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0.35", ",", "0.1"}], "}"}]}], "]"}]}], "]"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"Inset", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<\\nAB = 2 \\n CD = \>\"", ",", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"Cos", "[", "\[Theta]", " ", "]"}]}], ",", 
+                    "\"\<\\n Height = \>\"", ",", " ", 
+                    RowBox[{"Sin", "[", "\[Theta]", " ", "]"}]}], "}"}], 
+                    "]"}], ",", "14", ",", "Bold"}], "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "0.3"}], ",", 
+                    RowBox[{"-", "0.3"}]}], "}"}]}], "]"}]}], 
+               "\[IndentingNewLine]", "\[IndentingNewLine]", "}"}], ",", 
+              RowBox[{"PlotRange", "\[Rule]", "Automatic"}], ",", 
+              RowBox[{"ImageSize", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"450", ",", "400"}], "}"}]}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"plot", "=", 
+            RowBox[{"Plot", "[", 
+             RowBox[{
+              FractionBox[
+               RowBox[{"2", 
+                RowBox[{"areaT", "[", "\[Alpha]", "]"}]}], "\[Pi]"], ",", 
+              RowBox[{"{", 
+               RowBox[{"\[Alpha]", ",", 
+                RowBox[{"\[Pi]", "/", "36"}], ",", 
+                FractionBox[
+                 RowBox[{"5.", "\[Pi]"}], "6"]}], "}"}], ",", 
+              RowBox[{"Epilog", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"If", "[", 
+                 RowBox[{"answerT", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"PointSize", "[", "Large", "]"}], ",", 
+                    RowBox[{"ColorData", "[", 
+                    RowBox[{"\"\<HTML\>\"", ",", "\"\<Green\>\""}], "]"}], 
+                    ",", 
+                    RowBox[{"Point", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "/", "3"}], ",", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"areaT", "[", 
+                    RowBox[{"\[Pi]", "/", "3"}], "]"}]}], ")"}], "/", 
+                    "\[Pi]"}]}], "}"}], "]"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"PointSize", "[", "Large", "]"}], ",", "Red", ",", 
+                    RowBox[{"Point", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\[Theta]", ",", 
+                    FractionBox[
+                    RowBox[{"2", 
+                    RowBox[{"areaT", "[", "\[Theta]", "]"}]}], "\[Pi]"]}], 
+                    "}"}], "]"}]}], "}"}]}], "]"}], "}"}]}], ",", 
+              "\[IndentingNewLine]", "\[IndentingNewLine]", 
+              RowBox[{"AxesOrigin", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+              RowBox[{"PlotStyle", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"Thick", ",", "Blue"}], "}"}]}], ",", 
+              RowBox[{"PlotLabel", "->", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Row", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"\"\<The trapezoid covers \>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    FractionBox[
+                    RowBox[{"2.", " ", 
+                    RowBox[{"areaT", "[", "\[Theta]", "]"}]}], "\[Pi]"], ",", 
+                    
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "3"}], "}"}]}], "]"}], ",", 
+                    "\"\<\\nof the semicircle at \[Theta] = \>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"\[Theta]", " ", 
+                    RowBox[{"180.", "/", "\[Pi]"}]}], "  ", ",", "3"}], "]"}],
+                     ",", "\"\<\[Degree].\\n\>\""}], "}"}], "]"}], ",", "12", 
+                 ",", "Bold", ",", "\"\<Label\>\""}], "]"}]}], ",", 
+              RowBox[{"AxesLabel", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<m \[Angle] BMC\>\"", ",", "\"\<Label\>\"", ",", "14", 
+                   ",", "Bold"}], "]"}], ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\< circle\\ncoverage\>\"", ",", "14", ",", "Bold", ",", 
+                   "\"\<Label\>\""}], "]"}]}], "}"}]}], ",", 
+              RowBox[{"ImageSize", "\[Rule]", "400"}], ",", 
+              RowBox[{"PlotRange", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "\[Pi]"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "0.3"}], ",", "1"}], "}"}]}], "}"}]}], ",", 
+              RowBox[{"Ticks", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", 
+                   RowBox[{"\[Pi]", "/", "9"}], ",", 
+                   RowBox[{"2", 
+                    RowBox[{"\[Pi]", "/", "9"}]}], ",", 
+                   RowBox[{"\[Pi]", "/", "3"}], ",", 
+                   RowBox[{"4", 
+                    RowBox[{"\[Pi]", "/", "9"}]}], ",", 
+                   RowBox[{"5", 
+                    RowBox[{"\[Pi]", "/", "9"}]}], ",", 
+                   RowBox[{"2", 
+                    RowBox[{"\[Pi]", "/", "3"}]}], ",", 
+                   RowBox[{"7", 
+                    RowBox[{"\[Pi]", "/", "9"}]}], ",", 
+                   RowBox[{"8", 
+                    RowBox[{"\[Pi]", "/", "9"}]}], ",", "\[Pi]"}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "0", ",", "0.2", ",", "0.4", ",", "0.6", ",", "0.8", ",", 
+                   "1"}], "}"}]}], "}"}]}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Show", "[", 
+               RowBox[{"gr", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}], ",", 
+              RowBox[{"Show", "[", 
+               RowBox[{"plot", ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}]}], "]"}]}], 
+             "\[IndentingNewLine]", "}"}], "]"}]}], ",", 
+          RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+          RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+          RowBox[{"ItemSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"30", ",", "3"}], "}"}]}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Row", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Control", "[", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"\[Theta]", ",", 
+            RowBox[{"\[Pi]", "/", "6"}], ",", 
+            "\"\<angle BMC in degrees\>\""}], "}"}], ",", 
+          RowBox[{"\[Pi]", "/", "24"}], ",", 
+          RowBox[{"\[Pi]", "/", "2"}], ",", 
+          RowBox[{"\[Pi]", "/", "180"}], ",", 
+          RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], 
+        "]"}], ",", 
+       RowBox[{"Spacer", "[", "30", "]"}], ",", 
+       RowBox[{"Control", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"answerT", ",", "False", ",", "\"\<answer\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{"False", ",", "True"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+     "]"}], ",", 
+    RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+     RowBox[{"{", 
+      RowBox[{"\[Theta]", ",", "answerT"}], "}"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.35696210375764*^9, {3.409937343674302*^9, 3.4099373890655084`*^9}, {
+   3.409937714804053*^9, 3.4099377163821983`*^9}, {3.409950448326415*^9, 
+   3.4099504990145636`*^9}, {3.4099505309993477`*^9, 3.409950535218152*^9}, {
+   3.4099505974376984`*^9, 3.4099506177973337`*^9}, {3.410012100274644*^9, 
+   3.4100121120479827`*^9}, {3.4100121988841457`*^9, 
+   3.4100122447627935`*^9}, {3.410012275784608*^9, 3.410012276391962*^9}, 
+   3.410012510643485*^9, {3.530054110040689*^9, 3.530054155363201*^9}, {
+   3.530054239670772*^9, 3.530054242192027*^9}, 3.530054382157312*^9, {
+   3.530054426297665*^9, 3.530054432018021*^9}, {3.530054466635401*^9, 
+   3.530054472271359*^9}, {3.5300547590612783`*^9, 3.5300547890059032`*^9}, {
+   3.530054867650342*^9, 3.53005487490742*^9}, {3.530054910613371*^9, 
+   3.530054934884286*^9}, {3.5301001790047073`*^9, 3.530100182554825*^9}, {
+   3.530100557769382*^9, 3.5301005597573357`*^9}, 3.530100633114822*^9, {
+   3.53010066421955*^9, 3.530100666079075*^9}, 3.5301007078310966`*^9, {
+   3.53010074288165*^9, 3.530100757407826*^9}, 3.530100787952614*^9, 
+   3.53010081990112*^9, {3.530100871401518*^9, 3.5301008771523027`*^9}, {
+   3.530100920919649*^9, 3.5301009582254057`*^9}, {3.530101012434742*^9, 
+   3.5301010323809967`*^9}, {3.530101064324688*^9, 3.530101103255786*^9}, {
+   3.530101137084516*^9, 3.530101140306788*^9}, {3.530101176410923*^9, 
+   3.5301012352964163`*^9}, {3.530101267376629*^9, 3.5301013309497957`*^9}, {
+   3.530101712013501*^9, 3.530101714141506*^9}, {3.530101857388986*^9, 
+   3.5301018612888393`*^9}, 3.5301019557156773`*^9, {3.5301019925625153`*^9, 
+   3.530101998080811*^9}, {3.530102106090843*^9, 3.53010211329392*^9}, {
+   3.530102161313033*^9, 3.530102172349111*^9}, {3.530102207920472*^9, 
+   3.530102234797216*^9}, {3.530102445310812*^9, 3.530102459032937*^9}, 
+   3.530102519789678*^9, {3.530102661759905*^9, 3.530102668667782*^9}, 
+   3.5301032643130293`*^9, {3.530103299413249*^9, 3.530103334563033*^9}, {
+   3.53010341849784*^9, 3.530103481462496*^9}, {3.530103514312269*^9, 
+   3.5301035154522257`*^9}, {3.5301035509133377`*^9, 
+   3.5301035762132807`*^9}, {3.530103621190962*^9, 3.530103651270033*^9}, {
+   3.530103830431717*^9, 3.530103834656293*^9}, {3.530103894234881*^9, 
+   3.53010398947974*^9}, {3.530104040682798*^9, 3.530104174514823*^9}, {
+   3.530104227456245*^9, 3.530104239783065*^9}, {3.530104287951295*^9, 
+   3.5301043083832397`*^9}, {3.530104358399106*^9, 3.530104397896084*^9}, 
+   3.530104442381229*^9, {3.530104478562261*^9, 3.530104480441996*^9}, 
+   3.530104516240591*^9, {3.530104558556466*^9, 3.530104570235518*^9}, {
+   3.530104631906728*^9, 3.530104652859429*^9}, {3.5301047886513977`*^9, 
+   3.5301049319770403`*^9}, {3.5301049999329453`*^9, 
+   3.5301050180347977`*^9}, {3.530105056776577*^9, 3.530105091700838*^9}, {
+   3.5301051319461107`*^9, 3.530105150495901*^9}, {3.530105195357121*^9, 
+   3.530105311806333*^9}, {3.530105346074337*^9, 3.530105350614208*^9}, 
+   3.5301055447046337`*^9, {3.53010563276071*^9, 3.530105640939892*^9}, {
+   3.5301056801009283`*^9, 3.530105723833392*^9}, {3.530106003494295*^9, 
+   3.5301060111502037`*^9}, {3.5301060524188137`*^9, 3.530106067974564*^9}, {
+   3.530106099584815*^9, 3.530106124315361*^9}, {3.530106220882756*^9, 
+   3.5301062384870653`*^9}, 3.5301062732668247`*^9, {3.530106306626935*^9, 
+   3.530106423191689*^9}, {3.530106560277668*^9, 3.530106568261015*^9}, {
+   3.530106608043296*^9, 3.530106608577243*^9}, {3.530106683889901*^9, 
+   3.5301066888192663`*^9}, {3.530106721699916*^9, 3.530106722506936*^9}, {
+   3.5301068053965483`*^9, 3.530106834583275*^9}, {3.5301068968971777`*^9, 
+   3.530106898208415*^9}, {3.5312302078259277`*^9, 3.5312302100494537`*^9}, {
+   3.531230297330776*^9, 3.531230320697762*^9}, {3.531230396069725*^9, 
+   3.5312303985560637`*^9}, 3.531230434114274*^9, {3.5312304841349916`*^9, 
+   3.531230512647559*^9}, 3.531230542934887*^9, {3.5312306257867403`*^9, 
+   3.5312307339544983`*^9}, {3.531230802001631*^9, 3.531230819682733*^9}, {
+   3.531230916494135*^9, 3.5312309342171907`*^9}, {3.531231065274839*^9, 
+   3.531231146748808*^9}, 3.531233581005788*^9, {3.5312336564818783`*^9, 
+   3.531233657884688*^9}, {3.53123378314789*^9, 3.531233795391644*^9}, {
+   3.531233846424717*^9, 3.531233847409649*^9}, {3.5312338848207407`*^9, 
+   3.531233885454597*^9}, {3.5312339751193438`*^9, 3.531234105034498*^9}, 
+   3.531234139931821*^9, {3.531234960278459*^9, 3.5312349668705683`*^9}, {
+   3.630190837489958*^9, 3.630190870656082*^9}, {3.63019099983447*^9, 
+   3.6301910621294527`*^9}, 3.630191093448392*^9, {3.630191127268886*^9, 
+   3.630191135083024*^9}, {3.6301911693261557`*^9, 3.630191177084571*^9}, {
+   3.6301912181785316`*^9, 3.6301912267657213`*^9}, {3.630191348046871*^9, 
+   3.6301913682132483`*^9}, {3.630191426813027*^9, 3.630191589861392*^9}, {
+   3.6301916241490507`*^9, 3.6301916531292353`*^9}, {3.630191696763088*^9, 
+   3.630191719394766*^9}, {3.630191898060058*^9, 3.630192005069771*^9}, {
+   3.630192045304389*^9, 3.63019207333635*^9}, {3.630192151691154*^9, 
+   3.63019216550665*^9}, {3.630192270338121*^9, 3.63019229515248*^9}, {
+   3.630192351013958*^9, 3.6301923642292547`*^9}, {3.6301924233261347`*^9, 
+   3.630192431445437*^9}, {3.630192534712747*^9, 3.6301925516236963`*^9}, {
+   3.630192607387393*^9, 3.6301926096469507`*^9}, {3.63019264197507*^9, 
+   3.6301926435492773`*^9}, {3.630192712464869*^9, 3.6301927274979258`*^9}, {
+   3.6301927890589314`*^9, 3.6301927947310123`*^9}, 3.6301928339580593`*^9, {
+   3.6301930513564987`*^9, 3.630193080081581*^9}, {3.63019311743991*^9, 
+   3.63019311806872*^9}, {3.630193171478252*^9, 3.6301931880183*^9}, {
+   3.6301932983844233`*^9, 3.630193314269391*^9}, 3.630193362051896*^9, {
+   3.630193436545144*^9, 3.630193439037833*^9}, {3.630194241318533*^9, 
+   3.6301942610361423`*^9}, {3.6301944603120728`*^9, 3.630194569668241*^9}, {
+   3.630194728868781*^9, 3.630194753200879*^9}, {3.630194790889913*^9, 
+   3.630194796391685*^9}, {3.630194838792802*^9, 3.6301950017788353`*^9}, {
+   3.63019504604858*^9, 3.630195050960154*^9}, {3.630195086791732*^9, 
+   3.6301950917249727`*^9}, {3.6301951602516947`*^9, 3.630195290123332*^9}, {
+   3.630195325164164*^9, 3.630195335794076*^9}, {3.6301953921719847`*^9, 
+   3.630195395753785*^9}, {3.630195453134647*^9, 3.6301954751993504`*^9}, {
+   3.630195996610146*^9, 3.630196181368951*^9}, {3.630196212067316*^9, 
+   3.630196292139913*^9}, {3.630196402885455*^9, 3.630196426860139*^9}, {
+   3.630196465238755*^9, 3.630196590945064*^9}, {3.630196692748807*^9, 
+   3.630196706165653*^9}, {3.630196880430051*^9, 3.630196958287181*^9}, {
+   3.630196990491129*^9, 3.630197006621174*^9}, {3.630197115707605*^9, 
+   3.630197129221223*^9}, {3.63019720657268*^9, 3.63019722241827*^9}, {
+   3.6301973089032717`*^9, 3.630197328607234*^9}, {3.6301973633273973`*^9, 
+   3.630197363948772*^9}, {3.630197407629107*^9, 3.6301974235415497`*^9}, {
+   3.63019755824124*^9, 3.630197572923216*^9}, {3.630197701342196*^9, 
+   3.630197704804181*^9}, {3.630197747903401*^9, 3.630197807995439*^9}, {
+   3.630197850787018*^9, 3.630197955760606*^9}, {3.6301980235412493`*^9, 
+   3.630198149950354*^9}, {3.630198226524624*^9, 3.630198227149205*^9}, {
+   3.630198283070819*^9, 3.630198296176075*^9}, {3.630198332197927*^9, 
+   3.630198356020602*^9}, {3.630198433045891*^9, 3.630198433741026*^9}, {
+   3.630198487344434*^9, 3.630198487877802*^9}, {3.659542595235155*^9, 
+   3.6595425958842154`*^9}, {3.659542646581236*^9, 3.659542887290143*^9}, {
+   3.6595429420533857`*^9, 3.659543135714765*^9}, {3.659543170525876*^9, 
+   3.659543173199045*^9}, {3.659543213442358*^9, 3.659543384113473*^9}, {
+   3.659543457892954*^9, 3.6595436926682453`*^9}, 3.659543726170886*^9, {
+   3.6595437642623577`*^9, 3.659543815749448*^9}, 3.65954384667264*^9, {
+   3.659544062792513*^9, 3.659544074164053*^9}, {3.6595441382035227`*^9, 
+   3.659544143760564*^9}, {3.6595442228257637`*^9, 3.659544372356637*^9}, {
+   3.659544500673122*^9, 3.659544543336883*^9}, {3.659544574115344*^9, 
+   3.659544734412043*^9}, {3.659544808601935*^9, 3.659544822817279*^9}, {
+   3.6595450111437187`*^9, 3.6595450480282707`*^9}, {3.771017186368856*^9, 
+   3.771017187782992*^9}, {3.771017265814376*^9, 3.771017328055088*^9}, {
+   3.771017398259694*^9, 3.771017404464521*^9}, {3.7710174364673843`*^9, 
+   3.771017475810198*^9}, {3.771017538450077*^9, 3.771017610278232*^9}, {
+   3.771017665672612*^9, 3.771017726219486*^9}, {3.7710178581976547`*^9, 
+   3.771017859572823*^9}, {3.771017974074458*^9, 3.771017982487967*^9}, {
+   3.771018041447517*^9, 3.771018055968689*^9}, {3.771018101812282*^9, 
+   3.7710181644009132`*^9}, 3.771018204456905*^9, {3.771018406366119*^9, 
+   3.7710184503042307`*^9}, 3.771136933275538*^9, {3.7711377778223457`*^9, 
+   3.771137828650896*^9}, {3.7711379460641623`*^9, 3.771137948268454*^9}, {
+   3.771137982884502*^9, 3.771137984433075*^9}, {3.771138060168889*^9, 
+   3.771138071707848*^9}, {3.771138108097474*^9, 3.7711381123327513`*^9}, {
+   3.771138164298339*^9, 3.7711381818001347`*^9}, {3.7711382154112062`*^9, 
+   3.771138223888453*^9}, {3.77113825641322*^9, 3.771138284616869*^9}, {
+   3.771138375976259*^9, 3.771138404772792*^9}, {3.7711384363461*^9, 
+   3.77113845035879*^9}, {3.771138485174776*^9, 3.7711385171369743`*^9}, {
+   3.7711385493296127`*^9, 3.7711386025586576`*^9}},
+ CellLabel->"In[108]:=",
+ CellID->1030613539,ExpressionUUID->"06f01827-0b83-451a-8faa-4ce6b00d2760"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`answerT$$ = False, $CellContext`\[Theta]$$ =
+     Rational[1, 6] Pi, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Theta]$$], Rational[1, 6] Pi, 
+       "angle BMC in degrees"}, Rational[1, 24] Pi, Rational[1, 2] Pi, 
+      Rational[1, 180] Pi}, {{
+       Hold[$CellContext`answerT$$], False, "answer"}, {False, True}}, {
+      Hold[
+       Row[{
+         Manipulate`Place[1], 
+         Spacer[30], 
+         Manipulate`Place[2]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+    Typeset`size$$ = {575., {331.634033203125, 337.365966796875}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`\[Theta]$42352$$ = 0, $CellContext`answerT$42353$$ = 
+    False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`answerT$$ = False, $CellContext`\[Theta]$$ = 
+        Rational[1, 6] Pi}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$42352$$, 0], 
+        Hold[$CellContext`answerT$$, $CellContext`answerT$42353$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ($CellContext`areaT[
+          Pattern[$CellContext`\[Beta], 
+           Blank[]]] := (1 + Cos[$CellContext`\[Beta]]) 
+         Sin[$CellContext`\[Beta]]; Column[{
+          Item[
+           If[$CellContext`answerT$$, 
+            Style[
+             
+             Row[{"\nThe trapezoid has maximum area at \[Theta] = \
+\!\(\*FractionBox[\(\[Pi]\), \(3\)]\)\nIts Maximum area = ", 
+               $CellContext`area[Pi/3], " sq. units\n"}], 15, Purple, Italic], 
+            Style[
+            "\nAt what central angle does the trapezoid has maximum area ?\n \
+What is its maximum area ?\n", 15, Black, Italic]], Alignment -> Left, Frame -> 
+           True, ItemSize -> {40, 3}], 
+          Item[$CellContext`gr = Graphics[{Thick, Blue, 
+               Circle[{0, 0}, 1, {0, Pi}], 
+               If[$CellContext`answerT$$, {{
+                  EdgeForm[{Thick, Blue}], 
+                  FaceForm[Pink], 
+                  Polygon[{{-1, 0}, {1, 0}, {
+                    Cos[Pi/3], 
+                    Sin[Pi/3]}, {-Cos[Pi/3], 
+                    Sin[2 (Pi/3)]}}]}, {
+                  EdgeForm[{Thick, Black}], 
+                  FaceForm[Yellow], 
+                  Disk[{0, 0}, 0.2, {0, Pi/3}]}}, {
+                 EdgeForm[{Thick, Black}], 
+                 FaceForm[Yellow], 
+                 Polygon[{{-1, 0}, {1, 0}, {
+                    Cos[$CellContext`\[Theta]$$], 
+                    Sin[$CellContext`\[Theta]$$]}, {-
+                    Cos[$CellContext`\[Theta]$$], 
+                    Sin[$CellContext`\[Theta]$$]}}]}], {Thick, Blue, 
+                Line[{{-1, 0}, {1, 0}}]}, {Green, 
+                PointSize[0.03], 
+                Point[{0, 0}]}, Black, 
+               Text[
+                Style["A", 14, Bold, "Label"], 1.1 {-1, 0}], 
+               Text[
+                Style["B", 14, Bold, "Label"], 1.1 {1, 0}], 
+               If[$CellContext`answerT$$, 
+                Text[
+                 Style["C", 14, Bold, "Label"], 1.11 {
+                   Cos[Pi/3], 
+                   Sin[Pi/3]}], 
+                Text[
+                 Style["C", 14, Bold, "Label"], 1.11 {
+                   Cos[$CellContext`\[Theta]$$], 
+                   Sin[$CellContext`\[Theta]$$]}]], 
+               Text[
+                Style["D", 14, Bold, "Label"], 
+                1.11 {-Cos[$CellContext`\[Theta]$$], 
+                  Sin[$CellContext`\[Theta]$$]}], 
+               Text[
+                Style["M", 14, Bold, "Label"], {0, -0.1}], 
+               If[$CellContext`answerT$$, 
+                Line[{{0, 0}, {
+                   Cos[Pi/3], 
+                   Sin[Pi/3]}}], 
+                Line[{{0, 0}, {
+                   Cos[$CellContext`\[Theta]$$], 
+                   Sin[$CellContext`\[Theta]$$]}}]], {Thick, 
+                Circle[{0, 0}, 0.2, {0, $CellContext`\[Theta]$$}]}, 
+               If[$CellContext`answerT$$, 
+                Inset[
+                 Style[
+                  Row[{
+                    NumberForm[60, {4, 2}], "\[Degree]"}], 14, Bold], {0.27, 
+                 0.1}], 
+                Inset[
+                 Style[
+                  Row[{
+                    NumberForm[$CellContext`\[Theta]$$ (180./Pi), {4, 2}], 
+                    "\[Degree]"}], 14, Bold], {0.35, 0.1}]], 
+               Inset[
+                Style[
+                 
+                 Row[{"\nAB = 2 \n CD = ", 2 Cos[$CellContext`\[Theta]$$], 
+                   "\n Height = ", 
+                   Sin[$CellContext`\[Theta]$$]}], 14, Bold], {-0.3, -0.3}]}, 
+              PlotRange -> Automatic, 
+              ImageSize -> {450, 400}]; $CellContext`plot = 
+            Plot[2 $CellContext`areaT[$CellContext`\[Alpha]]/
+              Pi, {$CellContext`\[Alpha], Pi/36, 5. Pi/6}, Epilog -> {
+                If[$CellContext`answerT$$, {
+                  PointSize[Large], 
+                  ColorData["HTML", "Green"], 
+                  Point[{Pi/3, (2 $CellContext`areaT[Pi/3])/Pi}]}, {
+                  PointSize[Large], Red, 
+                  
+                  Point[{$CellContext`\[Theta]$$, 
+                    2 $CellContext`areaT[$CellContext`\[Theta]$$]/Pi}]}]}, 
+              AxesOrigin -> {0, 0}, PlotStyle -> {Thick, Blue}, PlotLabel -> 
+              Style[
+                Row[{"The trapezoid covers ", 
+                  NumberForm[
+                  2. $CellContext`areaT[$CellContext`\[Theta]$$]/Pi, {5, 3}], 
+                  "\nof the semicircle at \[Theta] = ", 
+                  NumberForm[$CellContext`\[Theta]$$ (180./Pi), 3], 
+                  "\[Degree].\n"}], 12, Bold, "Label"], AxesLabel -> {
+                Style["m \[Angle] BMC", "Label", 14, Bold], 
+                Style[" circle\ncoverage", 14, Bold, "Label"]}, ImageSize -> 
+              400, PlotRange -> {{0, Pi}, {-0.3, 1}}, 
+              Ticks -> {{
+                0, Pi/9, 2 (Pi/9), Pi/3, 4 (Pi/9), 5 (Pi/9), 2 (Pi/3), 
+                 7 (Pi/9), 8 (Pi/9), Pi}, {0, 0.2, 0.4, 0.6, 0.8, 1}}]; Row[{
+              Show[$CellContext`gr, ImageSize -> Medium, PlotRange -> All], 
+              Show[$CellContext`plot, ImageSize -> Medium]}], Alignment -> 
+           Left, Frame -> True, ItemSize -> {30, 3}]}]), 
+      "Specifications" :> {{{$CellContext`\[Theta]$$, Rational[1, 6] Pi, 
+          "angle BMC in degrees"}, Rational[1, 24] Pi, Rational[1, 2] Pi, 
+         Rational[1, 180] Pi, Appearance -> "Labeled", ControlPlacement -> 
+         1}, {{$CellContext`answerT$$, False, "answer"}, {False, True}, 
+         ControlPlacement -> 2}, 
+        Row[{
+          Manipulate`Place[1], 
+          Spacer[30], 
+          Manipulate`Place[2]}]}, 
+      "Options" :> {
+       TrackedSymbols :> {$CellContext`\[Theta]$$, $CellContext`answerT$$}}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{620., {379., 385.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.771172546446151*^9},
+ CellLabel->
+  "Out[108]=",ExpressionUUID->"e3fbd1cb-af56-486d-b9a0-6aa629c1ab6e"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{92, Automatic}, {Automatic, 111}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 204, 3, 67, "Section",ExpressionUUID->"480eb09e-2bdd-48b5-9c50-c5db3ef010cb"],
+Cell[CellGroupData[{
+Cell[809, 29, 29628, 591, 1423, "Input",ExpressionUUID->"06f01827-0b83-451a-8faa-4ce6b00d2760",
+ CellID->1030613539],
+Cell[30440, 622, 7853, 165, 841, "Output",ExpressionUUID->"e3fbd1cb-af56-486d-b9a0-6aa629c1ab6e"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

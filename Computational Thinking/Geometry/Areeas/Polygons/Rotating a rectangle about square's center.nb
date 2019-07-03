@@ -1,0 +1,666 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30318,        656]
+NotebookOptionsPosition[     29637,        634]
+NotebookOutlinePosition[     29974,        649]
+CellTagsIndexPosition[     29931,        646]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Rotating a rectangle about a center of a square.", "Section",
+ CellChangeTimes->{{3.698750625448892*^9, 
+  3.698750684601804*^9}},ExpressionUUID->"a264f2e0-9c01-4677-aa12-\
+47d07b0ee2f6"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Calculate the common area between a square and a rectangle whose vertex is at \
+the center of the square.\
+\>", "Subsection",
+ CellChangeTimes->{{3.6987932512995987`*^9, 
+  3.698793311849897*^9}},ExpressionUUID->"148d81d3-3936-4375-8ffe-\
+b402468f4abe"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "hint", ",", "answer"}], "}"}], ",", 
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{"answer", ",", 
+        RowBox[{"\[Theta]", "=", "0"}], ",", "\[Theta]"}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Column", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Item", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Which", "[", 
+            RowBox[{"answer", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+              "\"\<\\nCommon area = \!\(\*FractionBox[\(1\), \(4\)]\) of area \
+of square = 1 \!\(\*SuperscriptBox[\(in\), \(2\)]\)\\n\>\"", ",", "16", ",", 
+               "Purple"}], "]"}], ",", "hint", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+              "\"\<\\n rotate the rectangle until its sides coinside with the \
+square's diagonals ( \[Theta] = 0 )\\n\>\"", ",", "14", ",", " ", "Blue"}], 
+              "]"}], ",", "True", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+              "\"\<Calculate the common area bet. the square and \\nthe \
+rectangle if the square's side = 2 and the rctangle has length \
+3\!\(\*SqrtBox[\(2\)]\) and width 1.5\!\(\*SqrtBox[\(2\)]\)\\n\>\"", ",", 
+               "14", ",", "Black"}], "]"}]}], "\[IndentingNewLine]", "]"}], 
+           ",", 
+           RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+           RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Item", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Graphics", "[", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"EdgeForm", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"Thick", ",", "Black"}], "}"}], "]"}], ",", 
+                 RowBox[{"FaceForm", "[", "White", "]"}], ",", 
+                 RowBox[{"Rectangle", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "1"}], ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "1"}], "}"}]}], "]"}]}], "}"}], ",", 
+               RowBox[{"Which", "[", 
+                RowBox[{
+                 RowBox[{"\[Theta]", "<", "0."}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Black"}], "}"}], "]"}], ",", 
+                   RowBox[{"FaceForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Opacity", "[", "0.9", "]"}]}], "}"}], "]"}], ",", 
+                   RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Tan", "[", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "/", "4"}], "+", "\[Theta]"}], "]"}]}], 
+                    "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Tan", "[", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "/", "4"}], "+", "\[Theta]"}], "]"}], 
+                    ",", 
+                    RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}]}], "}"}], ",", 
+                 RowBox[{"\[Theta]", ">", "0"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Black"}], "}"}], "]"}], ",", 
+                   RowBox[{"FaceForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Opacity", "[", "0.9", "]"}]}], "}"}], "]"}], ",", 
+                   RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"Tan", "[", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "/", "4"}], "-", "\[Theta]"}], "]"}]}], 
+                    "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Tan", "[", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "/", "4"}], "-", "\[Theta]"}], "]"}], 
+                    ",", "1"}], "}"}]}], "}"}], "]"}]}], "}"}]}], "]"}], ",", 
+               "\[IndentingNewLine]", "\[IndentingNewLine]", 
+               RowBox[{"If", "[", 
+                RowBox[{"answer", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                    RowBox[{"FaceForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Yellow", ",", 
+                    RowBox[{"Opacity", "[", "0.5", "]"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1.5", ",", "1.5"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4.5", ",", 
+                    RowBox[{"-", "1.5"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", 
+                    RowBox[{"-", "3"}]}], "}"}]}], "}"}], "]"}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                    RowBox[{"FaceForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Opacity", "[", "0.8", "]"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}]}], "}"}]}], 
+                  "\[IndentingNewLine]", "}"}], ",", 
+                 RowBox[{"Rotate", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                    RowBox[{"FaceForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Yellow", ",", 
+                    RowBox[{"Opacity", "[", "0.5", "]"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1.5", ",", "1.5"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4.5", ",", 
+                    RowBox[{"-", "1.5"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", 
+                    RowBox[{"-", "3"}]}], "}"}]}], "}"}], "]"}]}], "}"}], ",",
+                    "\[Theta]", ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}]}], "]"}]}], 
+                "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"If", "[", 
+                RowBox[{"hint", ",", "\[IndentingNewLine]", 
+                 RowBox[{"Which", "[", 
+                  RowBox[{
+                   RowBox[{"\[Theta]", "<", "0."}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                    RowBox[{"FaceForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Opacity", "[", "0.8", "]"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1.", ",", 
+                    RowBox[{"Tan", "[", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "/", "4"}], "+", "\[Theta]"}], "]"}]}], 
+                    "}"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Tan", "[", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "/", "4"}], "+", "\[Theta]"}], "]"}], 
+                    ",", 
+                    RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}]}], "}"}], ",", 
+                   RowBox[{"\[Theta]", "\[Equal]", "0."}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                    RowBox[{"FaceForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Opacity", "[", "0.8", "]"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}]}], "}"}], ",", 
+                   RowBox[{"\[Theta]", ">", "0."}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                    RowBox[{"FaceForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Opacity", "[", "0.8", "]"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "1"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Tan", "[", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "/", "4"}], "-", "\[Theta]"}], "]"}], 
+                    ",", "1"}], "}"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Polygon", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", 
+                    RowBox[{"Tan", "[", 
+                    RowBox[{
+                    RowBox[{"\[Pi]", "/", "4"}], "-", "\[Theta]"}], "]"}]}]}],
+                     "}"}]}], "}"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+                  "]"}]}], "\[IndentingNewLine]", "]"}]}], "}"}], ",", 
+             RowBox[{"AxesOrigin", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+             RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "1.5"}], ",", "5"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "4.5"}], ",", "2.7"}], "}"}]}], "}"}]}]}], 
+            "]"}], "\[IndentingNewLine]", ",", 
+           RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+           RowBox[{"Alignment", "\[Rule]", 
+            RowBox[{"{", "Center", "}"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+        "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Row", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\[Theta]", ",", 
+             RowBox[{
+              RowBox[{"-", "\[Pi]"}], "/", "10."}], ",", 
+             "\"\<rot.Angle\>\""}], "}"}], ",", 
+           RowBox[{
+            RowBox[{"-", "\[Pi]"}], "/", "4."}], ",", 
+           RowBox[{"\[Pi]", "/", "4."}], ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", 
+            RowBox[{"Tiny", "\"\<,Enabled\[Rule]hint\>\""}]}]}], "}"}], "]"}],
+         ",", "\[IndentingNewLine]", 
+        RowBox[{"Spacer", "[", "30", "]"}], ",", 
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"hint", ",", "False", ",", "\"\<hint\>\""}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"False", ",", "True"}], "}"}]}], "}"}], "]"}], ",", 
+        RowBox[{"Spacer", "[", "30", "]"}], ",", 
+        RowBox[{"Control", "[", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"answer", ",", "False", ",", "\"\<answer\>\""}], "}"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"False", ",", "True"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+      "]"}], ",", 
+     RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+      RowBox[{"{", 
+       RowBox[{"\[Theta]", ",", "hint", ",", "answer"}], "}"}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.698746214989987*^9, 3.698746410157428*^9}, {
+   3.698746450043787*^9, 3.69874655340655*^9}, {3.6987466482930202`*^9, 
+   3.698746705981625*^9}, {3.69874674268114*^9, 3.6987467663857403`*^9}, {
+   3.698746852791347*^9, 3.698746857194296*^9}, {3.69874699289799*^9, 
+   3.698746996585958*^9}, {3.6987470563074017`*^9, 3.698747071935388*^9}, {
+   3.6987471169322157`*^9, 3.698747156653267*^9}, {3.698747193937508*^9, 
+   3.698747314159298*^9}, {3.6987473613904343`*^9, 3.698747392138908*^9}, 
+   3.698747438838217*^9, {3.698747470605186*^9, 3.698747481753417*^9}, 
+   3.698747519077379*^9, {3.698747581957842*^9, 3.698747592349516*^9}, 
+   3.698748429762989*^9, {3.698748462891852*^9, 3.6987485317266703`*^9}, {
+   3.698749234815978*^9, 3.698749285309514*^9}, {3.698749338540394*^9, 
+   3.69874936428927*^9}, {3.698749432797192*^9, 3.698749436660411*^9}, {
+   3.698749524464617*^9, 3.698749577654924*^9}, 3.698749613229682*^9, {
+   3.698749680014023*^9, 3.698749696829836*^9}, {3.6987499822067327`*^9, 
+   3.698750047543315*^9}, {3.698750089486823*^9, 3.698750100303257*^9}, {
+   3.698750153913803*^9, 3.698750173178516*^9}, {3.6987504209669647`*^9, 
+   3.698750443895149*^9}, 3.698750491333427*^9, {3.698750774279319*^9, 
+   3.698750874740027*^9}, 3.698750925894758*^9, 3.698754651442821*^9, {
+   3.698792930592955*^9, 3.6987929416663227`*^9}, {3.6987930653352013`*^9, 
+   3.698793100929576*^9}, {3.698793182097677*^9, 3.698793195194784*^9}, {
+   3.6987933687965593`*^9, 3.698793402005723*^9}, {3.698793437512268*^9, 
+   3.698793450661643*^9}, {3.698793543298996*^9, 3.69879364452404*^9}, {
+   3.6987936856890917`*^9, 3.698793921626255*^9}, {3.6987941246640787`*^9, 
+   3.698794283320429*^9}, {3.6987944025891333`*^9, 3.698794414411538*^9}, {
+   3.6987945653292027`*^9, 3.698794599315689*^9}, {3.698794759030691*^9, 
+   3.698794764481729*^9}, {3.6987948086480923`*^9, 3.6987948651345043`*^9}, {
+   3.6987948956376953`*^9, 3.6987949380931683`*^9}, {3.698794970635873*^9, 
+   3.698795118665449*^9}, {3.6987951992833033`*^9, 3.69879520150574*^9}, {
+   3.69879529838269*^9, 3.698795309563908*^9}, {3.698795426415374*^9, 
+   3.6987954302525387`*^9}, {3.698795463629149*^9, 3.698795493484942*^9}, {
+   3.6987955323866653`*^9, 3.6987955445301228`*^9}, {3.698795633049151*^9, 
+   3.698795667601796*^9}, 3.698795734068228*^9, {3.698795768521454*^9, 
+   3.698795850681877*^9}, {3.698795887563097*^9, 3.698795924039031*^9}, {
+   3.6987959749866467`*^9, 3.698796041335531*^9}, {3.698796098414608*^9, 
+   3.698796106580348*^9}, {3.6987964523400993`*^9, 3.698796507614122*^9}, {
+   3.698796546073949*^9, 3.6987965598094187`*^9}, {3.698796596764269*^9, 
+   3.698796686189947*^9}, {3.698796771151366*^9, 3.6987967994935293`*^9}, {
+   3.698797079798915*^9, 3.6987971681027107`*^9}, {3.6987973806718807`*^9, 
+   3.69879738327553*^9}, {3.6987979325272417`*^9, 3.69879796450813*^9}, {
+   3.698829659522204*^9, 3.698829671770339*^9}, {3.6988297076961813`*^9, 
+   3.698829733963442*^9}, {3.698829816851591*^9, 3.69882982952586*^9}, 
+   3.6988299236550283`*^9, {3.6988299731386423`*^9, 3.698830169893224*^9}, {
+   3.698830207999835*^9, 3.698830208280058*^9}, {3.698830379653657*^9, 
+   3.698830394815465*^9}, {3.698830444603548*^9, 3.6988304669728203`*^9}, {
+   3.698830552655257*^9, 3.698830639280381*^9}, {3.6988306762095203`*^9, 
+   3.698830679736405*^9}, {3.698830729805621*^9, 3.698830767154529*^9}, 
+   3.698830803145081*^9, {3.698830856285737*^9, 3.698830871740778*^9}, 
+   3.698830908096341*^9, 3.698831002138695*^9, {3.6988310869153833`*^9, 
+   3.6988311059670477`*^9}, {3.698831263176539*^9, 3.698831276426961*^9}, {
+   3.698831396742485*^9, 3.698831431853706*^9}, {3.698831710682248*^9, 
+   3.698831722212762*^9}, {3.698831775444131*^9, 3.698831810059169*^9}, {
+   3.6988318416034927`*^9, 3.698831845274233*^9}, {3.698831945631716*^9, 
+   3.698831994515768*^9}, {3.698832133125676*^9, 3.698832156471683*^9}, {
+   3.698832348591547*^9, 3.6988323591168737`*^9}, 3.698832406865911*^9, {
+   3.6988324720290623`*^9, 3.698832523333427*^9}, 3.698832558768092*^9, {
+   3.698832692429865*^9, 3.698832699268227*^9}, {3.698832936133481*^9, 
+   3.698832954410261*^9}, {3.698833025822729*^9, 3.698833029013475*^9}, {
+   3.698834435875517*^9, 3.698834453595744*^9}, {3.698834558211948*^9, 
+   3.698834576893602*^9}, {3.698834887912952*^9, 3.698834896862694*^9}, {
+   3.698834954954002*^9, 3.698834979282509*^9}, {3.698835012293394*^9, 
+   3.6988350233939667`*^9}, 3.698835059389247*^9, {3.698835159113628*^9, 
+   3.698835178383107*^9}, {3.698835215557024*^9, 3.698835216211402*^9}, {
+   3.698835510778768*^9, 3.6988355965227222`*^9}, {3.698835649021194*^9, 
+   3.698835674423785*^9}, {3.6988357165639973`*^9, 3.698835757895944*^9}, {
+   3.6988358095446177`*^9, 3.698835856473527*^9}, {3.698835898138348*^9, 
+   3.698835936840518*^9}, {3.698835976197441*^9, 3.698836026699658*^9}, {
+   3.698836109639058*^9, 3.6988361457159233`*^9}, {3.698836202946333*^9, 
+   3.698836233655843*^9}, {3.6988366528843603`*^9, 3.698836666247506*^9}, {
+   3.698836761691716*^9, 3.698836763355632*^9}, {3.698836848880187*^9, 
+   3.698836854538204*^9}, {3.698837156906404*^9, 3.698837165857771*^9}, {
+   3.698837420442197*^9, 3.698837424775134*^9}, {3.698837832875162*^9, 
+   3.69883784797786*^9}, {3.698837933376039*^9, 3.698837967864194*^9}, {
+   3.698837998392964*^9, 3.6988380313280087`*^9}, {3.6988380741613398`*^9, 
+   3.6988381250966578`*^9}, {3.6988382102839117`*^9, 3.69883821212245*^9}, {
+   3.69883826638913*^9, 3.6988382789069023`*^9}, 3.698838480450079*^9, {
+   3.698838585608282*^9, 3.6988385933635674`*^9}, 3.6988389852582417`*^9, {
+   3.698839025650752*^9, 3.6988390337559843`*^9}, {3.698839147216734*^9, 
+   3.6988391522651587`*^9}, {3.702935915757896*^9, 3.702935925637001*^9}},
+ CellLabel->
+  "In[101]:=",ExpressionUUID->"3b52d8e0-178c-4b52-ba64-17a85fe66028"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`\[Theta]$$, $CellContext`hint$$, 
+  CloudObject`Private`answer$$}, 
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{CloudObject`Private`answer$$ = 
+     False, $CellContext`hint$$ = 
+     False, $CellContext`\[Theta]$$ = -0.3141592653589793, Typeset`show$$ = 
+     True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+     "\"untitled\"", Typeset`specs$$ = {{{
+        Hold[$CellContext`\[Theta]$$], -0.3141592653589793, 
+        "rot.Angle"}, -0.7853981633974483, 0.7853981633974483}, {{
+        Hold[$CellContext`hint$$], False, "hint"}, {False, True}}, {{
+        Hold[CloudObject`Private`answer$$], False, "answer"}, {False, True}}, {
+       Hold[
+        Row[{
+          Manipulate`Place[1], 
+          Spacer[30], 
+          Manipulate`Place[2], 
+          Spacer[30], 
+          Manipulate`Place[3]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+     Typeset`size$$ = {451., {245.634033203125, 251.365966796875}}, 
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+     True, $CellContext`\[Theta]$$$38068$$ = 0, $CellContext`hint$$$38069$$ = 
+     False, CloudObject`Private`answer$$$38070$$ = False}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      2, StandardForm, 
+       "Variables" :> {
+        CloudObject`Private`answer$$ = False, $CellContext`hint$$ = 
+         False, $CellContext`\[Theta]$$ = -0.3141592653589793}, 
+       "ControllerVariables" :> {
+         Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$$$38068$$, 0], 
+         Hold[$CellContext`hint$$, $CellContext`hint$$$38069$$, False], 
+         Hold[
+         CloudObject`Private`answer$$, CloudObject`Private`answer$$$38070$$, 
+          False]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, 
+       "Body" :> (
+        If[CloudObject`Private`answer$$, $CellContext`\[Theta]$$ = 
+          0, $CellContext`\[Theta]$$]; Column[{
+           Item[
+            Which[CloudObject`Private`answer$$, 
+             Style[
+             "\nCommon area = \!\(\*FractionBox[\(1\), \(4\)]\) of area of \
+square = 1 \!\(\*SuperscriptBox[\(in\), \(2\)]\)\n", 16, 
+              Purple], $CellContext`hint$$, 
+             Style[
+             "\n rotate the rectangle until its sides coinside with the \
+square's diagonals ( \[Theta] = 0 )\n", 14, Blue], True, 
+             Style[
+             "Calculate the common area bet. the square and \nthe rectangle \
+if the square's side = 2 and the rctangle has length 3\!\(\*SqrtBox[\(2\)]\) \
+and width 1.5\!\(\*SqrtBox[\(2\)]\)\n", 14, Black]], Frame -> True, Alignment -> 
+            Left], 
+           Item[
+            Graphics[{{
+               EdgeForm[{Thick, Black}], 
+               FaceForm[White], 
+               Rectangle[{-1, -1}, {1, 1}]}, 
+              Which[$CellContext`\[Theta]$$ < 0., {
+                EdgeForm[{Thick, Black}], 
+                FaceForm[{Red, 
+                  Opacity[0.9]}], 
+                Polygon[{{0, 0}, {1, 
+                   Tan[Pi/4 + $CellContext`\[Theta]$$]}, {1, -1}, {
+                   Tan[
+                   Pi/4 + $CellContext`\[Theta]$$], -1}}]}, $CellContext`\
+\[Theta]$$ > 0, {
+                EdgeForm[{Thick, Black}], 
+                FaceForm[{Red, 
+                  Opacity[0.9]}], 
+                Polygon[{{0, 0}, {1, 
+                   Tan[Pi/4 - $CellContext`\[Theta]$$]}, {1, 1}, {
+                   Tan[Pi/4 - $CellContext`\[Theta]$$], 1}}]}], 
+              If[CloudObject`Private`answer$$, {{
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[{Yellow, 
+                   Opacity[0.5]}], 
+                 Polygon[{{0, 0}, {1.5, 1.5}, {4.5, -1.5}, {3, -3}}]}, {
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[{Red, 
+                   Opacity[0.8]}], 
+                 Polygon[{{0, 0}, {1, 1}, {1, -1}}]}}, 
+               Rotate[{
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[{Yellow, 
+                   Opacity[0.5]}], 
+                 
+                 Polygon[{{0, 0}, {1.5, 1.5}, {4.5, -1.5}, {
+                   3, -3}}]}, $CellContext`\[Theta]$$, {0, 0}]], 
+              If[$CellContext`hint$$, 
+               Which[$CellContext`\[Theta]$$ < 0., {
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[{Red, 
+                   Opacity[0.8]}], 
+                 Polygon[{{0, 0}, {1, 1}, {1., 
+                    Tan[Pi/4 + $CellContext`\[Theta]$$]}}], 
+                 Polygon[{{0, 0}, {1, -1}, {
+                    Tan[
+                    Pi/4 + $CellContext`\[Theta]$$], -1}}]}, $CellContext`\
+\[Theta]$$ == 0., {
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[{Red, 
+                   Opacity[0.8]}], 
+                 Polygon[{{0, 0}, {1, 1}, {1, -1}}]}, $CellContext`\[Theta]$$ > 
+                0., {
+                 EdgeForm[{Thick, Blue}], 
+                 FaceForm[{Red, 
+                   Opacity[0.8]}], 
+                 Polygon[{{0, 0}, {1, 1}, {
+                    Tan[Pi/4 - $CellContext`\[Theta]$$], 1}}], 
+                 
+                 Polygon[{{0, 0}, {1, -1}, {
+                   1, -Tan[Pi/4 - $CellContext`\[Theta]$$]}}]}]]}, 
+             AxesOrigin -> {0, 0}, Axes -> True, ImageSize -> Medium, 
+             PlotRange -> {{-1.5, 5}, {-4.5, 2.7}}], Frame -> True, 
+            Alignment -> {Center}]}]), 
+       "Specifications" :> {{{$CellContext`\[Theta]$$, -0.3141592653589793, 
+           "rot.Angle"}, -0.7853981633974483, 0.7853981633974483, Appearance -> 
+          "Labeled", ImageSize -> ",Enabled\[Rule]hint" Tiny, 
+          ControlPlacement -> 1}, {{$CellContext`hint$$, False, "hint"}, {
+          False, True}, ControlPlacement -> 2}, {{
+          CloudObject`Private`answer$$, False, "answer"}, {False, True}, 
+          ControlPlacement -> 3}, 
+         Row[{
+           Manipulate`Place[1], 
+           Spacer[30], 
+           Manipulate`Place[2], 
+           Spacer[30], 
+           Manipulate`Place[3]}]}, 
+       "Options" :> {
+        TrackedSymbols :> {$CellContext`\[Theta]$$, $CellContext`hint$$, 
+           CloudObject`Private`answer$$}}, "DefaultOptions" :> {}],
+      ImageSizeCache->{496., {292., 298.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{3.771171160751943*^9},
+ CellLabel->
+  "Out[101]=",ExpressionUUID->"dde73a94-3af1-48b4-9f42-fba494b559c9"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{167, Automatic}, {9, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 193, 3, 67, "Section",ExpressionUUID->"a264f2e0-9c01-4677-aa12-47d07b0ee2f6"],
+Cell[CellGroupData[{
+Cell[798, 29, 263, 6, 81, "Subsection",ExpressionUUID->"148d81d3-3936-4375-8ffe-b402468f4abe"],
+Cell[CellGroupData[{
+Cell[1086, 39, 21497, 436, 1113, "Input",ExpressionUUID->"3b52d8e0-178c-4b52-ba64-17a85fe66028"],
+Cell[22586, 477, 7011, 152, 643, "Output",ExpressionUUID->"dde73a94-3af1-48b4-9f42-fba494b559c9"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

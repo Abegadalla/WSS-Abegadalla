@@ -1,0 +1,708 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     29593,        698]
+NotebookOptionsPosition[     29039,        679]
+NotebookOutlinePosition[     29378,        694]
+CellTagsIndexPosition[     29335,        691]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+What is the largest equilateral triangle that can be inscribed in a unit \
+square (A square  with side length = 1 cm)\
+\>", "Section",
+ CellChangeTimes->{{3.6480334907693663`*^9, 3.6480335727219152`*^9}, {
+  3.64807651159692*^9, 
+  3.6480765125962963`*^9}},ExpressionUUID->"9d501dfb-0b65-453d-93b6-\
+f70c8f25bffa"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"EdgeForm", "[", 
+       RowBox[{"{", 
+        RowBox[{"Thick", ",", "Black"}], "}"}], "]"}], ",", 
+      RowBox[{"FaceForm", "[", "Yellow", "]"}], ",", 
+      RowBox[{"Rectangle", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1"}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<A\>\"", ",", "16", ",", "Bold", ",", "Black"}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "0.05"}], ",", "0"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<B\>\"", ",", "16", ",", "Bold", ",", "Black"}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"1.05", ",", "0"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<C\>\"", ",", "16", ",", "Bold", ",", "Black"}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"1.05", ",", "1.05"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Text", "[", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{"\"\<D\>\"", ",", "16", ",", "Bold", ",", "Black"}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "1.05"}], "}"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{"solution", ",", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"EdgeForm", "[", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+            RowBox[{"FaceForm", "[", "Red", "]"}], ",", 
+            RowBox[{"Polygon", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", 
+                 RowBox[{"Tan", "[", 
+                  RowBox[{"15", "\[Degree]"}], "]"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Sec", "[", 
+                   RowBox[{"15", "\[Degree]"}], "]"}], 
+                  RowBox[{"Cos", "[", 
+                   RowBox[{"75", "\[Degree]"}], "]"}]}], ",", 
+                 RowBox[{
+                  RowBox[{"Sec", "[", 
+                   RowBox[{"15", "\[Degree]"}], "]"}], 
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"75", "\[Degree]"}], "]"}]}]}], "}"}]}], "}"}], 
+             "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<E\>\"", ",", "16", ",", "Bold", ",", "Black"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"1.05", ",", 
+              RowBox[{"Tan", "[", 
+               RowBox[{"15", "\[Degree]"}], "]"}]}], "}"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<F\>\"", ",", "16", ",", "Bold", ",", "Black"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Sec", "[", 
+                RowBox[{"15", "\[Degree]"}], "]"}], 
+               RowBox[{"Cos", "[", 
+                RowBox[{"75", "\[Degree]"}], "]"}]}], ",", 
+              RowBox[{"0.05", "+", 
+               RowBox[{
+                RowBox[{"Sec", "[", 
+                 RowBox[{"15", "\[Degree]"}], "]"}], 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"75", "\[Degree]"}], "]"}]}]}]}], "}"}]}], "]"}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+             "\"\<\[Theta] = 15\[Degree]\>\"", ",", "16", ",", "Bold", ",", 
+              "Black"}], "]"}], ",", 
+            RowBox[{"0.25", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Cos", "[", 
+                 RowBox[{"15", 
+                  RowBox[{"\[Degree]", " ", "/", "2"}]}], "]"}], "+", "0.3"}],
+                ",", 
+               RowBox[{"Sin", "[", 
+                RowBox[{"15", " ", 
+                 RowBox[{"\[Degree]", "/", "2"}]}], "]"}]}], "}"}]}]}], "]"}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Arrowheads", "[", "0.03", "]"}], ",", "Thick", ",", 
+            "Black", ",", 
+            RowBox[{"Arrow", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0.2", ",", "0"}], "}"}], ",", 
+               RowBox[{"0.2", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", 
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"15", "\[Degree]"}], "]"}]}], "}"}]}]}], "}"}], 
+             "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+             "\"\<45\[Degree]\>\"", ",", "16", ",", "Bold", ",", "Black"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0.94", ",", 
+              RowBox[{"0.15", "+", 
+               RowBox[{"Tan", "[", 
+                RowBox[{"15", "\[Degree]"}], " ", "]"}]}]}], "}"}]}], "]"}], 
+          ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Black", ",", 
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"1", ",", 
+                RowBox[{"Tan", "[", 
+                 RowBox[{"15", "\[Degree]"}], "]"}]}], "}"}], ",", "0.12", 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\[Pi]", "/", "2"}], ",", 
+                RowBox[{"135", "\[Degree]"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+             "\"\<75\[Degree]\>\"", ",", "16", ",", "Bold", ",", "Black"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0.93", ",", 
+              RowBox[{
+               RowBox[{"Tan", "[", 
+                RowBox[{"15", "\[Degree]"}], " ", "]"}], "-", "0.12"}]}], 
+             "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Black", ",", 
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"1", ",", 
+                RowBox[{"Tan", "[", 
+                 RowBox[{"15", "\[Degree]"}], "]"}]}], "}"}], ",", "0.1", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"195", "\[Degree]"}], ",", 
+                RowBox[{"270", "\[Degree]"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+             "\"\<45\[Degree]\>\"", ",", "16", ",", "Bold", ",", "Black"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"Sec", "[", 
+                 RowBox[{"15", "\[Degree]"}], "]"}], 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"75", "\[Degree]"}], "]"}]}], "+", "0.13"}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Sec", "[", 
+                 RowBox[{"15", "\[Degree]"}], "]"}], 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"75", "\[Degree]"}], "]"}]}], "-", "0.05"}]}], 
+             "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Black", ",", 
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Sec", "[", 
+                  RowBox[{"15", "\[Degree]"}], "]"}], 
+                 RowBox[{"Cos", "[", 
+                  RowBox[{"75", "\[Degree]"}], "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"Sec", "[", 
+                  RowBox[{"15", "\[Degree]"}], "]"}], 
+                 RowBox[{"Sin", "[", 
+                  RowBox[{"75", "\[Degree]"}], "]"}]}]}], "}"}], ",", "0.08", 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"7", 
+                 RowBox[{"\[Pi]", "/", "4"}]}], ",", 
+                RowBox[{"2", " ", "\[Pi]"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Black", ",", 
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Sec", "[", 
+                  RowBox[{"15", "\[Degree]"}], "]"}], 
+                 RowBox[{"Cos", "[", 
+                  RowBox[{"75", "\[Degree]"}], "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"Sec", "[", 
+                  RowBox[{"15", "\[Degree]"}], "]"}], 
+                 RowBox[{"Sin", "[", 
+                  RowBox[{"75", "\[Degree]"}], "]"}]}]}], "}"}], ",", "0.08", 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{"\[Pi]", ",", 
+                RowBox[{"17", 
+                 RowBox[{"\[Pi]", "/", "12"}]}]}], "}"}]}], "]"}]}], "}"}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+             "\"\<75\[Degree]\>\"", ",", "16", ",", "Bold", ",", "Black"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"Sec", "[", 
+                 RowBox[{"15", "\[Degree]"}], "]"}], 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"75", "\[Degree]"}], "]"}]}], "-", "0.12"}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Sec", "[", 
+                 RowBox[{"15", "\[Degree]"}], "]"}], 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"75", "\[Degree]"}], "]"}]}], "-", "0.06"}]}], 
+             "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Row", "[", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                "\"\<The length of the side of \\nthe equilateral triangle = \
+\>\"", ",", 
+                 RowBox[{"Simplify", "[", 
+                  RowBox[{"Sec", "[", 
+                   RowBox[{"15", "\[Degree]"}], "]"}], "]"}], ",", 
+                 "\"\< cm\\nmaximum area of equilateral triangle = \>\"", ",",
+                  " ", 
+                 RowBox[{"FullSimplify", "[", 
+                  RowBox[{
+                   FractionBox[
+                    SqrtBox["3"], "4"], " ", 
+                   RowBox[{
+                    RowBox[{"Sec", "[", 
+                    RowBox[{"15", "\[Degree]"}], "]"}], "^", "2"}]}], "]"}], 
+                 ",", "\"\<  \!\(\*SuperscriptBox[\(cm\), \(2\)]\)\\n\>\""}], 
+                "}"}], "]"}], ",", "14", ",", "Purple"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0.5", ",", "1.2"}], "}"}]}], "]"}]}], 
+         "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+             "\"\<Calculate the side length and the area of the largest \
+\\nequilateral triangle that can be inscribed in a unit square\>\"", ",", 
+              "13", ",", "Italic", ",", "Black"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0.5", ",", "1.2"}], "}"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Inset", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Row", "[", 
+               RowBox[{"{", 
+                RowBox[{"\"\<\[Theta] = \>\"", ",", "\[Theta]"}], "}"}], 
+               "]"}], ",", "14", ",", "Bold", ",", "Blue"}], "]"}], ",", 
+            RowBox[{"0.25", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Cos", "[", 
+                 RowBox[{"\[Theta]", " ", "/", "2"}], "]"}], "+", "0.3"}], 
+               ",", 
+               RowBox[{"Sin", "[", 
+                RowBox[{"\[Theta]", " ", "/", "2"}], "]"}]}], "}"}]}]}], 
+           "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"EdgeForm", "[", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+            RowBox[{"FaceForm", "[", "Red", "]"}], ",", 
+            RowBox[{"Polygon", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", 
+                 RowBox[{"Tan", "[", "\[Theta]", "]"}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Sec", "[", "\[Theta]", "]"}], 
+                  RowBox[{"Cos", "[", 
+                   RowBox[{
+                    RowBox[{"\[Pi]", "/", "3"}], "+", "\[Theta]"}], "]"}]}], 
+                 ",", 
+                 RowBox[{
+                  RowBox[{"Sec", "[", "\[Theta]", "]"}], 
+                  RowBox[{"Sin", "[", 
+                   RowBox[{"\[Theta]", "+", 
+                    RowBox[{"\[Pi]", "/", "3"}]}], "]"}]}]}], "}"}]}], "}"}], 
+             "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Arrowheads", "[", "0.03", "]"}], ",", "Thick", ",", 
+            "Red", ",", 
+            RowBox[{"Arrow", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0.2", ",", "0"}], "}"}], ",", 
+               RowBox[{"0.2", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"Cos", "[", "\[Theta]", "]"}], ",", 
+                  RowBox[{"Sin", "[", "\[Theta]", "]"}]}], "}"}]}]}], "}"}], 
+             "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<E\>\"", ",", "16", ",", "Bold", ",", "Black"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"1.05", ",", 
+              RowBox[{"Tan", "[", "\[Theta]", "]"}]}], "}"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"Text", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<F\>\"", ",", "16", ",", "Bold", ",", "Black"}], 
+             "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Sec", "[", "\[Theta]", "]"}], 
+               RowBox[{"Cos", "[", 
+                RowBox[{"\[Theta]", "+", 
+                 RowBox[{"\[Pi]", "/", "3"}]}], "]"}]}], ",", 
+              RowBox[{"0.05", "+", 
+               RowBox[{
+                RowBox[{"Sec", "[", "\[Theta]", "]"}], 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"\[Theta]", "+", 
+                  RowBox[{"\[Pi]", "/", "3"}]}], "]"}]}]}]}], "}"}]}], 
+           "]"}]}], "\[IndentingNewLine]", "}"}]}], "]"}]}], 
+     "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\[Theta]", ",", 
+       RowBox[{"11", "\[Degree]"}], ",", "\"\<inclination angle\>\""}], "}"}],
+      ",", 
+     RowBox[{"20", "\[Degree]"}], ",", 
+     RowBox[{"0", "\[Degree]"}], " ", ",", 
+     RowBox[{"1", "\[Degree]"}], ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"solution", ",", "False", ",", "\"\<solution\>\""}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"False", ",", "True"}], "}"}]}], "}"}], "\[IndentingNewLine]", 
+   ",", 
+   RowBox[{"TrackedSymbols", "\[RuleDelayed]", 
+    RowBox[{"{", 
+     RowBox[{"\[Theta]", ",", "solution"}], "}"}]}], ",", 
+   RowBox[{"ContentSize", "\[Rule]", "390"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.64803172891085*^9, 3.648031972099188*^9}, {
+   3.648032035054174*^9, 3.648032097199841*^9}, {3.6480323141723347`*^9, 
+   3.648032586451598*^9}, {3.648032628232448*^9, 3.648032629289279*^9}, {
+   3.648032743715455*^9, 3.648032764057232*^9}, {3.648032815965653*^9, 
+   3.6480328201708317`*^9}, {3.6480328940927887`*^9, 3.648033009180572*^9}, {
+   3.6480334121242456`*^9, 3.648033459100419*^9}, {3.648036131128586*^9, 
+   3.6480361611538553`*^9}, {3.648036330134047*^9, 3.6480364777342157`*^9}, {
+   3.6480365186399183`*^9, 3.648036544736351*^9}, {3.648036600483389*^9, 
+   3.6480367986542587`*^9}, {3.6480368290373907`*^9, 
+   3.6480370512591677`*^9}, {3.64803719117793*^9, 3.64803721969316*^9}, {
+   3.648037377725493*^9, 3.6480374927214127`*^9}, {3.648037536419855*^9, 
+   3.648037631648088*^9}, {3.648037678673131*^9, 3.648037804605303*^9}, {
+   3.648037855997162*^9, 3.648038001976872*^9}, {3.6480380580215893`*^9, 
+   3.648038236920658*^9}, {3.648038285612975*^9, 3.648038356089501*^9}, 
+   3.6480384440535727`*^9, {3.6480385404380836`*^9, 3.64803854869238*^9}, {
+   3.6480386325625353`*^9, 3.648038647982718*^9}, {3.6480386855284653`*^9, 
+   3.648038691357026*^9}, {3.648038726707259*^9, 3.6480387427701263`*^9}, {
+   3.6480388525550127`*^9, 3.6480388623197803`*^9}, 3.648038897915852*^9, {
+   3.648038928524825*^9, 3.648038948488679*^9}, 3.6480389849435472`*^9, {
+   3.648039029903697*^9, 3.648039056032117*^9}, {3.648039102935052*^9, 
+   3.6480391211373997`*^9}, {3.648039186242416*^9, 3.6480393643470917`*^9}, 
+   3.648039400677177*^9, {3.6480394321101913`*^9, 3.648039454042946*^9}, {
+   3.6480394976115637`*^9, 3.648039526319763*^9}, {3.648039556735734*^9, 
+   3.648039632970896*^9}, {3.648039772687689*^9, 3.6480398033731956`*^9}, {
+   3.648039847230709*^9, 3.6480398479334497`*^9}, {3.648039922400847*^9, 
+   3.648039952556037*^9}, {3.648040014239917*^9, 3.648040019126199*^9}, {
+   3.6480400899708767`*^9, 3.6480400913570213`*^9}, {3.6480402110861177`*^9, 
+   3.648040220747739*^9}, 3.648040298885417*^9, {3.6480686727756357`*^9, 
+   3.648068727867324*^9}, {3.648068859105899*^9, 3.648068864184061*^9}, {
+   3.648068929643239*^9, 3.648068938361395*^9}, {3.6480690106117077`*^9, 
+   3.6480690334829884`*^9}, {3.6480691493028593`*^9, 3.64806917087267*^9}, {
+   3.648069205247119*^9, 3.648069229462764*^9}, {3.648069278868622*^9, 
+   3.64806930635583*^9}, {3.648069418784396*^9, 3.648069427287559*^9}, {
+   3.64806946224965*^9, 3.6480695184052896`*^9}, {3.648069572911933*^9, 
+   3.648069589501789*^9}, {3.648069669811605*^9, 3.6480696835962*^9}, {
+   3.6480697291672363`*^9, 3.648069770839109*^9}, {3.648069913410798*^9, 
+   3.648069923793538*^9}, {3.648070077701971*^9, 3.648070129293947*^9}, {
+   3.648070159371868*^9, 3.648070164962853*^9}, {3.648070211585751*^9, 
+   3.6480702286022387`*^9}, {3.648070657728097*^9, 3.648070699339992*^9}, 
+   3.6480707684073467`*^9, 3.648070811006054*^9, {3.648070888689455*^9, 
+   3.6480708891025133`*^9}, {3.6480709527539*^9, 3.648070963181417*^9}, {
+   3.6480710386874743`*^9, 3.648071070941328*^9}, 3.648071110943212*^9, {
+   3.6480711422539988`*^9, 3.648071170664254*^9}, {3.6480712186227407`*^9, 
+   3.648071240323536*^9}, {3.648071289213242*^9, 3.648071304323353*^9}, {
+   3.648071475581635*^9, 3.64807148328407*^9}, {3.6480753109670563`*^9, 
+   3.648075355350342*^9}, {3.64807542359511*^9, 3.648075446442223*^9}, {
+   3.648075698232456*^9, 3.648075726715665*^9}, {3.648075758636532*^9, 
+   3.648075781624709*^9}, {3.648075981996993*^9, 3.6480760726854897`*^9}, {
+   3.648076105101274*^9, 3.6480761971745996`*^9}, {3.648076348090407*^9, 
+   3.6480763509747467`*^9}, {3.648076493109386*^9, 3.6480764937711267`*^9}, {
+   3.648076570014267*^9, 3.648076608542507*^9}, {3.6480767031321983`*^9, 
+   3.648076703753201*^9}, 3.648076795947847*^9, {3.648077309131007*^9, 
+   3.648077312004405*^9}, {3.6480773997344913`*^9, 3.648077470195157*^9}, {
+   3.648077554423211*^9, 3.648077583800012*^9}, {3.648077667710656*^9, 
+   3.6480776708437443`*^9}, {3.6480777112147427`*^9, 3.648077722452174*^9}, {
+   3.648150456978672*^9, 3.648150460223531*^9}, {3.648150586972608*^9, 
+   3.648150621370934*^9}, {3.6481506898425913`*^9, 3.64815071192059*^9}, {
+   3.6481507536061897`*^9, 3.648150755871264*^9}, {3.648150796105893*^9, 
+   3.6481507987413177`*^9}, {3.6481508668980627`*^9, 3.64815088672858*^9}, {
+   3.6481509622741623`*^9, 3.64815097610641*^9}, {3.64815111464425*^9, 
+   3.648151114822731*^9}},
+ CellLabel->
+  "In[100]:=",ExpressionUUID->"3803e55f-e066-4154-a95b-30e8cda721a0"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`solution$$ = 
+    False, $CellContext`\[Theta]$$ = 11 Degree, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`\[Theta]$$], 11 Degree, "inclination angle"}, 20 
+      Degree, 0, Degree}, {{
+       Hold[$CellContext`solution$$], False, "solution"}, {False, True}}}, 
+    Typeset`size$$ = {360., {200., 204.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`\[Theta]$37795$$ = 0, $CellContext`solution$37796$$ = 
+    False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`solution$$ = 
+        False, $CellContext`\[Theta]$$ = 11 Degree}, "ControllerVariables" :> {
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$37795$$, 0], 
+        Hold[$CellContext`solution$$, $CellContext`solution$37796$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Graphics[{
+         EdgeForm[{Thick, Black}], 
+         FaceForm[Yellow], 
+         Rectangle[{0, 0}, {1, 1}], 
+         Text[
+          Style["A", 16, Bold, Black], {-0.05, 0}], 
+         Text[
+          Style["B", 16, Bold, Black], {1.05, 0}], 
+         Text[
+          Style["C", 16, Bold, Black], {1.05, 1.05}], 
+         Text[
+          Style["D", 16, Bold, Black], {0, 1.05}], 
+         If[$CellContext`solution$$, {{
+            EdgeForm[{Thick, Blue}], 
+            FaceForm[Red], 
+            Polygon[{{0, 0}, {1, 
+               Tan[15 Degree]}, {
+              Sec[15 Degree] Cos[75 Degree], Sec[15 Degree] 
+               Sin[75 Degree]}}]}, 
+           Text[
+            Style["E", 16, Bold, Black], {1.05, 
+             Tan[15 Degree]}], 
+           Text[
+            Style["F", 16, Bold, Black], {
+            Sec[15 Degree] Cos[75 Degree], 0.05 + 
+             Sec[15 Degree] Sin[75 Degree]}], 
+           Text[
+            Style["\[Theta] = 15\[Degree]", 16, Bold, Black], 
+            0.25 {Cos[15 (Degree/2)] + 0.3, 
+              Sin[15 (Degree/2)]}], {
+            Arrowheads[0.03], Thick, Black, 
+            Arrow[{{0.2, 0}, 0.2 {
+                Cos[$CellContext`\[Theta]$$], 
+                Sin[15 Degree]}}]}, 
+           Text[
+            Style["45\[Degree]", 16, Bold, Black], {
+            0.94, 0.15 + Tan[15 Degree]}], {Thick, Black, 
+            Circle[{1, 
+              Tan[15 Degree]}, 0.12, {Pi/2, 135 Degree}]}, 
+           Text[
+            Style["75\[Degree]", 16, Bold, Black], {
+            0.93, Tan[15 Degree] - 0.12}], {Thick, Black, 
+            Circle[{1, 
+              Tan[15 Degree]}, 0.1, {195 Degree, 270 Degree}]}, 
+           Text[
+            Style["45\[Degree]", 16, Bold, Black], {
+            Sec[15 Degree] Cos[75 Degree] + 0.13, 
+             Sec[15 Degree] Sin[75 Degree] - 0.05}], {Thick, Black, 
+            
+            Circle[{Sec[15 Degree] Cos[75 Degree], Sec[15 Degree] 
+              Sin[75 Degree]}, 0.08, {7 (Pi/4), 2 Pi}]}, {Thick, Black, 
+            
+            Circle[{Sec[15 Degree] Cos[75 Degree], Sec[15 Degree] 
+              Sin[75 Degree]}, 0.08, {Pi, 17 (Pi/12)}]}, 
+           Text[
+            Style["75\[Degree]", 16, Bold, Black], {
+            Sec[15 Degree] Cos[75 Degree] - 0.12, 
+             Sec[15 Degree] Sin[75 Degree] - 0.06}], 
+           Text[
+            Style[
+             Row[{"The length of the side of \nthe equilateral triangle = ", 
+               Simplify[
+                Sec[15 Degree]], 
+               " cm\nmaximum area of equilateral triangle = ", 
+               FullSimplify[(Sqrt[3]/4) Sec[15 Degree]^2], 
+               "  \!\(\*SuperscriptBox[\(cm\), \(2\)]\)\n"}], 14, Purple], {
+            0.5, 1.2}]}, {
+           Text[
+            Style[
+            "Calculate the side length and the area of the largest \n\
+equilateral triangle that can be inscribed in a unit square", 13, Italic, 
+             Black], {0.5, 1.2}], 
+           Inset[
+            Style[
+             Row[{"\[Theta] = ", $CellContext`\[Theta]$$}], 14, Bold, Blue], 
+            0.25 {Cos[$CellContext`\[Theta]$$/2] + 0.3, 
+              Sin[$CellContext`\[Theta]$$/2]}], {
+            EdgeForm[{Thick, Blue}], 
+            FaceForm[Red], 
+            Polygon[{{0, 0}, {1, 
+               Tan[$CellContext`\[Theta]$$]}, {
+              Sec[$CellContext`\[Theta]$$] 
+               Cos[Pi/3 + $CellContext`\[Theta]$$], 
+               Sec[$CellContext`\[Theta]$$] 
+               Sin[$CellContext`\[Theta]$$ + Pi/3]}}]}, {
+            Arrowheads[0.03], Thick, Red, 
+            Arrow[{{0.2, 0}, 0.2 {
+                Cos[$CellContext`\[Theta]$$], 
+                Sin[$CellContext`\[Theta]$$]}}]}, 
+           Text[
+            Style["E", 16, Bold, Black], {1.05, 
+             Tan[$CellContext`\[Theta]$$]}], 
+           Text[
+            Style["F", 16, Bold, Black], {
+            Sec[$CellContext`\[Theta]$$] Cos[$CellContext`\[Theta]$$ + Pi/3], 
+             0.05 + Sec[$CellContext`\[Theta]$$] 
+              Sin[$CellContext`\[Theta]$$ + Pi/3]}]}]}], 
+      "Specifications" :> {{{$CellContext`\[Theta]$$, 11 Degree, 
+          "inclination angle"}, 20 Degree, 0, Degree, Appearance -> 
+         "Labeled"}, {{$CellContext`solution$$, False, "solution"}, {
+         False, True}}}, 
+      "Options" :> {
+       TrackedSymbols :> {$CellContext`\[Theta]$$, $CellContext`solution$$}, 
+        ContentSize -> 390}, "DefaultOptions" :> {}],
+     ImageSizeCache->{404., {255., 260.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.7711710044983587`*^9},
+ CellLabel->
+  "Out[100]=",ExpressionUUID->"0d338855-c198-48bc-a07b-b6eb9e7ee972"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{248, Automatic}, {106, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 324, 7, 105, "Section",ExpressionUUID->"9d501dfb-0b65-453d-93b6-f70c8f25bffa"],
+Cell[CellGroupData[{
+Cell[929, 33, 21741, 498, 1244, "Input",ExpressionUUID->"3803e55f-e066-4154-a95b-30e8cda721a0"],
+Cell[22673, 533, 6338, 142, 592, "Output",ExpressionUUID->"0d338855-c198-48bc-a07b-b6eb9e7ee972"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
