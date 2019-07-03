@@ -10,20 +10,19 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29685,        704]
-NotebookOptionsPosition[     28950,        680]
-NotebookOutlinePosition[     29470,        700]
-CellTagsIndexPosition[     29427,        697]
+NotebookDataLength[     29996,        716]
+NotebookOptionsPosition[     28898,        679]
+NotebookOutlinePosition[     29766,        711]
+CellTagsIndexPosition[     29700,        706]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[TextData[StyleBox["The Area of Part of an Isosceles Triangle", "Title",
- FontColor->RGBColor[0.5, 0, 0.5]]], "Section",
- CellChangeTimes->{
-  3.51792393438269*^9},ExpressionUUID->"ec584c82-de75-4238-94a0-fca7f9d0f02f"],
+Cell["The Area of Part of an Isosceles Triangle", "Section",
+ CellChangeTimes->{3.51792393438269*^9},
+ CellTags->"c:1",ExpressionUUID->"ec584c82-de75-4238-94a0-fca7f9d0f02f"],
 
 Cell[CellGroupData[{
 
@@ -675,16 +674,22 @@ $CellContext`aa$$}}, "DefaultOptions" :> {}],
    3.658186890757882*^9}, 3.7668339712084846`*^9, {3.76683403973111*^9, 
    3.766834049253127*^9}},ExpressionUUID->"f211e12b-06e5-4c83-bbdb-\
 c0a68bb0c9ae"]
-}, Open  ]]
+}, {2}]]
 }, Open  ]]
 },
+ShowPageBreaks->False,
 WindowSize->{808, 911},
 WindowMargins->{{128, Automatic}, {-66, Automatic}},
 PrintingCopies->1,
+PrintingStartingPageNumber->-1994,
 PrintingPageRange->{1, Automatic},
 TaggingRules->{
  "WBTDraftSectionsDirectory" -> "/Users/a_gadalla/Documents/", 
-  "SlideshowSettings" -> {"Toolbar" -> True}},
+  "SlideshowSettings" -> {"Toolbar" -> True}, 
+  "PaginationCache" -> {{
+    2019, 7, 3, 15, 16, 53.066877`8.477398504738263}, {-2995, -2995, -2995}, 
+    Automatic}},
+Magnification->1.,
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -692,23 +697,28 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 174, 2, 67, "Section",ExpressionUUID->"ec584c82-de75-4238-94a0-fca7f9d0f02f",
+   CellTags->"c:1"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 29561, 700}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 223, 3, 89, "Section",ExpressionUUID->"ec584c82-de75-4238-94a0-fca7f9d0f02f"],
+Cell[580, 22, 174, 2, 67, "Section",ExpressionUUID->"ec584c82-de75-4238-94a0-fca7f9d0f02f",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[828, 29, 16940, 404, 1099, "Input",ExpressionUUID->"c4ce9e86-8a84-469c-9f48-575bd8981e34"],
-Cell[17771, 435, 11151, 241, 517, "Output",ExpressionUUID->"f211e12b-06e5-4c83-bbdb-c0a68bb0c9ae"]
-}, Open  ]]
+Cell[779, 28, 16940, 404, 1099, "Input",ExpressionUUID->"c4ce9e86-8a84-469c-9f48-575bd8981e34"],
+Cell[17722, 434, 11151, 241, 517, "Output",ExpressionUUID->"f211e12b-06e5-4c83-bbdb-c0a68bb0c9ae"]
+}, {2}]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

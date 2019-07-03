@@ -1,0 +1,91 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2523,         83]
+NotebookOptionsPosition[      1839,         66]
+NotebookOutlinePosition[      2180,         81]
+CellTagsIndexPosition[      2137,         78]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Geometry \[RightTriangle] Angles Contents", "ContentsTitle"],
+
+Cell[TextData[{
+ "Ratio between an angle and its complement",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Ratio between an angle and its complement 1.nb"], 
+    "c:1"}]], "TOCPage"]
+}], "TOCSection"],
+
+Cell[TextData[{
+ "Given a ratio between an angle and its complement, find the angles",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Ratio between an angle and its complement 2.nb"], 
+    "c:1"}]], "TOCPage"]
+}], "TOCSection"],
+
+Cell[TextData[{
+ "Ratio between an angle and its supplementary",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, 
+     "Ratio between an angle and its supplementary 1.nb"], "c:1"}]], "TOCPage"]
+}], "TOCSection"],
+
+Cell[TextData[{
+ "Given a ratio between an angle and its supplement, find the angles",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Ratio between an angle and its supplement.nb"], 
+    "c:1"}]], "TOCPage"]
+}], "TOCSection"]
+},
+WindowSize->{808, 911},
+WindowMargins->{{92, Automatic}, {33, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"HelpBrowser.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 66, 0, 70, "ContentsTitle",ExpressionUUID->"0d01693d-48b5-473e-8b58-0168bae51b72"],
+Cell[627, 22, 286, 9, 70, "TOCSection",ExpressionUUID->"e8d97477-12c5-4e37-b0f1-0536be7c1145"],
+Cell[916, 33, 311, 9, 70, "TOCSection",ExpressionUUID->"c4e8e994-3212-400a-9e9b-166d4807d93c"],
+Cell[1230, 44, 293, 9, 70, "TOCSection",ExpressionUUID->"c5952db4-dd33-4fb8-b40a-28f06c1e9a83"],
+Cell[1526, 55, 309, 9, 70, "TOCSection",ExpressionUUID->"b16dbf52-e119-4d1b-837b-6e1f852f9e1a"]
+}
+]
+*)
+

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18392,        423]
-NotebookOptionsPosition[     17846,        404]
-NotebookOutlinePosition[     18183,        419]
-CellTagsIndexPosition[     18140,        416]
+NotebookDataLength[     19327,        445]
+NotebookOptionsPosition[     17859,        403]
+NotebookOutlinePosition[     19100,        440]
+CellTagsIndexPosition[     19034,        435]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,9 +21,8 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Draw equilateral triangles with points", "Section",
- CellChangeTimes->{{3.6588293978700037`*^9, 
-  3.658829423969784*^9}},ExpressionUUID->"28ecddeb-318c-4675-8b82-\
-199603fb0e69"],
+ CellChangeTimes->{{3.6588293978700037`*^9, 3.658829423969784*^9}},
+ CellTags->"c:1",ExpressionUUID->"28ecddeb-318c-4675-8b82-199603fb0e69"],
 
 Cell[CellGroupData[{
 
@@ -402,8 +401,24 @@ Cell[BoxData[
 }, {2}]]
 }, Open  ]]
 },
+ShowPageBreaks->False,
 WindowSize->{808, 911},
 WindowMargins->{{108, Automatic}, {0, Automatic}},
+PrintingStartingPageNumber->-2994,
+TaggingRules->{
+ "CoursewareToolsSettings" -> {
+   "$RecordNBMargins" -> {{66, Automatic}, {Automatic, 2}}, "$RecordNBSize" -> 
+    Automatic, 
+    "$ControlPaletteNBMargins" -> {{666, Automatic}, {Automatic, 202}}, 
+    "$ControlPaletteType" -> "Vertical", "$ControlPaletteRecordingConfigType" -> 
+    "Vertical", "$ScriptNBMargins" -> {{566, 314}, {0, 0}}, "$ScriptNBHeight" -> 
+    1028, "$ConfigureImageDevicesAtStartup" -> False, "$UsageTimeToFade" -> 
+    Automatic, "$RecordWithThinkpointsCheckPoints" -> True, 
+    "$AutoAdvanceScript" -> False}, 
+  "PaginationCache" -> {{
+    2019, 7, 3, 15, 16, 53.905059`8.484204500422914}, {-3995, -3995, -3995}, 
+    Automatic}},
+Magnification->1.,
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -411,23 +426,28 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 198, 2, 67, "Section",ExpressionUUID->"28ecddeb-318c-4675-8b82-199603fb0e69",
+   CellTags->"c:1"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 18895, 429}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 185, 3, 67, "Section",ExpressionUUID->"28ecddeb-318c-4675-8b82-199603fb0e69"],
+Cell[580, 22, 198, 2, 67, "Section",ExpressionUUID->"28ecddeb-318c-4675-8b82-199603fb0e69",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[790, 29, 12761, 279, 556, "Input",ExpressionUUID->"d45c2882-7870-4946-88c8-4fd8673b3bcf"],
-Cell[13554, 310, 4267, 90, 481, "Output",ExpressionUUID->"a0fe00df-6690-47b5-8923-194244ac39a5"]
+Cell[803, 28, 12761, 279, 556, "Input",ExpressionUUID->"d45c2882-7870-4946-88c8-4fd8673b3bcf"],
+Cell[13567, 309, 4267, 90, 481, "Output",ExpressionUUID->"a0fe00df-6690-47b5-8923-194244ac39a5"]
 }, {2}]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

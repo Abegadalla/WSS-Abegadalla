@@ -10,27 +10,19 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     59477,       1344]
-NotebookOptionsPosition[     58455,       1316]
-NotebookOutlinePosition[     58943,       1335]
-CellTagsIndexPosition[     58900,       1332]
+NotebookDataLength[     59459,       1345]
+NotebookOptionsPosition[     58218,       1308]
+NotebookOutlinePosition[     59001,       1336]
+CellTagsIndexPosition[     58934,       1331]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Area of a triangle within a polygon", "Title",
- CellChangeTimes->{{3.767865465906712*^9, 
-  3.7678655031929827`*^9}},ExpressionUUID->"d33e9596-f90c-480e-ba9a-\
-2fd1c560e2ef"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
- CellChangeTimes->{{3.767184584633416*^9, 3.7671845953429947`*^9}},
- CellLabel->
-  "In[1740]:=",ExpressionUUID->"dad1810b-b8de-4e8e-83ac-a7a30393526f"],
+Cell["Area of a triangle within a polygon", "Section",
+ CellChangeTimes->{{3.767865465906712*^9, 3.7678655031929827`*^9}},
+ CellTags->"c:1",ExpressionUUID->"d33e9596-f90c-480e-ba9a-2fd1c560e2ef"],
 
 Cell[CellGroupData[{
 
@@ -1044,7 +1036,7 @@ length of the figure's side is k\n", 16, Black]], Alignment -> Left, Frame ->
    3.767870999301833*^9, 3.767871032569373*^9}},
  CellLabel->
   "Out[1746]=",ExpressionUUID->"7050135b-37ce-4747-9081-631111a46574"]
-}, Open  ]],
+}, {2}]],
 
 Cell[CellGroupData[{
 
@@ -1220,12 +1212,12 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`n$$ = 4, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`n$$ = 5, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`n$$], 4, "# Vertices"}, 4, 12, 1}}, 
-    Typeset`size$$ = {450., {221., 228.}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {450., {211., 217.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
     True, $CellContext`n$126687$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -1277,7 +1269,7 @@ Cell[BoxData[
          Appearance -> "Labeled"}}, 
       "Options" :> {TrackedSymbols :> {$CellContext`n$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{505., {274., 281.}},
+     ImageSizeCache->{505., {264., 271.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1316,9 +1308,12 @@ Cell[BoxData[
 },
 WindowSize->{884, 998},
 WindowMargins->{{Automatic, 289}, {-119, Automatic}},
+PrintingStartingPageNumber->1,
 TaggingRules->{
  "WBTDraftSectionsDirectory" -> "/Users/a_gadalla/Documents/", 
-  "SlideshowSettings" -> {"Toolbar" -> True}},
+  "SlideshowSettings" -> {"Toolbar" -> True}, 
+  "PaginationCache" -> {{2019, 7, 3, 15, 16, 51.049312`8.460564868653536}, {1,
+     1, 3, 4, 5, 5}, Automatic}},
 Magnification->1.25,
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -1327,23 +1322,29 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 195, 2, 84, "Section",ExpressionUUID->"d33e9596-f90c-480e-ba9a-2fd1c560e2ef",
+   CellTags->"c:1"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 58795, 1325}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 180, 3, 123, "Title",ExpressionUUID->"d33e9596-f90c-480e-ba9a-2fd1c560e2ef"],
-Cell[763, 27, 246, 5, 37, "Input",ExpressionUUID->"dad1810b-b8de-4e8e-83ac-a7a30393526f"],
+Cell[580, 22, 195, 2, 84, "Section",ExpressionUUID->"d33e9596-f90c-480e-ba9a-2fd1c560e2ef",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[1034, 36, 34217, 761, 2196, "Input",ExpressionUUID->"f33be856-19fe-448b-b351-a0ab976f520a"],
-Cell[35254, 799, 11175, 246, 764, "Output",ExpressionUUID->"7050135b-37ce-4747-9081-631111a46574"]
-}, Open  ]],
+Cell[800, 28, 34217, 761, 2196, "Input",ExpressionUUID->"f33be856-19fe-448b-b351-a0ab976f520a"],
+Cell[35020, 791, 11175, 246, 764, "Output",ExpressionUUID->"7050135b-37ce-4747-9081-631111a46574"]
+}, {2}]],
 Cell[CellGroupData[{
-Cell[46466, 1050, 7233, 167, 376, "Input",ExpressionUUID->"79a434f9-6c05-4ca8-9ee5-4de9f1dc7af9"],
-Cell[53702, 1219, 4728, 93, 578, "Output",ExpressionUUID->"7caaaacf-bbfe-4ea6-aa7c-962f69d8373b"]
+Cell[46229, 1042, 7233, 167, 376, "Input",ExpressionUUID->"79a434f9-6c05-4ca8-9ee5-4de9f1dc7af9"],
+Cell[53465, 1211, 4728, 93, 558, "Output",ExpressionUUID->"7caaaacf-bbfe-4ea6-aa7c-962f69d8373b"]
 }, {2}]]
 }, Open  ]]
 }

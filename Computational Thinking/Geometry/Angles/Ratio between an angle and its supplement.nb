@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     30524,        647]
-NotebookOptionsPosition[     29977,        628]
-NotebookOutlinePosition[     30314,        643]
-CellTagsIndexPosition[     30271,        640]
+NotebookDataLength[     31203,        666]
+NotebookOptionsPosition[     30037,        630]
+NotebookOutlinePosition[     30930,        659]
+CellTagsIndexPosition[     30842,        653]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,9 +24,9 @@ Cell["\<\
 Given a ratio between an angle and its supplement, find the angles\
 \>", "Section",
  CellChangeTimes->{{3.525353019476457*^9, 3.525353044768255*^9}, {
-   3.5253604869233713`*^9, 3.525360513081794*^9}, 
-   3.771104956287475*^9},ExpressionUUID->"025e37ec-3908-4f21-890b-\
-73c6b23385cb"],
+   3.5253604869233713`*^9, 3.525360513081794*^9}, 3.771104956287475*^9},
+ CellTags->{
+  "c:1", "b:3"},ExpressionUUID->"025e37ec-3908-4f21-890b-73c6b23385cb"],
 
 Cell[CellGroupData[{
 
@@ -496,6 +496,7 @@ is \>\"", ",", "ratio"}], "}"}], "]"}], ",", "16", ",", "Black", ",",
    3.525361312104073*^9, {3.5253613590901318`*^9, 3.525361360542798*^9}, 
    3.525516706121957*^9, 3.525516903355515*^9, {3.770804068983108*^9, 
    3.7708040741579943`*^9}},
+ CellTags->"b:3",
  CellLabel->
   "In[616]:=",ExpressionUUID->"14d268c6-6c4d-477b-a3e7-42a1e3a119eb"],
 
@@ -621,6 +622,7 @@ $CellContext`t2, $CellContext`alpha,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.6588367851280203`*^9, 3.770804076604519*^9},
+ CellTags->"b:3",
  CellLabel->
   "Out[616]=",ExpressionUUID->"452242ed-8c90-4dc4-a43a-d7f5a8d9d804"]
 }, {2}]]
@@ -635,23 +637,38 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 318, 6, 105, "Section",ExpressionUUID->"025e37ec-3908-4f21-890b-73c6b23385cb",
+   CellTags->{"c:1", "b:3"}]},
+ "b:3"->{
+  Cell[580, 22, 318, 6, 105, "Section",ExpressionUUID->"025e37ec-3908-4f21-890b-73c6b23385cb",
+   CellTags->{"c:1", "b:3"}],
+  Cell[923, 32, 23134, 468, 70, "Input",ExpressionUUID->"14d268c6-6c4d-477b-a3e7-42a1e3a119eb",
+   CellTags->"b:3"],
+  Cell[24060, 502, 5952, 124, 541, "Output",ExpressionUUID->"452242ed-8c90-4dc4-a43a-d7f5a8d9d804",
+   CellTags->"b:3"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 30319, 640},
+ {"b:3", 30455, 643}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 294, 6, 105, "Section",ExpressionUUID->"025e37ec-3908-4f21-890b-73c6b23385cb"],
+Cell[580, 22, 318, 6, 105, "Section",ExpressionUUID->"025e37ec-3908-4f21-890b-73c6b23385cb",
+ CellTags->{"c:1", "b:3"}],
 Cell[CellGroupData[{
-Cell[899, 32, 23116, 467, 70, "Input",ExpressionUUID->"14d268c6-6c4d-477b-a3e7-42a1e3a119eb"],
-Cell[24018, 501, 5934, 123, 541, "Output",ExpressionUUID->"452242ed-8c90-4dc4-a43a-d7f5a8d9d804"]
+Cell[923, 32, 23134, 468, 70, "Input",ExpressionUUID->"14d268c6-6c4d-477b-a3e7-42a1e3a119eb",
+ CellTags->"b:3"],
+Cell[24060, 502, 5952, 124, 541, "Output",ExpressionUUID->"452242ed-8c90-4dc4-a43a-d7f5a8d9d804",
+ CellTags->"b:3"]
 }, {2}]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
