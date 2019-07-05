@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     22152,        508]
-NotebookOptionsPosition[     21578,        488]
-NotebookOutlinePosition[     21918,        503]
-CellTagsIndexPosition[     21875,        500]
+NotebookDataLength[     22336,        514]
+NotebookOptionsPosition[     21594,        487]
+NotebookOutlinePosition[     22084,        508]
+CellTagsIndexPosition[     22018,        503]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,9 +21,8 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Area of a rectangle in a circle", "Section",
- CellChangeTimes->{{3.530102914407954*^9, 
-  3.530102927539686*^9}},ExpressionUUID->"84da6945-e1c6-4621-a0d7-\
-abd6af01e248"],
+ CellChangeTimes->{{3.530102914407954*^9, 3.530102927539686*^9}},
+ CellTags->"c:1",ExpressionUUID->"84da6945-e1c6-4621-a0d7-abd6af01e248"],
 
 Cell[CellGroupData[{
 
@@ -468,8 +467,8 @@ Cell[BoxData[
     DynamicModuleValues:>{},
     Initialization:>(($CellContext`A[
          Pattern[$CellContext`x, 
-          Blank[]]] := 
-       4 Abs[$CellContext`x] Sqrt[1 - $CellContext`x^2]; $CellContext`X[
+          Blank[]]] := (4 Abs[$CellContext`x]) 
+        Sqrt[1 - $CellContext`x^2]; $CellContext`X[
          Pattern[$CellContext`\[Theta], 
           Blank[]]] := Cos[$CellContext`\[Theta] Degree]); 
      Typeset`initDone$$ = True),
@@ -495,24 +494,29 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 189, 2, 67, "Section",ExpressionUUID->"84da6945-e1c6-4621-a0d7-abd6af01e248",
+   CellTags->"c:1"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 21879, 497}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 176, 3, 67, "Section",ExpressionUUID->"84da6945-e1c6-4621-a0d7-abd6af01e248"],
+Cell[580, 22, 189, 2, 67, "Section",ExpressionUUID->"84da6945-e1c6-4621-a0d7-abd6af01e248",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[781, 29, 15313, 339, 944, "Input",ExpressionUUID->"ed65855d-0a13-4847-b7dc-77824ddeaf45",
+Cell[794, 28, 15313, 339, 944, "Input",ExpressionUUID->"ed65855d-0a13-4847-b7dc-77824ddeaf45",
  CellID->1850899381],
-Cell[16097, 370, 5453, 114, 421, "Output",ExpressionUUID->"6e9d48d8-09f6-47f8-8e2d-d8bd1d1f2099"]
+Cell[16110, 369, 5456, 114, 363, "Output",ExpressionUUID->"6e9d48d8-09f6-47f8-8e2d-d8bd1d1f2099"]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     50798,       1053]
-NotebookOptionsPosition[     50224,       1033]
-NotebookOutlinePosition[     50561,       1048]
-CellTagsIndexPosition[     50518,       1045]
+NotebookDataLength[     50980,       1059]
+NotebookOptionsPosition[     50237,       1032]
+NotebookOutlinePosition[     50725,       1053]
+CellTagsIndexPosition[     50658,       1048]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,9 +21,8 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Another Exercise on area in a square", "Section",
- CellChangeTimes->{{3.7711734498737717`*^9, 
-  3.771173485561062*^9}},ExpressionUUID->"e8aed92d-4443-4da8-9f3d-\
-240a6454d5bb"],
+ CellChangeTimes->{{3.7711734498737717`*^9, 3.771173485561062*^9}},
+ CellTags->"c:1",ExpressionUUID->"e8aed92d-4443-4da8-9f3d-240a6454d5bb"],
 
 Cell[CellGroupData[{
 
@@ -1040,24 +1039,29 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 196, 2, 67, "Section",ExpressionUUID->"e8aed92d-4443-4da8-9f3d-240a6454d5bb",
+   CellTags->"c:1"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 50519, 1042}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 183, 3, 67, "Section",ExpressionUUID->"e8aed92d-4443-4da8-9f3d-240a6454d5bb"],
+Cell[580, 22, 196, 2, 67, "Section",ExpressionUUID->"e8aed92d-4443-4da8-9f3d-240a6454d5bb",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[788, 29, 9757, 275, 796, "Input",ExpressionUUID->"540ed1d0-7bae-45c8-ad72-9ceb63844254",
+Cell[801, 28, 9757, 275, 796, "Input",ExpressionUUID->"540ed1d0-7bae-45c8-ad72-9ceb63844254",
  PageBreakAbove->False],
-Cell[10548, 306, 39648, 723, 687, "Output",ExpressionUUID->"30f41595-7271-4589-b794-24784d420ee5"]
+Cell[10561, 305, 39648, 723, 629, "Output",ExpressionUUID->"30f41595-7271-4589-b794-24784d420ee5"]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

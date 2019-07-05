@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     46470,       1122]
-NotebookOptionsPosition[     45664,       1098]
-NotebookOutlinePosition[     46033,       1114]
-CellTagsIndexPosition[     45990,       1111]
+NotebookDataLength[     46838,       1133]
+NotebookOptionsPosition[     45692,       1097]
+NotebookOutlinePosition[     46365,       1123]
+CellTagsIndexPosition[     46275,       1117]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,8 +21,8 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Calculate the Gray shaded area in the square", "Section",
- CellChangeTimes->{{3.771145038565976*^9, 
-  3.771145079724*^9}},ExpressionUUID->"8615e2dc-d88e-4cf0-af88-542e1ee3eab4"],
+ CellChangeTimes->{{3.771145038565976*^9, 3.771145079724*^9}},
+ CellTags->"c:1",ExpressionUUID->"8615e2dc-d88e-4cf0-af88-542e1ee3eab4"],
 
 Cell[CellGroupData[{
 
@@ -30,9 +30,8 @@ Cell["\<\
 ABCD is a square of side length 4 .  Two quarter circles and a diagonal are \
 drawn as shown.  Find the area of the shaded region.\
 \>", "Subsection",
- CellChangeTimes->{{3.7642793134031963`*^9, 
-  3.7642794119254932`*^9}},ExpressionUUID->"2df98498-2688-450a-af47-\
-533271295e23"],
+ CellChangeTimes->{{3.7642793134031963`*^9, 3.7642794119254932`*^9}},
+ CellTags->"c:2",ExpressionUUID->"2df98498-2688-450a-af47-533271295e23"],
 
 Cell[BoxData[
  RowBox[{
@@ -1106,21 +1105,33 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 199, 2, 84, "Section",ExpressionUUID->"8615e2dc-d88e-4cf0-af88-542e1ee3eab4",
+   CellTags->"c:1"]},
+ "c:2"->{
+  Cell[804, 28, 303, 5, 101, "Subsection",ExpressionUUID->"2df98498-2688-450a-af47-533271295e23",
+   CellTags->"c:2"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 46006, 1108},
+ {"c:2", 46132, 1111}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 184, 2, 84, "Section",ExpressionUUID->"8615e2dc-d88e-4cf0-af88-542e1ee3eab4"],
+Cell[580, 22, 199, 2, 84, "Section",ExpressionUUID->"8615e2dc-d88e-4cf0-af88-542e1ee3eab4",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[789, 28, 290, 6, 101, "Subsection",ExpressionUUID->"2df98498-2688-450a-af47-533271295e23"],
-Cell[1082, 36, 242, 5, 37, "Input",ExpressionUUID->"c4eb4b08-87d6-48cc-9272-774600de5643"],
+Cell[804, 28, 303, 5, 101, "Subsection",ExpressionUUID->"2df98498-2688-450a-af47-533271295e23",
+ CellTags->"c:2"],
+Cell[1110, 35, 242, 5, 37, "Input",ExpressionUUID->"c4eb4b08-87d6-48cc-9272-774600de5643"],
 Cell[CellGroupData[{
-Cell[1349, 45, 36681, 897, 2969, "Input",ExpressionUUID->"27fe7f78-6835-4cbd-aa15-aca6d279518b"],
-Cell[38033, 944, 7591, 149, 732, "Output",ExpressionUUID->"ffec3d28-ad72-4207-8b45-1a5ac2b099b8"]
+Cell[1377, 44, 36681, 897, 2969, "Input",ExpressionUUID->"27fe7f78-6835-4cbd-aa15-aca6d279518b"],
+Cell[38061, 943, 7591, 149, 732, "Output",ExpressionUUID->"ffec3d28-ad72-4207-8b45-1a5ac2b099b8"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

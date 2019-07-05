@@ -1,0 +1,122 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3694,        114]
+NotebookOptionsPosition[      2828,         90]
+NotebookOutlinePosition[      3167,        105]
+CellTagsIndexPosition[      3124,        102]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Load the AuthorTools Package", "Subsection",
+ CellChangeTimes->{{3.771276057335986*^9, 3.7712760645049267`*^9}, {
+  3.771276163181724*^9, 
+  3.771276167465782*^9}},ExpressionUUID->"5bebae1a-d3d4-42ea-a259-\
+027f2da63c0f"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<AuthorTools`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7712760459663773`*^9, 3.771276052809889*^9}},
+ CellLabel->
+  "In[456]:=",ExpressionUUID->"39ac00d8-9ae6-42eb-91e0-f85dafee2cc3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Read the ",
+ StyleBox["Documentation",
+  FontWeight->"Bold"],
+ " for ",
+ StyleBox["AuthorTools",
+  FontWeight->"Bold"]
+}], "Subsection",
+ CellChangeTimes->{{3.771276069962017*^9, 3.771276098136331*^9}, {
+  3.7712761562916*^9, 
+  3.771276159202126*^9}},ExpressionUUID->"9def217f-181b-4a35-bbd9-\
+d955b7d9a897"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Use ",
+ StyleBox[ButtonBox["Make Project",
+  BaseStyle->"Link",
+  ButtonFunction:>NotebookOpen[
+    ToFileName[{$InstallationDirectory, "AddOns", "Applications", 
+      "AuthorTools", "FrontEnd", "TextResources"}, "MakeProject.nb"]],
+  ButtonData->"paclet:ref/Make Project"], "DialogElementName"]
+}], "Subsubsection",
+ CellChangeTimes->{{3.771276175754507*^9, 3.771276179189693*^9}, {
+  3.771276393308057*^9, 3.771276421282044*^9}, {3.771276486146564*^9, 
+  3.771276486440996*^9}},ExpressionUUID->"0287016e-22ab-4485-8853-\
+55068c5a787c"],
+
+Cell["\<\
+Follow the instructions, by filling in the fields to construct a project file \
+for a Folder, e.g. for Polygons\
+\>", "Text",
+ CellChangeTimes->{{3.771276429482708*^9, 
+  3.7712764739847097`*^9}},ExpressionUUID->"95d2ddbe-ccbe-4eeb-9eba-\
+f04ca676587f"],
+
+Cell[TextData[{
+ "If you open the Project Actions toggle bar in the ",
+ StyleBox[ButtonBox["Make Project",
+  BaseStyle->"Link",
+  ButtonFunction:>NotebookOpen[
+    ToFileName[{$InstallationDirectory, "AddOns", "Applications", 
+      "AuthorTools", "FrontEnd", "TextResources"}, "MakeProject.nb"]],
+  ButtonData->"paclet:ref/Make Project"], "DialogElementName"],
+ " palette you can build a Table of Contents."
+}], "Text",
+ CellChangeTimes->{{3.7712765177623672`*^9, 
+  3.771276572587288*^9}},ExpressionUUID->"84c42a3a-5c96-4b3d-8b7e-\
+75b5cccfc1bf"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{445, Automatic}, {Automatic, 120}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 227, 4, 54, "Subsection",ExpressionUUID->"5bebae1a-d3d4-42ea-a259-027f2da63c0f"],
+Cell[810, 28, 228, 4, 30, "Input",ExpressionUUID->"39ac00d8-9ae6-42eb-91e0-f85dafee2cc3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1075, 37, 327, 11, 54, "Subsection",ExpressionUUID->"9def217f-181b-4a35-bbd9-d955b7d9a897"],
+Cell[CellGroupData[{
+Cell[1427, 52, 556, 12, 45, "Subsubsection",ExpressionUUID->"0287016e-22ab-4485-8853-55068c5a787c"],
+Cell[1986, 66, 263, 6, 35, "Text",ExpressionUUID->"95d2ddbe-ccbe-4eeb-9eba-f04ca676587f"],
+Cell[2252, 74, 548, 12, 35, "Text",ExpressionUUID->"84c42a3a-5c96-4b3d-8b7e-75b5cccfc1bf"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

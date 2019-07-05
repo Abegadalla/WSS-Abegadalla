@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     28948,        657]
-NotebookOptionsPosition[     28169,        634]
-NotebookOutlinePosition[     28506,        649]
-CellTagsIndexPosition[     28463,        646]
+NotebookDataLength[     29500,        673]
+NotebookOptionsPosition[     28213,        633]
+NotebookOutlinePosition[     29004,        662]
+CellTagsIndexPosition[     28894,        655]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,9 +21,8 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Find the maximum area of a rectangle in a cyclic trapezoid", "Section",
- CellChangeTimes->{{3.630096742974959*^9, 
-  3.630096786369927*^9}},ExpressionUUID->"27933c2a-6b19-400f-abe5-\
-5750ee44fcc6"],
+ CellChangeTimes->{{3.630096742974959*^9, 3.630096786369927*^9}},
+ CellTags->"c:1",ExpressionUUID->"27933c2a-6b19-400f-abe5-5750ee44fcc6"],
 
 Cell[CellGroupData[{
 
@@ -31,9 +30,8 @@ Cell["\<\
 Given a trapezoid in a circle, find the dimensions of the rectangle that \
 gives maximum area\
 \>", "Subsection",
- CellChangeTimes->{{3.6300967926327963`*^9, 
-  3.630096861368464*^9}},ExpressionUUID->"af0565c9-3799-4cb5-b7af-\
-387c436e5225"],
+ CellChangeTimes->{{3.6300967926327963`*^9, 3.630096861368464*^9}},
+ CellTags->"c:2",ExpressionUUID->"af0565c9-3799-4cb5-b7af-387c436e5225"],
 
 Cell[CellGroupData[{
 
@@ -629,7 +627,8 @@ $CellContext`polygon = Graphics[{{Thick,
 }, Open  ]]
 }, Open  ]],
 
-Cell["", "Subsection",ExpressionUUID->"4badf425-a81e-4456-838d-98c4d7bace03"]
+Cell["", "Subsection",
+ CellTags->"c:3",ExpressionUUID->"4badf425-a81e-4456-838d-98c4d7bace03"]
 }, Open  ]]
 },
 WindowSize->{808, 974},
@@ -641,27 +640,42 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 216, 2, 67, "Section",ExpressionUUID->"27933c2a-6b19-400f-abe5-5750ee44fcc6",
+   CellTags->"c:1"]},
+ "c:2"->{
+  Cell[821, 28, 264, 5, 81, "Subsection",ExpressionUUID->"af0565c9-3799-4cb5-b7af-387c436e5225",
+   CellTags->"c:2"]},
+ "c:3"->{
+  Cell[28102, 629, 95, 1, 54, "Subsection",ExpressionUUID->"4badf425-a81e-4456-838d-98c4d7bace03",
+   CellTags->"c:3"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 28495, 643},
+ {"c:2", 28621, 646},
+ {"c:3", 28750, 649}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 203, 3, 67, "Section",ExpressionUUID->"27933c2a-6b19-400f-abe5-5750ee44fcc6"],
+Cell[580, 22, 216, 2, 67, "Section",ExpressionUUID->"27933c2a-6b19-400f-abe5-5750ee44fcc6",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[808, 29, 251, 6, 81, "Subsection",ExpressionUUID->"af0565c9-3799-4cb5-b7af-387c436e5225"],
+Cell[821, 28, 264, 5, 81, "Subsection",ExpressionUUID->"af0565c9-3799-4cb5-b7af-387c436e5225",
+ CellTags->"c:2"],
 Cell[CellGroupData[{
-Cell[1084, 39, 19325, 428, 1615, "Input",ExpressionUUID->"d09dcfc1-3058-4028-a042-3d784aa765cb"],
-Cell[20412, 469, 7637, 158, 677, "Output",ExpressionUUID->"985a82ec-b57b-4961-8d0b-be8be61d803c"]
+Cell[1110, 37, 19325, 428, 1615, "Input",ExpressionUUID->"d09dcfc1-3058-4028-a042-3d784aa765cb"],
+Cell[20438, 467, 7637, 158, 619, "Output",ExpressionUUID->"985a82ec-b57b-4961-8d0b-be8be61d803c"]
 }, Open  ]]
 }, Open  ]],
-Cell[28076, 631, 77, 0, 54, "Subsection",ExpressionUUID->"4badf425-a81e-4456-838d-98c4d7bace03"]
+Cell[28102, 629, 95, 1, 54, "Subsection",ExpressionUUID->"4badf425-a81e-4456-838d-98c4d7bace03",
+ CellTags->"c:3"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

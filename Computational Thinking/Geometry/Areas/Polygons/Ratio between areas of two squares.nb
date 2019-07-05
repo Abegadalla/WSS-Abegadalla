@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9067,        235]
-NotebookOptionsPosition[      8521,        216]
-NotebookOutlinePosition[      8857,        231]
-CellTagsIndexPosition[      8814,        228]
+NotebookDataLength[      9247,        241]
+NotebookOptionsPosition[      8534,        215]
+NotebookOutlinePosition[      9019,        236]
+CellTagsIndexPosition[      8954,        231]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,9 +21,8 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Ratio between areas of two squares", "Section",
- CellChangeTimes->{{3.771133730598481*^9, 
-  3.771133766798223*^9}},ExpressionUUID->"d888476d-4da1-4974-a0a8-\
-5869b10602ae"],
+ CellChangeTimes->{{3.771133730598481*^9, 3.771133766798223*^9}},
+ CellTags->"c:1",ExpressionUUID->"d888476d-4da1-4974-a0a8-5869b10602ae"],
 
 Cell[CellGroupData[{
 
@@ -223,18 +222,25 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 192, 2, 67, "Section",ExpressionUUID->"d888476d-4da1-4974-a0a8-5869b10602ae",
+   CellTags->"c:1"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 8815, 225}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 179, 3, 67, "Section",ExpressionUUID->"d888476d-4da1-4974-a0a8-5869b10602ae"],
+Cell[580, 22, 192, 2, 67, "Section",ExpressionUUID->"d888476d-4da1-4974-a0a8-5869b10602ae",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[784, 29, 4640, 116, 430, "Input",ExpressionUUID->"145c71f5-28f6-4362-8ac0-17a7ea9b16b7"],
-Cell[5427, 147, 3066, 65, 549, "Output",ExpressionUUID->"7a1701e9-8659-4479-afc7-26e0ba2ca36d"]
+Cell[797, 28, 4640, 116, 430, "Input",ExpressionUUID->"145c71f5-28f6-4362-8ac0-17a7ea9b16b7"],
+Cell[5440, 146, 3066, 65, 549, "Output",ExpressionUUID->"7a1701e9-8659-4479-afc7-26e0ba2ca36d"]
 }, Open  ]]
 }, Open  ]]
 }

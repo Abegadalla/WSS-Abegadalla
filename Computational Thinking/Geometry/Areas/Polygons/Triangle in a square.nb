@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29593,        698]
-NotebookOptionsPosition[     29039,        679]
-NotebookOutlinePosition[     29378,        694]
-CellTagsIndexPosition[     29335,        691]
+NotebookDataLength[     29775,        704]
+NotebookOptionsPosition[     29052,        678]
+NotebookOutlinePosition[     29542,        699]
+CellTagsIndexPosition[     29476,        694]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,9 +25,8 @@ What is the largest equilateral triangle that can be inscribed in a unit \
 square (A square  with side length = 1 cm)\
 \>", "Section",
  CellChangeTimes->{{3.6480334907693663`*^9, 3.6480335727219152`*^9}, {
-  3.64807651159692*^9, 
-  3.6480765125962963`*^9}},ExpressionUUID->"9d501dfb-0b65-453d-93b6-\
-f70c8f25bffa"],
+  3.64807651159692*^9, 3.6480765125962963`*^9}},
+ CellTags->"c:1",ExpressionUUID->"9d501dfb-0b65-453d-93b6-f70c8f25bffa"],
 
 Cell[CellGroupData[{
 
@@ -660,7 +659,7 @@ equilateral triangle that can be inscribed in a unit square", 13, Italic,
       "Options" :> {
        TrackedSymbols :> {$CellContext`\[Theta]$$, $CellContext`solution$$}, 
         ContentSize -> 390}, "DefaultOptions" :> {}],
-     ImageSizeCache->{404., {255., 260.}},
+     ImageSizeCache->{421., {255., 260.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -686,23 +685,28 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 337, 6, 105, "Section",ExpressionUUID->"9d501dfb-0b65-453d-93b6-f70c8f25bffa",
+   CellTags->"c:1"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 29336, 688}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 324, 7, 105, "Section",ExpressionUUID->"9d501dfb-0b65-453d-93b6-f70c8f25bffa"],
+Cell[580, 22, 337, 6, 105, "Section",ExpressionUUID->"9d501dfb-0b65-453d-93b6-f70c8f25bffa",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[929, 33, 21741, 498, 1244, "Input",ExpressionUUID->"3803e55f-e066-4154-a95b-30e8cda721a0"],
-Cell[22673, 533, 6338, 142, 592, "Output",ExpressionUUID->"0d338855-c198-48bc-a07b-b6eb9e7ee972"]
+Cell[942, 32, 21741, 498, 1244, "Input",ExpressionUUID->"3803e55f-e066-4154-a95b-30e8cda721a0"],
+Cell[22686, 532, 6338, 142, 534, "Output",ExpressionUUID->"0d338855-c198-48bc-a07b-b6eb9e7ee972"]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

@@ -1,0 +1,208 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6259,        200]
+NotebookOptionsPosition[      4548,        168]
+NotebookOutlinePosition[      4920,        184]
+CellTagsIndexPosition[      4877,        181]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Areas of Triangles", "ContentsTitle",
+ CellChangeTimes->{{3.771276973074316*^9, 
+  3.771276973233005*^9}},ExpressionUUID->"36b15008-787a-474f-b22e-\
+ec0adbf2e4d2"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Area of a triangle within a polygon",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of a triangle in a polygon 5-26-19.nb"], 
+    "c:1"}]], "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "\[Bullet] ",
+ ButtonBox["Area of a triangle within a polygon",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of a triangle in a polygon 6-24-19.nb"], 
+    "c:1"}],
+ " "
+}], "TOCSubsectionCondensed",ExpressionUUID->"03b884b8-27e5-49c4-8e26-\
+3fe301a83618"]
+}, Open  ]],
+
+Cell[TextData[{
+ "I. \[Pi] as a length of a semi-circle with radius = 1.",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["-1000",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of a triangle in a polygon 6-24-19.nb"], 
+    "c:2"}]], "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Maria Gaetana Agnesi (1718 - 1799  Italian Mathematician .",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["-1000",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of a triangle in a polygon 6-24-19.nb"], 
+    "c:4"}]], "TOCPage"]
+}], "TOCTitleCondensed"],
+
+Cell[TextData[{
+ StyleBox["The area under the graph when a = 1 is \[Pi] square units.",
+  FontColor->GrayLevel[0]],
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["-1000",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of a triangle in a polygon 6-24-19.nb"], 
+    "c:5"}]], "TOCPage",ExpressionUUID->"c34f2383-6b28-4161-997c-266aa31b491e"]
+}], "TOCSectionCondensed",ExpressionUUID->"05ebce37-eb44-48d7-9abc-\
+e31370b6e036"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "III.  \[Pi]  as a Volume ",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["-1000",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of a triangle in a polygon 6-24-19.nb"], 
+    "c:6"}]], "TOCPage"]
+}], "TOCTitleCondensed"],
+
+Cell[TextData[{
+ "\[Bullet] ",
+ ButtonBox["Here are other series derived from Euler\[CloseCurlyQuote]s \
+formulas and others.",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of a triangle in a polygon 6-24-19.nb"], 
+    "c:7"}],
+ " "
+}], "TOCSubsectionCondensed",ExpressionUUID->"5bc40f7f-3ba0-439d-b556-\
+718adc6185e7"],
+
+Cell[TextData[{
+ "Ideas",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["-1000",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of a triangle in a polygon 6-24-19.nb"], 
+    "c:8"}]], "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "Area of a triangle within a polygon",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["-1995",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of a triangle within a polygon.nb"], "c:1"}]],
+   "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "The Area of Part of an Isosceles Triangle",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["-2995",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Area of parts of isosceles right triangle.nb"], 
+    "c:1"}]], "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "Draw equilateral triangles with points",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["-3995",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Equilateral Triangles.nb"], "c:1"}]], "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "Calculate the ratios of areas of Triangles",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["-4995",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Ratios of areas of Triangles.nb"], "c:1"}]], 
+  "TOCPage"]
+}], "TOCSectionCondensed"]
+}, Open  ]]
+},
+WindowSize->{1212, 916},
+WindowMargins->{{44, Automatic}, {Automatic, 104}},
+Magnification:>2. Inherited,
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"HelpBrowser.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 169, 3, 121, "ContentsTitle",ExpressionUUID->"36b15008-787a-474f-b22e-ec0adbf2e4d2"],
+Cell[CellGroupData[{
+Cell[752, 27, 285, 9, 29, "TOCSectionCondensed",ExpressionUUID->"6b2748ae-0cfd-4999-9915-4480a694cbe6"],
+Cell[1040, 38, 300, 9, 28, "TOCSubsectionCondensed",ExpressionUUID->"03b884b8-27e5-49c4-8e26-3fe301a83618"]
+}, Open  ]],
+Cell[1355, 50, 308, 9, 56, "TOCSectionCondensed",ExpressionUUID->"1d8f753a-313e-48cc-b7d0-45f92ccf4267"],
+Cell[CellGroupData[{
+Cell[1688, 63, 310, 9, 58, "TOCTitleCondensed",ExpressionUUID->"38696cf2-c0b4-4a60-bff8-89e1df7f91d9"],
+Cell[2001, 74, 461, 11, 56, "TOCSectionCondensed",ExpressionUUID->"05ebce37-eb44-48d7-9abc-e31370b6e036"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2499, 90, 277, 9, 70, "TOCTitleCondensed",ExpressionUUID->"b9c78dcc-3b90-42a1-b95e-d23ba30de722"],
+Cell[2779, 101, 347, 10, 28, "TOCSubsectionCondensed",ExpressionUUID->"5bc40f7f-3ba0-439d-b556-718adc6185e7"],
+Cell[3129, 113, 259, 9, 56, "TOCSectionCondensed",ExpressionUUID->"a91fbbc8-dd7f-4681-95b1-dd2511d3ec83"],
+Cell[3391, 124, 283, 9, 56, "TOCSectionCondensed",ExpressionUUID->"373c3363-fbca-484c-baa9-0e2166227e9e"],
+Cell[3677, 135, 297, 9, 56, "TOCSectionCondensed",ExpressionUUID->"b2b89fc8-84b0-455f-a996-6d8ea141ad76"],
+Cell[3977, 146, 269, 8, 56, "TOCSectionCondensed",ExpressionUUID->"d49c45ac-a7e7-4784-a734-371797219be3"],
+Cell[4249, 156, 283, 9, 56, "TOCSectionCondensed",ExpressionUUID->"5bb491d2-01c9-4c23-b644-514fc555d38f"]
+}, Open  ]]
+}
+]
+*)
+

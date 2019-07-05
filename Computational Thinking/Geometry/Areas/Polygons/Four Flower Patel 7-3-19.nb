@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     77735,       1899]
-NotebookOptionsPosition[     76226,       1871]
-NotebookOutlinePosition[     76563,       1886]
-CellTagsIndexPosition[     76520,       1883]
+NotebookDataLength[     77943,       1904]
+NotebookOptionsPosition[     76264,       1869]
+NotebookOutlinePosition[     76752,       1890]
+CellTagsIndexPosition[     76685,       1885]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,9 +21,8 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Four Flower Patel", "Section",
- CellChangeTimes->{{3.77127285683396*^9, 
-  3.771272867138891*^9}},ExpressionUUID->"24f1446e-e7ca-4bf9-a3e7-\
-b447455ca462"],
+ CellChangeTimes->{{3.77127285683396*^9, 3.771272867138891*^9}},
+ CellTags->"c:1",ExpressionUUID->"24f1446e-e7ca-4bf9-a3e7-b447455ca462"],
 
 Cell[BoxData[
  RowBox[{
@@ -1568,34 +1567,33 @@ Cell[BoxData[
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, 
       "Body" :> ($CellContext`areaSeg := 
-        FullSimplify[(1/2.) (Sqrt[2.] $CellContext`r)^2 (Pi/6) - (1/2) (
-           Sqrt[3.] - 1) $CellContext`r ((Sqrt[3.] + 1)/
-           2) $CellContext`r]; $CellContext`requiredArea1 := 
+        FullSimplify[((1/2.) (Sqrt[2.] $CellContext`r)^2) (Pi/
+            6) - ((((1/2) (Sqrt[3.] - 1)) $CellContext`r) ((Sqrt[3.] + 1)/
+            2)) $CellContext`r]; $CellContext`requiredArea1 := 
         FullSimplify[(Sqrt[3.] - 1)^2 $CellContext`r^2 + 
-          4 FullSimplify[(1/2.) (Sqrt[2.] $CellContext`r)^2 (Pi/6) - (1/2) (
-              Sqrt[3] - 1) $CellContext`r ((Sqrt[3.] + 1)/
-              2) $CellContext`r]]; $CellContext`yellowArea2 := 
+          4 FullSimplify[((1/2.) (Sqrt[2.] $CellContext`r)^2) (Pi/
+               6) - ((((1/2) (Sqrt[3] - 1)) $CellContext`r) ((Sqrt[3.] + 1)/
+               2)) $CellContext`r]]; $CellContext`yellowArea2 := 
         HoldForm[
           Yellow $CellContext`area = 
            4 Integrate[-$CellContext`r + 
               Sqrt[2 $CellContext`r^2 - $CellContext`x^2], {$CellContext`x, 
-               0, (Sqrt[3] - 1) $CellContext`r/2}]] == 
+               0, (Sqrt[3] - 1) ($CellContext`r/2)}]] == 
          Framed[4 
            Integrate[-$CellContext`r + 
              Sqrt[2. $CellContext`r^2 - $CellContext`x^2], {$CellContext`x, 
-              0, (Sqrt[3.] - 1) $CellContext`r/2}], Background -> 
+              0, (Sqrt[3.] - 1) ($CellContext`r/2)}], Background -> 
            LightYellow]; $CellContext`redArea2 := 
-        HoldForm[
-          Red $CellContext`and Blue $CellContext`areas = 
+        HoldForm[((Red $CellContext`and) Blue) $CellContext`areas = 
            4 Integrate[(-$CellContext`r + 
                Sqrt[2 $CellContext`r^2 - $CellContext`y^2]) - ((Sqrt[3] - 1)/
                2) $CellContext`r, {$CellContext`y, 
-               0, (Sqrt[3] - 1) $CellContext`r/2}]] == 
+               0, (Sqrt[3] - 1) ($CellContext`r/2)}]] == 
          Framed[4 
            Integrate[(-$CellContext`r + 
               Sqrt[2. $CellContext`r^2 - $CellContext`y^2]) - ((Sqrt[3.] - 1)/
               2.) $CellContext`r, {$CellContext`y, 
-              0, (Sqrt[3.] - 1) $CellContext`r/2}], Background -> 
+              0, (Sqrt[3.] - 1) ($CellContext`r/2)}], Background -> 
            LightRed]; $CellContext`YlRedAreas = Style[
           
           Row[{"\nYellow area = 4\!\(\*SubsuperscriptBox[\(\[Integral]\), \(0\
@@ -1783,9 +1781,9 @@ $CellContext`r)^2]}, {$CellContext`x, 0, 0.415}, AspectRatio ->
                 Style[
                  
                  TraditionalForm[$CellContext`r {(Sqrt[3] - 1)/
-                    2, -(Sqrt[3] - 1)/2}], 12, Black, 
-                 Italic], $CellContext`r {(Sqrt[3] - 0.8)/2, -(Sqrt[3] - 0.8)/
-                  2}], Yellow, 
+                    2, (-(Sqrt[3] - 1))/2}], 12, Black, 
+                 Italic], $CellContext`r {(Sqrt[3] - 0.8)/
+                  2, (-(Sqrt[3] - 0.8))/2}], Yellow, 
                
                Rectangle[$CellContext`r {-((Sqrt[3] - 1)/2), -((Sqrt[3] - 1)/
                    2)}, $CellContext`r {(Sqrt[3] - 1)/2, (Sqrt[3] - 1)/2}], {
@@ -1878,28 +1876,35 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 174, 2, 67, "Section",ExpressionUUID->"24f1446e-e7ca-4bf9-a3e7-b447455ca462",
+   CellTags->"c:1"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 76546, 1879}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 161, 3, 67, "Section",ExpressionUUID->"24f1446e-e7ca-4bf9-a3e7-b447455ca462"],
-Cell[744, 27, 242, 5, 30, "Input",ExpressionUUID->"acf47ec6-62ac-4cf2-beba-f80d92d888e8"],
-Cell[989, 34, 220, 5, 30, "Input",ExpressionUUID->"85a1114b-6ef0-42a6-bbb8-be1dde767ca3"],
-Cell[1212, 41, 674, 22, 58, "Input",ExpressionUUID->"9ad506d2-585a-41fc-8aa6-09acc319c796"],
-Cell[1889, 65, 902, 29, 63, "Input",ExpressionUUID->"ab24992f-d40e-4584-ae0a-f0c3fbf3a248"],
-Cell[2794, 96, 980, 31, 58, "Input",ExpressionUUID->"f5dbd6a7-3714-44e7-b698-4766cb497a99"],
-Cell[3777, 129, 827, 27, 58, "Input",ExpressionUUID->"3b134f3f-6f45-4026-82a5-a1fd03b1b056"],
-Cell[4607, 158, 978, 31, 58, "Input",ExpressionUUID->"75fca0b6-1826-4c29-ab20-2e9c50d26e2c"],
-Cell[5588, 191, 823, 27, 58, "Input",ExpressionUUID->"91ee8f1d-5cf4-4e91-9e31-e72349e1a2da"],
-Cell[6414, 220, 718, 23, 58, "Input",ExpressionUUID->"5b149cb2-465f-4038-be97-0a1a1ea40382"],
-Cell[7135, 245, 946, 30, 63, "Input",ExpressionUUID->"3359dfa9-a09a-47d5-a58b-ad9a0eab0230"],
-Cell[8084, 277, 51305, 1264, 3683, "Input",ExpressionUUID->"c03d125f-1574-479d-b3b7-703d0946a6b1",
+Cell[580, 22, 174, 2, 67, "Section",ExpressionUUID->"24f1446e-e7ca-4bf9-a3e7-b447455ca462",
+ CellTags->"c:1"],
+Cell[757, 26, 242, 5, 30, "Input",ExpressionUUID->"acf47ec6-62ac-4cf2-beba-f80d92d888e8"],
+Cell[1002, 33, 220, 5, 30, "Input",ExpressionUUID->"85a1114b-6ef0-42a6-bbb8-be1dde767ca3"],
+Cell[1225, 40, 674, 22, 58, "Input",ExpressionUUID->"9ad506d2-585a-41fc-8aa6-09acc319c796"],
+Cell[1902, 64, 902, 29, 63, "Input",ExpressionUUID->"ab24992f-d40e-4584-ae0a-f0c3fbf3a248"],
+Cell[2807, 95, 980, 31, 58, "Input",ExpressionUUID->"f5dbd6a7-3714-44e7-b698-4766cb497a99"],
+Cell[3790, 128, 827, 27, 58, "Input",ExpressionUUID->"3b134f3f-6f45-4026-82a5-a1fd03b1b056"],
+Cell[4620, 157, 978, 31, 58, "Input",ExpressionUUID->"75fca0b6-1826-4c29-ab20-2e9c50d26e2c"],
+Cell[5601, 190, 823, 27, 58, "Input",ExpressionUUID->"91ee8f1d-5cf4-4e91-9e31-e72349e1a2da"],
+Cell[6427, 219, 718, 23, 58, "Input",ExpressionUUID->"5b149cb2-465f-4038-be97-0a1a1ea40382"],
+Cell[7148, 244, 946, 30, 63, "Input",ExpressionUUID->"3359dfa9-a09a-47d5-a58b-ad9a0eab0230"],
+Cell[8097, 276, 51305, 1264, 3683, "Input",ExpressionUUID->"c03d125f-1574-479d-b3b7-703d0946a6b1",
  CellGroupingRules->{"GroupTogetherGrouping", 10000.}],
-Cell[59392, 1543, 16818, 325, 819, "Output",ExpressionUUID->"bdaa5647-cdba-498a-a4c3-06dc58e54045"]
+Cell[59405, 1542, 16843, 324, 819, "Output",ExpressionUUID->"bdaa5647-cdba-498a-a4c3-06dc58e54045"]
 }, Open  ]]
 }
 ]

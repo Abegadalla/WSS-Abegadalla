@@ -1,0 +1,251 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7682,        243]
+NotebookOptionsPosition[      5609,        206]
+NotebookOutlinePosition[      5980,        222]
+CellTagsIndexPosition[      5937,        219]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Areas of Polygons", "ContentsTitle",
+ CellChangeTimes->{{3.771276642717857*^9, 
+  3.771276643068088*^9}},ExpressionUUID->"71862ff3-0a70-412a-ac5d-\
+607c4d94939f"],
+
+Cell[TextData[{
+ "Calculate the ratio of shaded Areas in a Rectangle",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, 
+     "Calculate the ratio of shaded Areas in a Rectangle.nb"], "c:1"}]], 
+  "TOCPage",ExpressionUUID->"91df226e-4040-4c0c-8a65-12366281c0d8"]
+}], "TOCSectionCondensed",ExpressionUUID->"f16c53af-4d7b-4900-9577-\
+e3821b570fa3"],
+
+Cell[TextData[{
+ "Four Flower Patel",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Four Flower Patel 7-3-19.nb"], "c:1"}]], 
+  "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "Ratio between areas of two squares",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Ratio between areas of two squares.nb"], "c:1"}]], 
+  "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "Area of a rectangle in a circle",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Rectangle in a circle.nb"], "c:1"}]], "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Find the maximum area of a rectangle in a cyclical trapezoid",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "rectangle in a cyclical trapezoid.nb"], "c:1"}]], 
+  "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "\[Bullet] ",
+ ButtonBox["Given a trapezoid in a circle, find the dimensions of the \
+rectangle that gives maximum area",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "rectangle in a cyclical trapezoid.nb"], "c:2"}],
+ " "
+}], "TOCSubsectionCondensed",ExpressionUUID->"672c2f83-6399-4372-a477-\
+77d39a00190b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Find the maximum area of a rectangle in a cyclic trapezoid",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "rectangle in cyclical trapezoid.nb"], "c:1"}]], 
+  "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "\[Bullet] ",
+ ButtonBox["Given a trapezoid in a circle, find the dimensions of the \
+rectangle that gives maximum area",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "rectangle in cyclical trapezoid.nb"], "c:2"}],
+ " ",
+ "\[Bullet] ",
+ ButtonBox["",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "rectangle in cyclical trapezoid.nb"], "c:3"}],
+ " "
+}], "TOCSubsectionCondensed"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Rotating a rectangle about a center of a square.",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Rotating a rectangle about square's center.nb"], 
+    "c:1"}]], "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "\[Bullet] ",
+ ButtonBox["Calculate the common area between a square and a rectangle whose \
+vertex is at the center of the square.",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Rotating a rectangle about square's center.nb"], 
+    "c:2"}],
+ " "
+}], "TOCSubsectionCondensed"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Calculate the Gray shaded area in the square",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "shaded area in a square 7 - 3.nb"], "c:1"}]], 
+  "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "\[Bullet] ",
+ ButtonBox["ABCD is a square of side length 4 .  Two quarter circles and a \
+diagonal are drawn as shown.  Find the area of the shaded region.",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "shaded area in a square 7 - 3.nb"], "c:2"}],
+ " "
+}], "TOCSubsectionCondensed"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Another Exercise on area in a square",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Shaded area in a square II.nb"], "c:1"}]], 
+  "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "Area of a Trapezoid in a semicircle",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Trapezoid in semicircle.nb"], "c:1"}]], "TOCPage"]
+}], "TOCSectionCondensed"],
+
+Cell[TextData[{
+ "What is the largest equilateral triangle that can be inscribed in a unit \
+square (A square  with side length = 1 cm)",
+ " ",
+ StyleBox["\t", "Leader"],
+ Cell[TextData[ButtonBox["?",
+  BaseStyle->"PageLink",
+  ButtonData->{
+    FrontEnd`FileName[{}, "Triangle in a square.nb"], "c:1"}]], "TOCPage"]
+}], "TOCSectionCondensed"]
+},
+WindowSize->{1411, 915},
+WindowMargins->{{36, Automatic}, {Automatic, 87}},
+Magnification:>2. Inherited,
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"HelpBrowser.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 168, 3, 121, "ContentsTitle",ExpressionUUID->"71862ff3-0a70-412a-ac5d-607c4d94939f"],
+Cell[729, 25, 427, 11, 29, "TOCSectionCondensed",ExpressionUUID->"f16c53af-4d7b-4900-9577-e3821b570fa3"],
+Cell[1159, 38, 250, 9, 29, "TOCSectionCondensed",ExpressionUUID->"c1417e0c-432b-4bc8-8a6e-621d96b424ed"],
+Cell[1412, 49, 277, 9, 29, "TOCSectionCondensed",ExpressionUUID->"5c695a16-acab-4d39-a385-6e075b640e8b"],
+Cell[1692, 60, 258, 8, 29, "TOCSectionCondensed",ExpressionUUID->"db13a227-749d-4308-a2c6-b415536a1cf6"],
+Cell[CellGroupData[{
+Cell[1975, 72, 302, 9, 29, "TOCSectionCondensed",ExpressionUUID->"98b92dec-b069-48f2-865d-25974679db0d"],
+Cell[2280, 83, 347, 9, 54, "TOCSubsectionCondensed",ExpressionUUID->"672c2f83-6399-4372-a477-77d39a00190b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2664, 97, 298, 9, 29, "TOCSectionCondensed",ExpressionUUID->"b81530d5-ccb9-4e3e-8317-0d347c26b6fc"],
+Cell[2965, 108, 439, 14, 54, "TOCSubsectionCondensed",ExpressionUUID->"645efde7-cdfe-4858-930c-7338e4d4856b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3441, 127, 301, 9, 29, "TOCSectionCondensed",ExpressionUUID->"7120cf49-f1f1-4462-92ad-5660c66be682"],
+Cell[3745, 138, 316, 9, 54, "TOCSubsectionCondensed",ExpressionUUID->"1ed5dc90-9b28-4357-a282-b2de43c3992e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4098, 152, 282, 9, 29, "TOCSectionCondensed",ExpressionUUID->"be362cd1-c9a9-4dab-bfea-0cb5aac7cd81"],
+Cell[4383, 163, 323, 8, 54, "TOCSubsectionCondensed",ExpressionUUID->"e09d886b-8c1e-4619-b154-d074bec9e49e"]
+}, Open  ]],
+Cell[4721, 174, 271, 9, 29, "TOCSectionCondensed",ExpressionUUID->"978ed463-a36f-4200-a7b2-1fc01cbbb848"],
+Cell[4995, 185, 264, 8, 29, "TOCSectionCondensed",ExpressionUUID->"3ab13929-a883-423c-a834-f8841fea661a"],
+Cell[5262, 195, 343, 9, 52, "TOCSectionCondensed",ExpressionUUID->"073fa7d5-bea3-4d9a-a62f-b8119346d232"]
+}
+]
+*)
+

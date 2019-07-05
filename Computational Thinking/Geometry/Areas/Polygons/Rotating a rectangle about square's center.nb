@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     30318,        656]
-NotebookOptionsPosition[     29637,        634]
-NotebookOutlinePosition[     29974,        649]
-CellTagsIndexPosition[     29931,        646]
+NotebookDataLength[     30681,        666]
+NotebookOptionsPosition[     29663,        632]
+NotebookOutlinePosition[     30301,        657]
+CellTagsIndexPosition[     30213,        651]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,9 +21,8 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Rotating a rectangle about a center of a square.", "Section",
- CellChangeTimes->{{3.698750625448892*^9, 
-  3.698750684601804*^9}},ExpressionUUID->"a264f2e0-9c01-4677-aa12-\
-47d07b0ee2f6"],
+ CellChangeTimes->{{3.698750625448892*^9, 3.698750684601804*^9}},
+ CellTags->"c:1",ExpressionUUID->"a264f2e0-9c01-4677-aa12-47d07b0ee2f6"],
 
 Cell[CellGroupData[{
 
@@ -31,9 +30,8 @@ Cell["\<\
 Calculate the common area between a square and a rectangle whose vertex is at \
 the center of the square.\
 \>", "Subsection",
- CellChangeTimes->{{3.6987932512995987`*^9, 
-  3.698793311849897*^9}},ExpressionUUID->"148d81d3-3936-4375-8ffe-\
-b402468f4abe"],
+ CellChangeTimes->{{3.6987932512995987`*^9, 3.698793311849897*^9}},
+ CellTags->"c:2",ExpressionUUID->"148d81d3-3936-4375-8ffe-b402468f4abe"],
 
 Cell[CellGroupData[{
 
@@ -641,26 +639,36 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 206, 2, 67, "Section",ExpressionUUID->"a264f2e0-9c01-4677-aa12-47d07b0ee2f6",
+   CellTags->"c:1"]},
+ "c:2"->{
+  Cell[811, 28, 276, 5, 81, "Subsection",ExpressionUUID->"148d81d3-3936-4375-8ffe-b402468f4abe",
+   CellTags->"c:2"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 29945, 642},
+ {"c:2", 30071, 645}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 193, 3, 67, "Section",ExpressionUUID->"a264f2e0-9c01-4677-aa12-47d07b0ee2f6"],
+Cell[580, 22, 206, 2, 67, "Section",ExpressionUUID->"a264f2e0-9c01-4677-aa12-47d07b0ee2f6",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[798, 29, 263, 6, 81, "Subsection",ExpressionUUID->"148d81d3-3936-4375-8ffe-b402468f4abe"],
+Cell[811, 28, 276, 5, 81, "Subsection",ExpressionUUID->"148d81d3-3936-4375-8ffe-b402468f4abe",
+ CellTags->"c:2"],
 Cell[CellGroupData[{
-Cell[1086, 39, 21497, 436, 1113, "Input",ExpressionUUID->"3b52d8e0-178c-4b52-ba64-17a85fe66028"],
-Cell[22586, 477, 7011, 152, 643, "Output",ExpressionUUID->"dde73a94-3af1-48b4-9f42-fba494b559c9"]
+Cell[1112, 37, 21497, 436, 1113, "Input",ExpressionUUID->"3b52d8e0-178c-4b52-ba64-17a85fe66028"],
+Cell[22612, 475, 7011, 152, 609, "Output",ExpressionUUID->"dde73a94-3af1-48b4-9f42-fba494b559c9"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 

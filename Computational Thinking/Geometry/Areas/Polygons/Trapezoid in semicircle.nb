@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38894,        811]
-NotebookOptionsPosition[     38321,        791]
-NotebookOutlinePosition[     38659,        806]
-CellTagsIndexPosition[     38616,        803]
+NotebookDataLength[     39088,        818]
+NotebookOptionsPosition[     38347,        791]
+NotebookOutlinePosition[     38835,        812]
+CellTagsIndexPosition[     38769,        807]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,8 +22,8 @@ Notebook[{
 Cell[CellGroupData[{
 Cell["Area of a Trapezoid in a semicircle", "Section",
  CellChangeTimes->{{3.6301909040848293`*^9, 3.63019090408908*^9}, 
-   3.771171783838738*^9},ExpressionUUID->"480eb09e-2bdd-48b5-9c50-\
-c5db3ef010cb"],
+   3.771171783838738*^9},
+ CellTags->"c:1",ExpressionUUID->"480eb09e-2bdd-48b5-9c50-c5db3ef010cb"],
 
 Cell[CellGroupData[{
 
@@ -733,8 +733,8 @@ What is its maximum area ?\n", 15, Black, Italic]], Alignment -> Left, Frame ->
                    Sin[$CellContext`\[Theta]$$]}], 14, Bold], {-0.3, -0.3}]}, 
               PlotRange -> Automatic, 
               ImageSize -> {450, 400}]; $CellContext`plot = 
-            Plot[2 $CellContext`areaT[$CellContext`\[Alpha]]/
-              Pi, {$CellContext`\[Alpha], Pi/36, 5. Pi/6}, Epilog -> {
+            Plot[2 ($CellContext`areaT[$CellContext`\[Alpha]]/
+               Pi), {$CellContext`\[Alpha], Pi/36, 5. (Pi/6)}, Epilog -> {
                 If[$CellContext`answerT$$, {
                   PointSize[Large], 
                   ColorData["HTML", "Green"], 
@@ -742,13 +742,13 @@ What is its maximum area ?\n", 15, Black, Italic]], Alignment -> Left, Frame ->
                   PointSize[Large], Red, 
                   
                   Point[{$CellContext`\[Theta]$$, 
-                    2 $CellContext`areaT[$CellContext`\[Theta]$$]/Pi}]}]}, 
+                    2 ($CellContext`areaT[$CellContext`\[Theta]$$]/Pi)}]}]}, 
               AxesOrigin -> {0, 0}, PlotStyle -> {Thick, Blue}, PlotLabel -> 
               Style[
                 Row[{"The trapezoid covers ", 
                   NumberForm[
-                  2. $CellContext`areaT[$CellContext`\[Theta]$$]/Pi, {5, 3}], 
-                  "\nof the semicircle at \[Theta] = ", 
+                  2. ($CellContext`areaT[$CellContext`\[Theta]$$]/Pi), {5, 
+                   3}], "\nof the semicircle at \[Theta] = ", 
                   NumberForm[$CellContext`\[Theta]$$ (180./Pi), 3], 
                   "\[Degree].\n"}], 12, Bold, "Label"], AxesLabel -> {
                 Style["m \[Angle] BMC", "Label", 14, Bold], 
@@ -772,7 +772,7 @@ What is its maximum area ?\n", 15, Black, Italic]], Alignment -> Left, Frame ->
       "Options" :> {
        TrackedSymbols :> {$CellContext`\[Theta]$$, $CellContext`answerT$$}}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{620., {379., 385.}},
+     ImageSizeCache->{620., {378., 384.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -798,24 +798,29 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "c:1"->{
+  Cell[580, 22, 220, 3, 67, "Section",ExpressionUUID->"480eb09e-2bdd-48b5-9c50-c5db3ef010cb",
+   CellTags->"c:1"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"c:1", 38630, 801}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 204, 3, 67, "Section",ExpressionUUID->"480eb09e-2bdd-48b5-9c50-c5db3ef010cb"],
+Cell[580, 22, 220, 3, 67, "Section",ExpressionUUID->"480eb09e-2bdd-48b5-9c50-c5db3ef010cb",
+ CellTags->"c:1"],
 Cell[CellGroupData[{
-Cell[809, 29, 29628, 591, 1423, "Input",ExpressionUUID->"06f01827-0b83-451a-8faa-4ce6b00d2760",
+Cell[825, 29, 29628, 591, 1423, "Input",ExpressionUUID->"06f01827-0b83-451a-8faa-4ce6b00d2760",
  CellID->1030613539],
-Cell[30440, 622, 7853, 165, 841, "Output",ExpressionUUID->"e3fbd1cb-af56-486d-b9a0-6aa629c1ab6e"]
+Cell[30456, 622, 7863, 165, 781, "Output",ExpressionUUID->"e3fbd1cb-af56-486d-b9a0-6aa629c1ab6e"]
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
