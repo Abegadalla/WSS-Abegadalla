@@ -1,0 +1,303 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10923,        295]
+NotebookOptionsPosition[      8989,        250]
+NotebookOutlinePosition[      9432,        267]
+CellTagsIndexPosition[      9389,        264]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Nested Controls", "Section",
+ CellChangeTimes->{
+  3.652728456208679*^9, 3.652728527108994*^9, {3.7712753006367273`*^9, 
+   3.771275301671689*^9}, {3.7712753488917913`*^9, 3.771275350480586*^9}},
+ CellID->536675164,ExpressionUUID->"96bb6651-c7cc-4f7b-8fe0-4a648a29b60e"],
+
+Cell[TextData[{
+ "List your ",
+ StyleBox["types of solution",
+  FontSlant->"Italic"],
+ ", and the ",
+ StyleBox["methods of solution for each type",
+  FontSlant->"Italic"],
+ " as an ",
+ ButtonBox["Association",
+  BaseStyle->"Link"],
+ ":"
+}], "CodeText",
+ CellChangeTimes->{{3.771273895716221*^9, 3.771273898796364*^9}, {
+   3.771274355474389*^9, 3.771274406809877*^9}, 3.7712746795878*^9, 
+   3.7712747271116247`*^9},ExpressionUUID->"8e99a806-3b9b-4925-83a4-\
+844b76f5c359"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"solutions", "=", 
+   RowBox[{"Association", "[", 
+    RowBox[{
+     RowBox[{"\"\<Problem\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<problem\>\"", ",", "\"\<solution\>\""}], "}"}]}], ",", 
+     RowBox[{"\"\<Geometry\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<g1\>\"", ",", "\"\<g2\>\"", ",", "\"\<g3\>\"", ",", "\"\<g4\>\"", 
+        ",", "\"\<g5\>\""}], "}"}]}], ",", 
+     RowBox[{"\"\<Trigonometry\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"\"\<t1\>\"", ",", "\"\<t2\>\"", ",", "\"\<t3\>\""}], "}"}]}], 
+     ",", 
+     RowBox[{"\"\<Calculus\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<c1\>\"", ",", "\"\<c2\>\"", ",", "\"\<c3\>\"", ",", 
+        "\"\<c4\>\""}], "}"}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7712729960454884`*^9, 3.7712730759766407`*^9}, {
+   3.771273135094411*^9, 3.7712731490959787`*^9}, 3.771273235586528*^9, {
+   3.7712734680646772`*^9, 3.771273496171318*^9}, {3.7712735386433363`*^9, 
+   3.771273620224916*^9}, {3.7712744184830227`*^9, 3.771274419540518*^9}, {
+   3.771274767705776*^9, 3.77127476852596*^9}, {3.771275086195095*^9, 
+   3.771275093449108*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"5f61502f-2bc5-4d94-9fdb-a37ec2731ae0"],
+
+Cell[TextData[{
+ "Extract a list of ",
+ StyleBox["types of solution",
+  FontSlant->"Italic"],
+ " using ",
+ ButtonBox["Keys",
+  BaseStyle->"Link"],
+ ":"
+}], "CodeText",
+ CellChangeTimes->{{3.771274688978904*^9, 3.77127473402352*^9}, {
+  3.77127477970667*^9, 3.7712747919415073`*^9}, {3.7712750334232597`*^9, 
+  3.7712750438978148`*^9}},ExpressionUUID->"78446aff-60a6-4c7f-9b22-\
+d3daad587694"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Keys", "@", "solutions"}]], "Input",
+ CellChangeTimes->{3.771275065503256*^9, 3.771275097699848*^9},
+ CellLabel->"In[18]:=",ExpressionUUID->"2c371a5c-a9c9-4da4-9c56-9534ed1e0f26"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Problem\"\>", ",", "\<\"Geometry\"\>", 
+   ",", "\<\"Trigonometry\"\>", ",", "\<\"Calculus\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.7712745777754173`*^9, 3.7712750982267513`*^9},
+ CellLabel->"Out[18]=",
+ CellID->1173806658,ExpressionUUID->"26f14b41-e5d8-41dd-b708-53cd1525fc1f"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Extract a list of ",
+ StyleBox["methods of solution for each type",
+  FontSlant->"Italic"],
+ " using ",
+ ButtonBox["Key",
+  BaseStyle->"Link"],
+ ":"
+}], "CodeText",
+ CellChangeTimes->{{3.771274688978904*^9, 3.77127473402352*^9}, {
+  3.77127477970667*^9, 3.7712747919415073`*^9}, {3.7712750334232597`*^9, 
+  3.7712750438978148`*^9}, {3.7712751100925827`*^9, 3.771275121094645*^9}},
+ CellID->601582604,ExpressionUUID->"843e5ce2-95e4-4d98-9cce-402fd5119a5c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"solutions", "\[LeftDoubleBracket]", 
+  RowBox[{"Key", "[", "\"\<Problem\>\"", "]"}], 
+  "\[RightDoubleBracket]"}]], "Input",
+ CellChangeTimes->{{3.771274585369256*^9, 3.771274587533289*^9}, 
+   3.771275100234632*^9},
+ CellLabel->"In[19]:=",ExpressionUUID->"70cea2b3-8357-4145-91d0-0f5950476241"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"problem\"\>", ",", "\<\"solution\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.7712745879515333`*^9, 3.7712751264091043`*^9},
+ CellLabel->"Out[19]=",
+ CellID->2015564070,ExpressionUUID->"66ead18c-ba8a-48bb-bcfa-1bc6d3defab8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"solutions", "\[LeftDoubleBracket]", 
+  RowBox[{"Key", "[", "\"\<Trigonometry\>\"", "]"}], 
+  "\[RightDoubleBracket]"}]], "Input",
+ CellChangeTimes->{{3.771274585369256*^9, 3.771274592681307*^9}, 
+   3.7712752639546537`*^9},
+ CellLabel->"In[23]:=",ExpressionUUID->"60427257-b304-440e-9843-4c6ccd0ae77b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"t1\"\>", ",", "\<\"t2\"\>", ",", "\<\"t3\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.771274593240109*^9, 3.77127512807053*^9, 
+  3.771275265842608*^9},
+ CellLabel->"Out[23]=",
+ CellID->1324368773,ExpressionUUID->"ce894826-735d-4647-a683-72f7749c323e"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Construct a dynamic interface which changes based on the ",
+ ButtonBox["Dynamic",
+  BaseStyle->"Link"],
+ " value of type of solution:"
+}], "CodeText",
+ CellChangeTimes->{{3.771274688978904*^9, 3.77127473402352*^9}, {
+  3.77127477970667*^9, 3.7712747919415073`*^9}, {3.7712750334232597`*^9, 
+  3.7712750438978148`*^9}, {3.7712751100925827`*^9, 3.771275192936453*^9}, {
+  3.771275241648163*^9, 3.7712752931216288`*^9}},
+ CellID->1264821762,ExpressionUUID->"147e677c-514a-4f98-93d5-e77b175e0255"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Column", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"SetterBar", "[", 
+     RowBox[{
+      RowBox[{"Dynamic", "@", "x"}], ",", 
+      RowBox[{"Keys", "@", "solutions"}]}], "]"}], ",", 
+    RowBox[{"Dynamic", "@", 
+     RowBox[{"RadioButtonBar", "[", 
+      RowBox[{
+       RowBox[{"solutions", "\[LeftDoubleBracket]", 
+        RowBox[{
+         RowBox[{"Key", "[", "x", "]"}], ",", "1"}], 
+        "\[RightDoubleBracket]"}], ",", 
+       RowBox[{"solutions", "\[LeftDoubleBracket]", 
+        RowBox[{"Key", "[", "x", "]"}], "\[RightDoubleBracket]"}]}], 
+      "]"}]}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7712729128110113`*^9, 3.771272963888555*^9}, {
+  3.771273292305008*^9, 3.7712733979261293`*^9}, {3.771273584543207*^9, 
+  3.771273598050272*^9}, {3.771274450686577*^9, 3.771274463116827*^9}, {
+  3.771274494789568*^9, 3.77127456591711*^9}, {3.771274604917886*^9, 
+  3.771274627951033*^9}, {3.771275210182507*^9, 3.7712752354727373`*^9}, {
+  3.771275270164269*^9, 3.771275273369376*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"ef0da61e-fdce-46bc-90b1-a159a3c091ed"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     InterpretationBox[
+      StyleBox[GridBox[{
+         {
+          SetterBox[Dynamic[$CellContext`x], {"Problem"}, "\<\"Problem\"\>"], 
+          
+          
+          SetterBox[Dynamic[$CellContext`x], {
+           "Geometry"}, "\<\"Geometry\"\>"], 
+          
+          SetterBox[Dynamic[$CellContext`x], {
+           "Trigonometry"}, "\<\"Trigonometry\"\>"], 
+          SetterBox[Dynamic[$CellContext`x], {"Calculus"}, "\<\"Calculus\"\>"]}
+        },
+        BaselinePosition->{1, 1},
+        GridBoxSpacings->{"Columns" -> {
+            Offset[0.27999999999999997`], {
+             Offset[0.]}, 
+            Offset[0.27999999999999997`]}, "Rows" -> {
+            Offset[0.2], {
+             Offset[0.4]}, 
+            Offset[0.2]}}],
+       Deployed->True],
+      SetterBar[
+       Dynamic[$CellContext`x], {
+       "Problem", "Geometry", "Trigonometry", "Calculus"}]]},
+    {
+     DynamicBox[ToBoxes[
+       RadioButtonBar[
+        Part[$CellContext`solutions, 
+         Key[$CellContext`x], 1], 
+        Part[$CellContext`solutions, 
+         Key[$CellContext`x]]], StandardForm],
+      ImageSizeCache->{200., {5., 18.}}]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.771272921574314*^9, 3.7712729325640783`*^9}, 
+   3.771272966410758*^9, 3.7712733091658278`*^9, {3.771273349338229*^9, 
+   3.771273365449665*^9}, 3.7712733984050903`*^9, 3.77127349987007*^9, {
+   3.771273560297475*^9, 3.771273599985939*^9}, {3.771274441913295*^9, 
+   3.771274524679812*^9}, {3.771274556327962*^9, 3.7712745713350277`*^9}, {
+   3.7712746055114717`*^9, 3.771274628411577*^9}, 3.771274675083853*^9, {
+   3.771275211059792*^9, 3.771275235989986*^9}, 3.77127527388092*^9},
+ CellLabel->"Out[24]=",
+ CellID->495638395,ExpressionUUID->"1028c976-3561-4959-be87-47d9d875ba3b"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1119, 859},
+WindowMargins->{{122, Automatic}, {Automatic, 74}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 276, 4, 136, "Section",ExpressionUUID->"96bb6651-c7cc-4f7b-8fe0-4a648a29b60e",
+ CellID->536675164],
+Cell[859, 28, 473, 15, 48, "CodeText",ExpressionUUID->"8e99a806-3b9b-4925-83a4-844b76f5c359"],
+Cell[1335, 45, 1281, 28, 98, "Input",ExpressionUUID->"5f61502f-2bc5-4d94-9fdb-a37ec2731ae0"],
+Cell[2619, 75, 392, 12, 48, "CodeText",ExpressionUUID->"78446aff-60a6-4c7f-9b22-d3daad587694"],
+Cell[CellGroupData[{
+Cell[3036, 91, 203, 3, 37, "Input",ExpressionUUID->"2c371a5c-a9c9-4da4-9c56-9534ed1e0f26"],
+Cell[3242, 96, 328, 6, 51, "Output",ExpressionUUID->"26f14b41-e5d8-41dd-b708-53cd1525fc1f",
+ CellID->1173806658]
+}, Open  ]],
+Cell[3585, 105, 473, 12, 48, "CodeText",ExpressionUUID->"843e5ce2-95e4-4d98-9cce-402fd5119a5c",
+ CellID->601582604],
+Cell[CellGroupData[{
+Cell[4083, 121, 319, 6, 37, "Input",ExpressionUUID->"70cea2b3-8357-4145-91d0-0f5950476241"],
+Cell[4405, 129, 270, 5, 51, "Output",ExpressionUUID->"66ead18c-ba8a-48bb-bcfa-1bc6d3defab8",
+ CellID->2015564070]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4712, 139, 326, 6, 37, "Input",ExpressionUUID->"60427257-b304-440e-9843-4c6ccd0ae77b"],
+Cell[5041, 147, 301, 7, 51, "Output",ExpressionUUID->"ce894826-735d-4647-a683-72f7749c323e",
+ CellID->1324368773]
+}, Open  ]],
+Cell[5357, 157, 511, 10, 48, "CodeText",ExpressionUUID->"147e677c-514a-4f98-93d5-e77b175e0255",
+ CellID->1264821762],
+Cell[CellGroupData[{
+Cell[5893, 171, 1108, 24, 68, "Input",ExpressionUUID->"ef0da61e-fdce-46bc-90b1-a159a3c091ed"],
+Cell[7004, 197, 1957, 49, 97, "Output",ExpressionUUID->"1028c976-3561-4959-be87-47d9d875ba3b",
+ CellID->495638395]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
