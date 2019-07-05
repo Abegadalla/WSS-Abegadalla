@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     46278,       1119]
-NotebookOptionsPosition[     45375,       1094]
-NotebookOutlinePosition[     45744,       1110]
-CellTagsIndexPosition[     45701,       1107]
+NotebookDataLength[     46470,       1122]
+NotebookOptionsPosition[     45664,       1098]
+NotebookOutlinePosition[     46033,       1114]
+CellTagsIndexPosition[     45990,       1111]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -252,8 +252,8 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"-", "0.3"}], ",", "4"}], "}"}]}], "]"}]}], "\n", "}"}], 
       ",", 
-      RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], ";"}], 
-  "\[IndentingNewLine]", "\n", 
+      RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
   RowBox[{"(*", " ", 
    RowBox[{"hint", " ", "and", " ", "step2"}], " ", "*)"}], 
   " "}], "\[IndentingNewLine]", 
@@ -402,10 +402,10 @@ Cell[BoxData[{
           RowBox[{"{", 
            RowBox[{"3", ",", "3.2"}], "}"}]}], "]"}]}], "\[IndentingNewLine]",
         "\[IndentingNewLine]", "}"}], ",", 
-      RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], ";"}], 
-  "\[IndentingNewLine]", 
+      RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], ";"}], "\n", 
   RowBox[{"(*", " ", 
-   RowBox[{"hint", " ", "and", " ", "step3"}], "*)"}]}], "\n", 
+   RowBox[{"hint", " ", "and", " ", "step3"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"graphStep3", "=", "\[IndentingNewLine]", 
@@ -614,9 +614,9 @@ Cell[BoxData[{
           ",", 
           RowBox[{"{", 
            RowBox[{"3.8", ",", "0.3"}], "}"}]}], "]"}]}], "}"}], ",", 
-      RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], ";"}], "\n", 
-  "\[IndentingNewLine]", 
-  RowBox[{"(*", "graphStep4", " ", "*)"}]}], "\[IndentingNewLine]", 
+      RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", "graphStep4", " ", "*)"}]}], "\n", 
  RowBox[{
   RowBox[{"graphStep4", "=", 
    RowBox[{"Graphics", "[", 
@@ -812,12 +812,13 @@ the green segment from the red segment in step 1.\\nHence the required area = \
                    RowBox[{"Background", "\[Rule]", "Yellow"}]}], "]"}]}], 
                 "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
                "\[IndentingNewLine]", 
-               RowBox[{"Style", "[", 
-                RowBox[{
-                "\"\<\\nABCD is a square of side length 4. cm \\n Two quarter \
-circles and a diagonal are drawn as shown.\\n  Find the area of the gray \
-region\\n\>\"", ",", "14", ",", " ", "Black", " ", ",", "Italic"}], "]"}]}], 
-              "]"}]}], "]"}], ",", 
+               RowBox[{"Text", "@", 
+                RowBox[{"Style", "[", 
+                 RowBox[{
+                 "\"\<\\nABCD is a square of side length 4. cm \\n Two \
+quarter circles and a diagonal are drawn as shown.\\n  Find the area of the \
+gray region\\n\>\"", ",", "14", ",", " ", "Black", " ", ",", "Italic"}], 
+                 "]"}]}]}], "]"}]}], "]"}], ",", 
            RowBox[{"Frame", "\[Rule]", "True"}], ",", 
            RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}], ",", 
          "\[IndentingNewLine]", 
@@ -936,23 +937,24 @@ region\\n\>\"", ",", "14", ",", " ", "Black", " ", ",", "Italic"}], "]"}]}],
    3.771155762263295*^9}, {3.771155839621908*^9, 3.7711558406421556`*^9}, {
    3.771155900547804*^9, 3.771155909383007*^9}, {3.771156095081603*^9, 
    3.771156129999136*^9}, {3.771156228135874*^9, 3.77115623682885*^9}, {
-   3.771156296531839*^9, 
-   3.7711563390416822`*^9}},ExpressionUUID->"27fe7f78-6835-4cbd-aa15-\
-aca6d279518b"],
+   3.771156296531839*^9, 3.7711563390416822`*^9}, {3.7712753168531446`*^9, 
+   3.771275332554587*^9}},
+ CellLabel->
+  "In[432]:=",ExpressionUUID->"27fe7f78-6835-4cbd-aa15-aca6d279518b"],
 
 Cell[BoxData[
  FrameBox[
   TagBox[
    StyleBox[
-    DynamicModuleBox[{$CellContext`answerRegion$$ = 
-     False, $CellContext`hint$$ = False, $CellContext`step$$ = 1, 
+    DynamicModuleBox[{CloudObject`Private`answerRegion$$ = False, 
+     CloudObject`Private`hint$$ = False, CloudObject`Private`step$$ = 1, 
      Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
      1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-        Hold[$CellContext`hint$$], False, "hint"}, {False, True}}, {{
-        Hold[$CellContext`step$$], 1, "step"}, {1, 2, 3, 4}}, {{
-        Hold[$CellContext`answerRegion$$], False, "Answer"}, {False, True}}, {
-      
+        Hold[CloudObject`Private`hint$$], False, "hint"}, {False, True}}, {{
+        Hold[CloudObject`Private`step$$], 1, "step"}, {1, 2, 3, 4}}, {{
+        Hold[CloudObject`Private`answerRegion$$], False, "Answer"}, {
+       False, True}}, {
        Hold[
         Row[{
           Manipulate`Place[1], 
@@ -960,46 +962,52 @@ Cell[BoxData[
           Manipulate`Place[2], 
           Spacer[30], 
           Manipulate`Place[3]}]], Manipulate`Dump`ThisIsNotAControl}}, 
-     Typeset`size$$ = {609., {80.41754150390625, 87.58245849609375}}, 
-     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-     True, $CellContext`hint$11946$$ = False, $CellContext`step$11947$$ = 
-     0, $CellContext`answerRegion$11948$$ = False}, 
+     Typeset`size$$ = {515., {288.41754150390625`, 295.58245849609375`}}, 
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+     CloudObject`Private`hint$365047$$ = False, 
+     CloudObject`Private`step$365048$$ = 0, 
+     CloudObject`Private`answerRegion$365049$$ = False}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       2, StandardForm, 
-       "Variables" :> {$CellContext`answerRegion$$ = 
-         False, $CellContext`hint$$ = False, $CellContext`step$$ = 1}, 
+       "Variables" :> {
+        CloudObject`Private`answerRegion$$ = False, 
+         CloudObject`Private`hint$$ = False, CloudObject`Private`step$$ = 1}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`hint$$, $CellContext`hint$11946$$, False], 
-         Hold[$CellContext`step$$, $CellContext`step$11947$$, 0], 
-         Hold[$CellContext`answerRegion$$, $CellContext`answerRegion$11948$$, 
-          False]}, 
+         Hold[
+         CloudObject`Private`hint$$, CloudObject`Private`hint$365047$$, 
+          False], 
+         Hold[
+         CloudObject`Private`step$$, CloudObject`Private`step$365048$$, 0], 
+         Hold[
+         CloudObject`Private`answerRegion$$, 
+          CloudObject`Private`answerRegion$365049$$, False]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Column[{
           Item[
-           If[$CellContext`answerRegion$$, 
+           If[CloudObject`Private`answerRegion$$, 
             Style[
             "\n Area of the Gray region = \!\(\*FractionBox[\(2  \[Pi]\), \
 \(\(3\)\(\\ \)\)]\) + 4 \!\(\*SqrtBox[\(3\)]\) - 8 \
 \!\(\*SuperscriptBox[\(cm\), \(2\)]\)\n", 16, Black, Italic, Background -> 
              Yellow], 
-            If[$CellContext`hint$$, 
-             Which[$CellContext`step$$ == 1, 
+            If[CloudObject`Private`hint$$, 
+             Which[CloudObject`Private`step$$ == 1, 
               Style[
                
                Row[{"\nArea of segment = Area of quarter circle - area of \
 \[CapitalDelta] ABC\n", 
                  Spacer[60], "= ", 
-                 HoldForm[(Pi/4) 4^2 - ((1/2) 4) 4 = 4 (Pi - 2)]}], 16, Blue, 
-               Italic], $CellContext`step$$ == 2, 
+                 HoldForm[(Pi/4) 4^2 - (1/2) 4 4 = 4 (Pi - 2)]}], 16, Blue, 
+               Italic], CloudObject`Private`step$$ == 2, 
               Style[
               "\nArea of yellow sector with angle = 15\[Degree] , or \
 \!\(\*FractionBox[\(\[Pi]\), \(12\)]\) = \n      =  \!\(\*FractionBox[\(1\), \
 \(2\)]\) \!\(\*SuperscriptBox[\(4\), \(2\)]\) \!\(\*FractionBox[\(\[Pi]\), \
-\(12\)]\) = \!\(\*FractionBox[\(2  \[Pi]\), \(3\)]\)\n", 16, Blue, 
-               Italic], $CellContext`step$$ == 3, 
+\(12\)]\) = \!\(\*FractionBox[\(2  \[Pi]\), \(3\)]\)\n", 16, Blue, Italic], 
+              CloudObject`Private`step$$ == 3, 
               Style[
               "\nArea of green segment = area of sector - area of equilateral \
 triangle\n    =    \!\(\*FractionBox[\(1\), \(2\)]\) \!\(\*SuperscriptBox[\(4\
@@ -1007,7 +1015,7 @@ triangle\n    =    \!\(\*FractionBox[\(1\), \(2\)]\) \!\(\*SuperscriptBox[\(4\
 \!\(\*FractionBox[SqrtBox[\(3\)], \(4\)]\) (4\!\(\*SuperscriptBox[\()\), \
 \(2\)]\) = 4 (\!\(\*FractionBox[\(2  \[Pi]\), \(3\)]\) - \!\(\*SqrtBox[\(3\)]\
 \)) \!\(\*SuperscriptBox[\(cm\), \(2\)]\)\n", 16, Black, Italic, Background -> 
-               Yellow], $CellContext`step$$ == 4, 
+               Yellow], CloudObject`Private`step$$ == 4, 
               Style[
               "\nFinally, subtract the sum of the yellow sector and the green \
 segment from the red segment in step 1.\nHence the required area = 4 ( \[Pi] \
@@ -1016,26 +1024,27 @@ segment from the red segment in step 1.\nHence the required area = 4 ( \[Pi] \
 \[Pi]\), \(3\)]\) - 8 + 4 \!\(\*SqrtBox[\(\(3\)\(\\ \)\)]\) \
 \!\(\*SuperscriptBox[\(cm\), \(2\)]\)\n", 16, Black, Italic, Background -> 
                Yellow]], 
-             Style[
-             "\nABCD is a square of side length 4. cm \n Two quarter circles \
+             Text[
+              Style[
+              "\nABCD is a square of side length 4. cm \n Two quarter circles \
 and a diagonal are drawn as shown.\n  Find the area of the gray region\n", 14,
-               Black, Italic]]], Frame -> True, Alignment -> Center], 
+                Black, Italic]]]], Frame -> True, Alignment -> Center], 
           Item[
-           If[$CellContext`hint$$, 
-            Which[$CellContext`step$$ == 1, 
-             Show[$CellContext`graphStep1], $CellContext`step$$ == 2, 
-             Show[$CellContext`graphStep2], $CellContext`step$$ == 3, 
-             Show[$CellContext`graphStep3], $CellContext`step$$ == 4, 
+           If[CloudObject`Private`hint$$, 
+            Which[CloudObject`Private`step$$ == 1, 
+             Show[$CellContext`graphStep1], CloudObject`Private`step$$ == 2, 
+             Show[$CellContext`graphStep2], CloudObject`Private`step$$ == 3, 
+             Show[$CellContext`graphStep3], CloudObject`Private`step$$ == 4, 
              Show[$CellContext`graphStep4]], 
             Show[$CellContext`graphP]], Frame -> True, 
            Alignment -> {Center}]}], 
-       "Specifications" :> {{{$CellContext`hint$$, False, "hint"}, {
-          False, True}, ControlPlacement -> 
-          1}, {{$CellContext`step$$, 1, "step"}, {1, 2, 3, 4}, ControlType -> 
-          RadioButton, Enabled -> Dynamic[$CellContext`hint$$], 
-          ControlPlacement -> 
-          2}, {{$CellContext`answerRegion$$, False, "Answer"}, {False, True}, 
-          ControlPlacement -> 3}, 
+       "Specifications" :> {{{CloudObject`Private`hint$$, False, "hint"}, {
+          False, True}, ControlPlacement -> 1}, {{
+          CloudObject`Private`step$$, 1, "step"}, {1, 2, 3, 4}, ControlType -> 
+          RadioButton, Enabled -> Dynamic[CloudObject`Private`hint$$], 
+          ControlPlacement -> 2}, {{
+          CloudObject`Private`answerRegion$$, False, "Answer"}, {False, True},
+           ControlPlacement -> 3}, 
          Row[{
            Manipulate`Place[1], 
            Spacer[30], 
@@ -1043,10 +1052,11 @@ and a diagonal are drawn as shown.\n  Find the area of the gray region\n", 14,
            Spacer[30], 
            Manipulate`Place[3]}]}, 
        "Options" :> {
-        TrackedSymbols :> {$CellContext`hint$$, $CellContext`step$$, \
-$CellContext`answerRegion$$}, AutorunSequencing -> {1, 2, 3, 4}}, 
-       "DefaultOptions" :> {}],
-      ImageSizeCache->{664., {135., 142.}},
+        TrackedSymbols :> {
+          CloudObject`Private`hint$$, CloudObject`Private`step$$, 
+           CloudObject`Private`answerRegion$$}, 
+         AutorunSequencing -> {1, 2, 3, 4}}, "DefaultOptions" :> {}],
+      ImageSizeCache->{570., {343., 350.}},
       SingleEvaluation->True],
      Deinitialization:>None,
      DynamicModuleValues:>{},
@@ -1077,17 +1087,11 @@ $CellContext`answerRegion$$}, AutorunSequencing -> {1, 2, 3, 4}},
    3.771155531339569*^9, 3.771155550518097*^9}, {3.771155700845656*^9, 
    3.771155714416109*^9}, {3.771155767132349*^9, 3.77115581199438*^9}, {
    3.7711558434743547`*^9, 3.771155861670926*^9}, {3.77115591563864*^9, 
-   3.7711559847275467`*^9}, 3.771156259472021*^9},
- CellLabel->"Out[78]=",ExpressionUUID->"8a517085-4f98-4251-a670-238905e2bc62"],
-
-Cell[BoxData[
- TemplateBox[{
-  "Show","gtype",
-   "\"\\!\\(\\*RowBox[{\\\"Symbol\\\"}]\\) is not a type of graphics.\"",2,98,
-   23,28850946702309994020,"Local"},
-  "MessageTemplate"]], "Message", "MSG",
- CellChangeTimes->{3.771170014214919*^9},
- CellLabel->"",ExpressionUUID->"60c98ccb-a2c3-432f-9aaf-a77286ee9968"]
+   3.7711559847275467`*^9}, 3.771156259472021*^9, 3.771275293328391*^9, {
+   3.771275337338005*^9, 3.771275361914825*^9}, {3.771275410270668*^9, 
+   3.771275420870655*^9}},
+ CellLabel->
+  "Out[437]=",ExpressionUUID->"ffec3d28-ad72-4207-8b45-1a5ac2b099b8"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -1115,9 +1119,8 @@ Cell[CellGroupData[{
 Cell[789, 28, 290, 6, 101, "Subsection",ExpressionUUID->"2df98498-2688-450a-af47-533271295e23"],
 Cell[1082, 36, 242, 5, 37, "Input",ExpressionUUID->"c4eb4b08-87d6-48cc-9272-774600de5643"],
 Cell[CellGroupData[{
-Cell[1349, 45, 36561, 895, 2943, "Input",ExpressionUUID->"27fe7f78-6835-4cbd-aa15-aca6d279518b"],
-Cell[37913, 942, 7103, 138, 316, "Output",ExpressionUUID->"8a517085-4f98-4251-a670-238905e2bc62"],
-Cell[45019, 1082, 316, 7, 29, "Message",ExpressionUUID->"60c98ccb-a2c3-432f-9aaf-a77286ee9968"]
+Cell[1349, 45, 36681, 897, 2969, "Input",ExpressionUUID->"27fe7f78-6835-4cbd-aa15-aca6d279518b"],
+Cell[38033, 944, 7591, 149, 732, "Output",ExpressionUUID->"ffec3d28-ad72-4207-8b45-1a5ac2b099b8"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
