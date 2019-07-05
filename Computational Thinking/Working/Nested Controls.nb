@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10923,        295]
-NotebookOptionsPosition[      8989,        250]
-NotebookOutlinePosition[      9432,        267]
-CellTagsIndexPosition[      9389,        264]
+NotebookDataLength[     15178,        392]
+NotebookOptionsPosition[     12897,        341]
+NotebookOutlinePosition[     13341,        358]
+CellTagsIndexPosition[     13298,        355]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,7 +24,14 @@ Cell["Nested Controls", "Section",
  CellChangeTimes->{
   3.652728456208679*^9, 3.652728527108994*^9, {3.7712753006367273`*^9, 
    3.771275301671689*^9}, {3.7712753488917913`*^9, 3.771275350480586*^9}},
+ CellLabel->"In[445]:=",
  CellID->536675164,ExpressionUUID->"96bb6651-c7cc-4f7b-8fe0-4a648a29b60e"],
+
+Cell[BoxData[
+ RowBox[{"Controls", " ", "Nested"}]], "Output",
+ CellChangeTimes->{3.771275619043674*^9, 3.771275755815814*^9},
+ CellLabel->"Out[445]=",
+ CellID->91358511,ExpressionUUID->"43821f93-fc8c-4bec-a4f6-23325a35677e"],
 
 Cell[TextData[{
  "List your ",
@@ -46,32 +53,37 @@ Cell[TextData[{
 Cell[BoxData[
  RowBox[{
   RowBox[{"solutions", "=", 
-   RowBox[{"Association", "[", 
+   RowBox[{"Association", "[", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"\"\<Problem\>\"", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{"\"\<problem\>\"", ",", "\"\<solution\>\""}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
      RowBox[{"\"\<Geometry\>\"", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{
        "\"\<g1\>\"", ",", "\"\<g2\>\"", ",", "\"\<g3\>\"", ",", "\"\<g4\>\"", 
-        ",", "\"\<g5\>\""}], "}"}]}], ",", 
+        ",", "\"\<g5\>\"", ",", "\"\<answer\>\""}], "}"}]}], ",", 
+     "\[IndentingNewLine]", 
      RowBox[{"\"\<Trigonometry\>\"", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{"\"\<t1\>\"", ",", "\"\<t2\>\"", ",", "\"\<t3\>\""}], "}"}]}], 
-     ",", 
+     ",", "\[IndentingNewLine]", 
      RowBox[{"\"\<Calculus\>\"", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{
-       "\"\<c1\>\"", ",", "\"\<c2\>\"", ",", "\"\<c3\>\"", ",", 
-        "\"\<c4\>\""}], "}"}]}]}], "]"}]}], ";"}]], "Input",
+       "\"\<c1\>\"", ",", "\"\<c2\>\"", ",", "\"\<c3\>\"", ",", "\"\<c4\>\"", 
+        ",", "\"\<calc answer\>\""}], "}"}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.7712729960454884`*^9, 3.7712730759766407`*^9}, {
    3.771273135094411*^9, 3.7712731490959787`*^9}, 3.771273235586528*^9, {
    3.7712734680646772`*^9, 3.771273496171318*^9}, {3.7712735386433363`*^9, 
    3.771273620224916*^9}, {3.7712744184830227`*^9, 3.771274419540518*^9}, {
    3.771274767705776*^9, 3.77127476852596*^9}, {3.771275086195095*^9, 
-   3.771275093449108*^9}},
- CellLabel->"In[17]:=",ExpressionUUID->"5f61502f-2bc5-4d94-9fdb-a37ec2731ae0"],
+   3.771275093449108*^9}, {3.771275639972231*^9, 3.7712756492348757`*^9}, {
+   3.771275730406225*^9, 3.771275766434609*^9}},
+ CellLabel->
+  "In[451]:=",ExpressionUUID->"5f61502f-2bc5-4d94-9fdb-a37ec2731ae0"],
 
 Cell[TextData[{
  "Extract a list of ",
@@ -92,15 +104,17 @@ Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"Keys", "@", "solutions"}]], "Input",
  CellChangeTimes->{3.771275065503256*^9, 3.771275097699848*^9},
- CellLabel->"In[18]:=",ExpressionUUID->"2c371a5c-a9c9-4da4-9c56-9534ed1e0f26"],
+ CellLabel->
+  "In[447]:=",ExpressionUUID->"2c371a5c-a9c9-4da4-9c56-9534ed1e0f26"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"\<\"Problem\"\>", ",", "\<\"Geometry\"\>", 
    ",", "\<\"Trigonometry\"\>", ",", "\<\"Calculus\"\>"}], "}"}]], "Output",
- CellChangeTimes->{3.7712745777754173`*^9, 3.7712750982267513`*^9},
- CellLabel->"Out[18]=",
- CellID->1173806658,ExpressionUUID->"26f14b41-e5d8-41dd-b708-53cd1525fc1f"]
+ CellChangeTimes->{3.7712745777754173`*^9, 3.7712750982267513`*^9, 
+  3.771275619333004*^9, 3.7712757559525642`*^9},
+ CellLabel->"Out[447]=",
+ CellID->11686772,ExpressionUUID->"fb947da0-52ca-4cb9-95ea-39760ba64eb7"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -125,14 +139,16 @@ Cell[BoxData[
   "\[RightDoubleBracket]"}]], "Input",
  CellChangeTimes->{{3.771274585369256*^9, 3.771274587533289*^9}, 
    3.771275100234632*^9},
- CellLabel->"In[19]:=",ExpressionUUID->"70cea2b3-8357-4145-91d0-0f5950476241"],
+ CellLabel->
+  "In[448]:=",ExpressionUUID->"70cea2b3-8357-4145-91d0-0f5950476241"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"\<\"problem\"\>", ",", "\<\"solution\"\>"}], "}"}]], "Output",
- CellChangeTimes->{3.7712745879515333`*^9, 3.7712751264091043`*^9},
- CellLabel->"Out[19]=",
- CellID->2015564070,ExpressionUUID->"66ead18c-ba8a-48bb-bcfa-1bc6d3defab8"]
+ CellChangeTimes->{3.7712745879515333`*^9, 3.7712751264091043`*^9, 
+  3.7712756193906116`*^9, 3.7712757559646883`*^9},
+ CellLabel->"Out[448]=",
+ CellID->998565127,ExpressionUUID->"bbf128e8-b978-4b44-9371-9ada2190f299"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -143,16 +159,17 @@ Cell[BoxData[
   "\[RightDoubleBracket]"}]], "Input",
  CellChangeTimes->{{3.771274585369256*^9, 3.771274592681307*^9}, 
    3.7712752639546537`*^9},
- CellLabel->"In[23]:=",ExpressionUUID->"60427257-b304-440e-9843-4c6ccd0ae77b"],
+ CellLabel->
+  "In[449]:=",ExpressionUUID->"60427257-b304-440e-9843-4c6ccd0ae77b"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"\<\"t1\"\>", ",", "\<\"t2\"\>", ",", "\<\"t3\"\>"}], 
   "}"}]], "Output",
  CellChangeTimes->{3.771274593240109*^9, 3.77127512807053*^9, 
-  3.771275265842608*^9},
- CellLabel->"Out[23]=",
- CellID->1324368773,ExpressionUUID->"ce894826-735d-4647-a683-72f7749c323e"]
+  3.771275265842608*^9, 3.7712756194050493`*^9, 3.771275755979595*^9},
+ CellLabel->"Out[449]=",
+ CellID->299388184,ExpressionUUID->"46464f00-0e5e-4053-aa89-c496b6872b52"]
 }, Open  ]],
 
 Cell[TextData[{
@@ -166,8 +183,6 @@ Cell[TextData[{
   3.7712750438978148`*^9}, {3.7712751100925827`*^9, 3.771275192936453*^9}, {
   3.771275241648163*^9, 3.7712752931216288`*^9}},
  CellID->1264821762,ExpressionUUID->"147e677c-514a-4f98-93d5-e77b175e0255"],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Column", "[", 
@@ -193,63 +208,139 @@ Cell[BoxData[
   3.771274494789568*^9, 3.77127456591711*^9}, {3.771274604917886*^9, 
   3.771274627951033*^9}, {3.771275210182507*^9, 3.7712752354727373`*^9}, {
   3.771275270164269*^9, 3.771275273369376*^9}},
- CellLabel->"In[24]:=",ExpressionUUID->"ef0da61e-fdce-46bc-90b1-a159a3c091ed"],
+ CellLabel->
+  "In[450]:=",ExpressionUUID->"ef0da61e-fdce-46bc-90b1-a159a3c091ed"],
+
+Cell[TextData[{
+ "Put this dynamic interface into a ",
+ ButtonBox["Manipulate",
+  BaseStyle->"Link"],
+ ":"
+}], "CodeText",
+ CellChangeTimes->{{3.771274688978904*^9, 3.77127473402352*^9}, {
+  3.77127477970667*^9, 3.7712747919415073`*^9}, {3.7712750334232597`*^9, 
+  3.7712750438978148`*^9}, {3.7712751100925827`*^9, 3.771275192936453*^9}, {
+  3.771275241648163*^9, 3.7712752931216288`*^9}, {3.77127586380754*^9, 
+  3.771275891913198*^9}},
+ CellID->2079220519,ExpressionUUID->"1984a76d-744e-4256-9bc5-0b214d4133d8"],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
- TagBox[GridBox[{
-    {
-     InterpretationBox[
-      StyleBox[GridBox[{
-         {
-          SetterBox[Dynamic[$CellContext`x], {"Problem"}, "\<\"Problem\"\>"], 
-          
-          
-          SetterBox[Dynamic[$CellContext`x], {
-           "Geometry"}, "\<\"Geometry\"\>"], 
-          
-          SetterBox[Dynamic[$CellContext`x], {
-           "Trigonometry"}, "\<\"Trigonometry\"\>"], 
-          SetterBox[Dynamic[$CellContext`x], {"Calculus"}, "\<\"Calculus\"\>"]}
-        },
-        BaselinePosition->{1, 1},
-        GridBoxSpacings->{"Columns" -> {
-            Offset[0.27999999999999997`], {
-             Offset[0.]}, 
-            Offset[0.27999999999999997`]}, "Rows" -> {
-            Offset[0.2], {
-             Offset[0.4]}, 
-            Offset[0.2]}}],
-       Deployed->True],
-      SetterBar[
-       Dynamic[$CellContext`x], {
-       "Problem", "Geometry", "Trigonometry", "Calculus"}]]},
-    {
-     DynamicBox[ToBoxes[
-       RadioButtonBar[
-        Part[$CellContext`solutions, 
-         Key[$CellContext`x], 1], 
-        Part[$CellContext`solutions, 
-         Key[$CellContext`x]]], StandardForm],
-      ImageSizeCache->{200., {5., 18.}}]}
-   },
-   DefaultBaseStyle->"Column",
-   GridBoxAlignment->{"Columns" -> {{Left}}},
-   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-  "Column"]], "Output",
- CellChangeTimes->{{3.771272921574314*^9, 3.7712729325640783`*^9}, 
-   3.771272966410758*^9, 3.7712733091658278`*^9, {3.771273349338229*^9, 
-   3.771273365449665*^9}, 3.7712733984050903`*^9, 3.77127349987007*^9, {
-   3.771273560297475*^9, 3.771273599985939*^9}, {3.771274441913295*^9, 
-   3.771274524679812*^9}, {3.771274556327962*^9, 3.7712745713350277`*^9}, {
-   3.7712746055114717`*^9, 3.771274628411577*^9}, 3.771274675083853*^9, {
-   3.771275211059792*^9, 3.771275235989986*^9}, 3.77127527388092*^9},
- CellLabel->"Out[24]=",
- CellID->495638395,ExpressionUUID->"1028c976-3561-4959-be87-47d9d875ba3b"]
+ RowBox[{"Manipulate", "[", 
+  RowBox[{"x", ",", 
+   RowBox[{"Column", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"SetterBar", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "@", "x"}], ",", 
+        RowBox[{"Keys", "@", "solutions"}]}], "]"}], ",", 
+      RowBox[{"Dynamic", "@", 
+       RowBox[{"RadioButtonBar", "[", 
+        RowBox[{
+         RowBox[{"solutions", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{"Key", "[", "x", "]"}], ",", "1"}], 
+          "\[RightDoubleBracket]"}], ",", 
+         RowBox[{"solutions", "\[LeftDoubleBracket]", 
+          RowBox[{"Key", "[", "x", "]"}], "\[RightDoubleBracket]"}]}], 
+        "]"}]}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"solutions", "=", 
+       RowBox[{"Association", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"\"\<Problem\>\"", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<problem\>\"", ",", "\"\<solution\>\""}], "}"}]}], ",",
+          "\[IndentingNewLine]", 
+         RowBox[{"\"\<Geometry\>\"", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<g1\>\"", ",", "\"\<g2\>\"", ",", "\"\<g3\>\"", ",", 
+            "\"\<g4\>\"", ",", "\"\<g5\>\"", ",", "\"\<answer\>\""}], "}"}]}],
+          ",", "\[IndentingNewLine]", 
+         RowBox[{"\"\<Trigonometry\>\"", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<t1\>\"", ",", "\"\<t2\>\"", ",", "\"\<t3\>\""}], 
+           "}"}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"\"\<Calculus\>\"", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<c1\>\"", ",", "\"\<c2\>\"", ",", "\"\<c3\>\"", ",", 
+            "\"\<c4\>\"", ",", "\"\<calc answer\>\""}], "}"}]}]}], 
+        "\[IndentingNewLine]", "]"}]}], ";"}], ")"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.771275820633831*^9, 3.7712758345453873`*^9}, {
+  3.771275911205935*^9, 3.771275921938588*^9}},
+ CellLabel->"In[455]:=",
+ CellID->374442251,ExpressionUUID->"f5c7c54c-f93a-4f37-a3b4-c322e723c47a"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       Column[{
+         SetterBar[
+          Dynamic[$CellContext`x], {
+          "Problem", "Geometry", "Trigonometry", "Calculus"}], 
+         Dynamic[
+          RadioButtonBar[
+           Part[$CellContext`solutions, 
+            Key[$CellContext`x], 1], 
+           Part[$CellContext`solutions, 
+            Key[$CellContext`x]]]]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+    Typeset`size$$ = {67., {1., 14.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {}, "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> $CellContext`x, "Specifications" :> {
+        Column[{
+          SetterBar[
+           Dynamic[$CellContext`x], {
+           "Problem", "Geometry", "Trigonometry", "Calculus"}], 
+          Dynamic[
+           RadioButtonBar[
+            Part[$CellContext`solutions, 
+             Key[$CellContext`x], 1], 
+            Part[$CellContext`solutions, 
+             Key[$CellContext`x]]]]}]}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{305., {81., 90.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`solutions = 
+       Association[
+        "Problem" -> {"problem", "solution"}, 
+         "Geometry" -> {"g1", "g2", "g3", "g4", "g5", "answer"}, 
+         "Trigonometry" -> {"t1", "t2", "t3"}, 
+         "Calculus" -> {"c1", "c2", "c3", "c4", "calc answer"}]; Null); 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.771275835396495*^9, {3.771275894281337*^9, 3.771275936870076*^9}},
+ CellLabel->"Out[455]=",
+ CellID->84922124,ExpressionUUID->"2f646276-cea1-484e-8528-e3e4ed78249f"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1119, 859},
-WindowMargins->{{122, Automatic}, {Automatic, 74}},
+WindowSize->{1172, 1018},
+WindowMargins->{{Automatic, 304}, {Automatic, 33}},
 Magnification:>1.25 Inherited,
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "BookToolsStyles.nb", 
@@ -267,34 +358,40 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 276, 4, 136, "Section",ExpressionUUID->"96bb6651-c7cc-4f7b-8fe0-4a648a29b60e",
+Cell[580, 22, 301, 5, 136, "Section",ExpressionUUID->"96bb6651-c7cc-4f7b-8fe0-4a648a29b60e",
  CellID->536675164],
-Cell[859, 28, 473, 15, 48, "CodeText",ExpressionUUID->"8e99a806-3b9b-4925-83a4-844b76f5c359"],
-Cell[1335, 45, 1281, 28, 98, "Input",ExpressionUUID->"5f61502f-2bc5-4d94-9fdb-a37ec2731ae0"],
-Cell[2619, 75, 392, 12, 48, "CodeText",ExpressionUUID->"78446aff-60a6-4c7f-9b22-d3daad587694"],
+Cell[884, 29, 225, 4, 51, "Output",ExpressionUUID->"43821f93-fc8c-4bec-a4f6-23325a35677e",
+ CellID->91358511],
+Cell[1112, 35, 473, 15, 48, "CodeText",ExpressionUUID->"8e99a806-3b9b-4925-83a4-844b76f5c359"],
+Cell[1588, 52, 1566, 33, 188, "Input",ExpressionUUID->"5f61502f-2bc5-4d94-9fdb-a37ec2731ae0"],
+Cell[3157, 87, 392, 12, 48, "CodeText",ExpressionUUID->"78446aff-60a6-4c7f-9b22-d3daad587694"],
 Cell[CellGroupData[{
-Cell[3036, 91, 203, 3, 37, "Input",ExpressionUUID->"2c371a5c-a9c9-4da4-9c56-9534ed1e0f26"],
-Cell[3242, 96, 328, 6, 51, "Output",ExpressionUUID->"26f14b41-e5d8-41dd-b708-53cd1525fc1f",
- CellID->1173806658]
+Cell[3574, 103, 207, 4, 37, "Input",ExpressionUUID->"2c371a5c-a9c9-4da4-9c56-9534ed1e0f26"],
+Cell[3784, 109, 376, 7, 51, "Output",ExpressionUUID->"fb947da0-52ca-4cb9-95ea-39760ba64eb7",
+ CellID->11686772]
 }, Open  ]],
-Cell[3585, 105, 473, 12, 48, "CodeText",ExpressionUUID->"843e5ce2-95e4-4d98-9cce-402fd5119a5c",
+Cell[4175, 119, 473, 12, 48, "CodeText",ExpressionUUID->"843e5ce2-95e4-4d98-9cce-402fd5119a5c",
  CellID->601582604],
 Cell[CellGroupData[{
-Cell[4083, 121, 319, 6, 37, "Input",ExpressionUUID->"70cea2b3-8357-4145-91d0-0f5950476241"],
-Cell[4405, 129, 270, 5, 51, "Output",ExpressionUUID->"66ead18c-ba8a-48bb-bcfa-1bc6d3defab8",
- CellID->2015564070]
+Cell[4673, 135, 323, 7, 37, "Input",ExpressionUUID->"70cea2b3-8357-4145-91d0-0f5950476241"],
+Cell[4999, 144, 321, 6, 51, "Output",ExpressionUUID->"bbf128e8-b978-4b44-9371-9ada2190f299",
+ CellID->998565127]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4712, 139, 326, 6, 37, "Input",ExpressionUUID->"60427257-b304-440e-9843-4c6ccd0ae77b"],
-Cell[5041, 147, 301, 7, 51, "Output",ExpressionUUID->"ce894826-735d-4647-a683-72f7749c323e",
- CellID->1324368773]
+Cell[5357, 155, 330, 7, 37, "Input",ExpressionUUID->"60427257-b304-440e-9843-4c6ccd0ae77b"],
+Cell[5690, 164, 347, 7, 51, "Output",ExpressionUUID->"46464f00-0e5e-4053-aa89-c496b6872b52",
+ CellID->299388184]
 }, Open  ]],
-Cell[5357, 157, 511, 10, 48, "CodeText",ExpressionUUID->"147e677c-514a-4f98-93d5-e77b175e0255",
+Cell[6052, 174, 511, 10, 48, "CodeText",ExpressionUUID->"147e677c-514a-4f98-93d5-e77b175e0255",
  CellID->1264821762],
+Cell[6566, 186, 1112, 25, 68, "Input",ExpressionUUID->"ef0da61e-fdce-46bc-90b1-a159a3c091ed"],
+Cell[7681, 213, 513, 11, 48, "CodeText",ExpressionUUID->"1984a76d-744e-4256-9bc5-0b214d4133d8",
+ CellID->2079220519],
 Cell[CellGroupData[{
-Cell[5893, 171, 1108, 24, 68, "Input",ExpressionUUID->"ef0da61e-fdce-46bc-90b1-a159a3c091ed"],
-Cell[7004, 197, 1957, 49, 97, "Output",ExpressionUUID->"1028c976-3561-4959-be87-47d9d875ba3b",
- CellID->495638395]
+Cell[8219, 228, 2100, 49, 278, "Input",ExpressionUUID->"f5c7c54c-f93a-4f37-a3b4-c322e723c47a",
+ CellID->374442251],
+Cell[10322, 279, 2547, 58, 200, "Output",ExpressionUUID->"2f646276-cea1-484e-8528-e3e4ed78249f",
+ CellID->84922124]
 }, Open  ]]
 }, Open  ]]
 }
