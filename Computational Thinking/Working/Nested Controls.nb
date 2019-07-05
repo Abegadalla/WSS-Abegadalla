@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15178,        392]
-NotebookOptionsPosition[     12897,        341]
-NotebookOutlinePosition[     13341,        358]
-CellTagsIndexPosition[     13298,        355]
+NotebookDataLength[     15491,        400]
+NotebookOptionsPosition[     13208,        349]
+NotebookOutlinePosition[     13652,        366]
+CellTagsIndexPosition[     13609,        363]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -228,7 +228,11 @@ Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Manipulate", "[", 
-  RowBox[{"x", ",", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"solutions", "\[LeftDoubleBracket]", 
+      RowBox[{"Key", "[", "x", "]"}], "\[RightDoubleBracket]"}]}], "}"}], ",", 
    RowBox[{"Column", "[", 
     RowBox[{"{", 
      RowBox[{
@@ -273,8 +277,9 @@ Cell[BoxData[
             "\"\<c4\>\"", ",", "\"\<calc answer\>\""}], "}"}]}]}], 
         "\[IndentingNewLine]", "]"}]}], ";"}], ")"}]}]}], "]"}]], "Input",
  CellChangeTimes->{{3.771275820633831*^9, 3.7712758345453873`*^9}, {
-  3.771275911205935*^9, 3.771275921938588*^9}},
- CellLabel->"In[455]:=",
+  3.771275911205935*^9, 3.771275921938588*^9}, {3.771288866607862*^9, 
+  3.7712888786323547`*^9}},
+ CellLabel->"In[27]:=",
  CellID->374442251,ExpressionUUID->"f5c7c54c-f93a-4f37-a3b4-c322e723c47a"],
 
 Cell[BoxData[
@@ -294,7 +299,7 @@ Cell[BoxData[
             Key[$CellContext`x], 1], 
            Part[$CellContext`solutions, 
             Key[$CellContext`x]]]]}]], Manipulate`Dump`ThisIsNotAControl}}, 
-    Typeset`size$$ = {67., {1., 14.}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {305., {4., 14.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {}, "ControllerVariables" :> {}, 
@@ -302,7 +307,9 @@ Cell[BoxData[
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> $CellContext`x, "Specifications" :> {
+         Typeset`skipInitDone$$}, "Body" :> {$CellContext`x, 
+        Part[$CellContext`solutions, 
+         Key[$CellContext`x]]}, "Specifications" :> {
         Column[{
           SetterBar[
            Dynamic[$CellContext`x], {
@@ -314,7 +321,7 @@ Cell[BoxData[
             Part[$CellContext`solutions, 
              Key[$CellContext`x]]]]}]}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{305., {81., 90.}},
+     ImageSizeCache->{362., {81., 90.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -333,9 +340,10 @@ Cell[BoxData[
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
-  3.771275835396495*^9, {3.771275894281337*^9, 3.771275936870076*^9}},
- CellLabel->"Out[455]=",
- CellID->84922124,ExpressionUUID->"2f646276-cea1-484e-8528-e3e4ed78249f"]
+  3.771275835396495*^9, {3.771275894281337*^9, 3.771275936870076*^9}, 
+   3.771288879438529*^9},
+ CellLabel->"Out[27]=",
+ CellID->1104931306,ExpressionUUID->"98c8a264-d14e-4f40-a457-f54128e311d4"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -388,10 +396,10 @@ Cell[6566, 186, 1112, 25, 68, "Input",ExpressionUUID->"ef0da61e-fdce-46bc-90b1-a
 Cell[7681, 213, 513, 11, 48, "CodeText",ExpressionUUID->"1984a76d-744e-4256-9bc5-0b214d4133d8",
  CellID->2079220519],
 Cell[CellGroupData[{
-Cell[8219, 228, 2100, 49, 278, "Input",ExpressionUUID->"f5c7c54c-f93a-4f37-a3b4-c322e723c47a",
+Cell[8219, 228, 2311, 54, 278, "Input",ExpressionUUID->"f5c7c54c-f93a-4f37-a3b4-c322e723c47a",
  CellID->374442251],
-Cell[10322, 279, 2547, 58, 200, "Output",ExpressionUUID->"2f646276-cea1-484e-8528-e3e4ed78249f",
- CellID->84922124]
+Cell[10533, 284, 2647, 61, 200, "Output",ExpressionUUID->"98c8a264-d14e-4f40-a457-f54128e311d4",
+ CellID->1104931306]
 }, Open  ]]
 }, Open  ]]
 }
