@@ -10,10 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
+<<<<<<< HEAD:Computational Thinking/Working/Nested Controls.nb
 NotebookDataLength[     22032,        565]
 NotebookOptionsPosition[     19326,        504]
 NotebookOutlinePosition[     19773,        521]
 CellTagsIndexPosition[     19730,        518]
+=======
+NotebookDataLength[     15491,        400]
+NotebookOptionsPosition[     13208,        349]
+NotebookOutlinePosition[     13652,        366]
+CellTagsIndexPosition[     13609,        363]
+>>>>>>> 8a69515177059f424bce9315a79860e24155ddb5:Computational Thinking/Working/Nested Controls PCA.nb
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -277,7 +284,11 @@ Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Manipulate", "[", 
-  RowBox[{"x", ",", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"solutions", "\[LeftDoubleBracket]", 
+      RowBox[{"Key", "[", "x", "]"}], "\[RightDoubleBracket]"}]}], "}"}], ",", 
    RowBox[{"Column", "[", 
     RowBox[{"{", 
      RowBox[{
@@ -322,8 +333,9 @@ Cell[BoxData[
             "\"\<c4\>\"", ",", "\"\<calc answer\>\""}], "}"}]}]}], 
         "\[IndentingNewLine]", "]"}]}], ";"}], ")"}]}]}], "]"}]], "Input",
  CellChangeTimes->{{3.771275820633831*^9, 3.7712758345453873`*^9}, {
-  3.771275911205935*^9, 3.771275921938588*^9}},
- CellLabel->"In[455]:=",
+  3.771275911205935*^9, 3.771275921938588*^9}, {3.771288866607862*^9, 
+  3.7712888786323547`*^9}},
+ CellLabel->"In[27]:=",
  CellID->374442251,ExpressionUUID->"f5c7c54c-f93a-4f37-a3b4-c322e723c47a"],
 
 Cell[BoxData[
@@ -343,7 +355,7 @@ Cell[BoxData[
             Key[$CellContext`x], 1], 
            Part[$CellContext`solutions, 
             Key[$CellContext`x]]]]}]], Manipulate`Dump`ThisIsNotAControl}}, 
-    Typeset`size$$ = {67., {1., 14.}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {305., {4., 14.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {}, "ControllerVariables" :> {}, 
@@ -351,7 +363,9 @@ Cell[BoxData[
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> $CellContext`x, "Specifications" :> {
+         Typeset`skipInitDone$$}, "Body" :> {$CellContext`x, 
+        Part[$CellContext`solutions, 
+         Key[$CellContext`x]]}, "Specifications" :> {
         Column[{
           SetterBar[
            Dynamic[$CellContext`x], {
@@ -363,7 +377,11 @@ Cell[BoxData[
             Part[$CellContext`solutions, 
              Key[$CellContext`x]]]]}]}, "Options" :> {}, 
       "DefaultOptions" :> {}],
+<<<<<<< HEAD:Computational Thinking/Working/Nested Controls.nb
      ImageSizeCache->{300., {81., 90.}},
+=======
+     ImageSizeCache->{362., {81., 90.}},
+>>>>>>> 8a69515177059f424bce9315a79860e24155ddb5:Computational Thinking/Working/Nested Controls PCA.nb
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -382,6 +400,7 @@ Cell[BoxData[
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
+<<<<<<< HEAD:Computational Thinking/Working/Nested Controls.nb
   3.771275835396495*^9, {3.771275894281337*^9, 3.771275936870076*^9}},
  CellLabel->"Out[455]=",
  CellID->84922124,ExpressionUUID->"2f646276-cea1-484e-8528-e3e4ed78249f"]
@@ -499,6 +518,12 @@ Cell[BoxData[
   3.771328250432953*^9, 3.77132983755688*^9},
  CellLabel->"Out[484]=",
  CellID->512348390,ExpressionUUID->"a266f4d5-a356-4dac-b80c-3df2f1c73b1e"]
+=======
+  3.771275835396495*^9, {3.771275894281337*^9, 3.771275936870076*^9}, 
+   3.771288879438529*^9},
+ CellLabel->"Out[27]=",
+ CellID->1104931306,ExpressionUUID->"98c8a264-d14e-4f40-a457-f54128e311d4"]
+>>>>>>> 8a69515177059f424bce9315a79860e24155ddb5:Computational Thinking/Working/Nested Controls PCA.nb
 }, Open  ]]
 }, Open  ]]
 },
@@ -555,6 +580,7 @@ Cell[7777, 216, 1495, 43, 97, "Output",ExpressionUUID->"0bc61938-5460-470e-9af1-
 Cell[9287, 262, 513, 11, 48, "CodeText",ExpressionUUID->"1984a76d-744e-4256-9bc5-0b214d4133d8",
  CellID->2079220519],
 Cell[CellGroupData[{
+<<<<<<< HEAD:Computational Thinking/Working/Nested Controls.nb
 Cell[9825, 277, 2100, 49, 278, "Input",ExpressionUUID->"f5c7c54c-f93a-4f37-a3b4-c322e723c47a",
  CellID->374442251],
 Cell[11928, 328, 2547, 58, 200, "Output",ExpressionUUID->"2f646276-cea1-484e-8528-e3e4ed78249f",
@@ -565,6 +591,12 @@ Cell[14512, 391, 2189, 49, 278, "Input",ExpressionUUID->"7eca2a48-5c83-442b-95f0
  CellID->1996761762],
 Cell[16704, 442, 2594, 58, 200, "Output",ExpressionUUID->"a266f4d5-a356-4dac-b80c-3df2f1c73b1e",
  CellID->512348390]
+=======
+Cell[8219, 228, 2311, 54, 278, "Input",ExpressionUUID->"f5c7c54c-f93a-4f37-a3b4-c322e723c47a",
+ CellID->374442251],
+Cell[10533, 284, 2647, 61, 200, "Output",ExpressionUUID->"98c8a264-d14e-4f40-a457-f54128e311d4",
+ CellID->1104931306]
+>>>>>>> 8a69515177059f424bce9315a79860e24155ddb5:Computational Thinking/Working/Nested Controls PCA.nb
 }, Open  ]]
 }, Open  ]]
 }
