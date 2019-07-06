@@ -2720,7 +2720,7 @@ Cell[BoxData[
             Dynamic[$CellContext`sol], 
             Part[$CellContext`categories, 
              Key[$CellContext`cat]]]]}]], Manipulate`Dump`ThisIsNotAControl}},
-     Typeset`size$$ = {422., {281.134033203125, 286.865966796875}}, 
+     Typeset`size$$ = {413., {243.134033203125, 248.865966796875}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {}, "ControllerVariables" :> {}, 
@@ -2748,7 +2748,7 @@ Cell[BoxData[
              Part[$CellContext`categories, 
               Key[$CellContext`cat]]]]}]}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{467., {338., 344.}},
+     ImageSizeCache->{494., {300., 306.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -6450,7 +6450,7 @@ Integration: Shaded Area Area = \\n\>\"", ",",
 },
 WindowToolbars->"EditBar",
 WindowSize->{932, 1010},
-WindowMargins->{{140, Automatic}, {22, Automatic}},
+WindowMargins->{{463, Automatic}, {72, Automatic}},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
@@ -6469,7 +6469,7 @@ Cell[CellGroupData[{
 Cell[580, 22, 157, 3, 54, "Subsection",ExpressionUUID->"5894e53c-097e-4aa7-99fe-08b13920e924"],
 Cell[CellGroupData[{
 Cell[762, 29, 105821, 2675, 7564, "Input",ExpressionUUID->"2e7c4a4b-db05-41b5-8469-05da2d7efdd2"],
-Cell[106586, 2706, 30285, 629, 701, "Output",ExpressionUUID->"6feb5d36-5edc-4e3b-8a4f-413d11d912cf"]
+Cell[106586, 2706, 30285, 629, 625, "Output",ExpressionUUID->"6feb5d36-5edc-4e3b-8a4f-413d11d912cf"]
 }, {2}]]
 }, Open  ]],
 Cell[CellGroupData[{
