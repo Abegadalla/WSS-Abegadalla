@@ -1,0 +1,1101 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     47396,       1093]
+NotebookOptionsPosition[     44959,       1041]
+NotebookOutlinePosition[     45297,       1056]
+CellTagsIndexPosition[     45254,       1053]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"solutions", "=", 
+  RowBox[{"<|", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<Problem\>\"", "\[Rule]", 
+     RowBox[{"Dynamic", "[", "solution", "]"}]}], ",", "\[IndentingNewLine]", 
+    
+    RowBox[{"\"\<Solution\>\"", "\[Rule]", 
+     RowBox[{"ToString", "[", 
+      RowBox[{
+       RowBox[{"Dynamic", "[", "solution", "]"}], "<>", "\"\< world2\>\""}], 
+      "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Step1\>\"", "\[Rule]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"Dynamic", "[", 
+        RowBox[{"ToString", "@", "solution"}], "]"}], "<>", 
+       "\"\< world3\>\""}], ")"}]}]}], "\[IndentingNewLine]", 
+   "|>"}]}]], "Input",
+ CellLabel->"In[48]:=",ExpressionUUID->"78f98e04-c0ee-4257-aee4-378b274c6311"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"Problem\"\>", "\[Rule]", 
+    DynamicBox[ToBoxes[$CellContext`solution, StandardForm],
+     ImageSizeCache->{55., {1., 10.}}]}], ",", 
+   RowBox[{"\<\"Solution\"\>", 
+    "\[Rule]", "\<\"Dynamic[solution]<> world2\"\>"}], ",", 
+   RowBox[{"\<\"Step1\"\>", "\[Rule]", 
+    RowBox[{
+     DynamicBox[ToBoxes[
+       ToString[$CellContext`solution], StandardForm],
+      ImageSizeCache->{55., {1., 10.}}], "<>", "\<\" world3\"\>"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[48]=",ExpressionUUID->"9d34272f-786b-4668-82c0-740b59b85cd2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"categories", "=", 
+  RowBox[{"Association", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"\"\<Problem\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Problem\>\"", ",", "\"\<Solution\>\""}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\"\<Geometry\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Step 1\>\"", ",", "\"\<Step 2\>\"", ",", "\"\<Step 3\>\"", ",", 
+       "\"\<Step 4\>\"", ",", "\"\<Step 5\>\"", ",", "\"\<Step 6\>\"", ",", 
+       "\"\<Step 7\>\"", ",", "\"\<Step 8\>\"", ",", "\"\<Answer\>\""}], 
+      "}"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"\"\<Trigonometry\>\"", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Trig 1\>\"", ",", "\"\<Trig 2\>\""}], "}"}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"\"\<Calculus\>\"", "\[Rule]", 
+     RowBox[{"{", "\"\<Integration\>\"", "}"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",ExpressionUUID->"fd41a5ac-727b-4ff2-b02e-72fa2788b001"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"Problem\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"Problem\"\>", ",", "\<\"Solution\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"Geometry\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"Step 1\"\>", ",", "\<\"Step 2\"\>", ",", "\<\"Step3\"\>", 
+      ",", "\<\"Step4\"\>", ",", "\<\"Step5\"\>", ",", "\<\"Step6\"\>", 
+      ",", "\<\"Step7\"\>", ",", "\<\"Step8\"\>", ",", "\<\"Answer\"\>"}], 
+     "}"}]}], ",", 
+   RowBox[{"\<\"Trigonometry\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\<\"Trig 1\"\>", ",", "\<\"Trig 2\"\>"}], "}"}]}], ",", 
+   RowBox[{"\<\"Calculus\"\>", "\[Rule]", 
+    RowBox[{"{", "\<\"Integration\"\>", "}"}]}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellLabel->"Out[51]=",ExpressionUUID->"8c27440b-c274-4109-9978-6dd945cba800"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Dataset", "[", "categories", "]"}]], "Input",
+ CellLabel->"In[7]:=",ExpressionUUID->"858067aa-9a53-4e7f-8137-a2ea00210941"],
+
+Cell[BoxData[
+ TemplateBox[{TagBox[
+    DynamicModuleBox[{
+     TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
+      Data`UnorderedAssociation[
+       "RowCount" -> 4, "Length" -> 4, "InitialType" -> TypeSystem`Assoc[
+          TypeSystem`Atom[
+           TypeSystem`Enumeration[
+           "Calculus", "Geometry", "Problem", "Trigonometry"]], 
+          TypeSystem`Vector[
+           TypeSystem`Atom[String], TypeSystem`AnyLength], 4], "Shape" -> 
+        TypeSystem`PackageScope`Limited[
+          TypeSystem`PackageScope`ColumnShape[
+           TypeSystem`PackageScope`KeyValueShape[
+            TypeSystem`PackageScope`AtomShape[108.], 
+            TypeSystem`PackageScope`UnknownShape]], 4, {}], "InitialData" -> 
+        TypeSystem`PackageScope`CacheHandle[171193662], "Type" -> 
+        TypeSystem`Assoc[
+          TypeSystem`Atom[
+           TypeSystem`Enumeration[
+           "Calculus", "Geometry", "Problem", "Trigonometry"]], 
+          TypeSystem`Vector[
+           TypeSystem`Atom[String], TypeSystem`AnyLength], 4], "HandleQ" -> 
+        True, "RowTarget" -> 20, "Data" -> 
+        TypeSystem`PackageScope`CacheHandle[171193662]], 
+      TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+      TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
+      TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+      DynamicModule[{
+        TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+           Style[
+            Grid[{{
+               Item[
+                Pane[
+                 Annotation[
+                  EventHandler[
+                   MouseAppearance[
+                    Mouseover["Problem", 
+                    Style[
+                    "Problem", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                   TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059][{
+                    
+                    Key["Problem"]}]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][
+                   GeneralUtilities`Slice[
+                    Key["Problem"]]], "Mouse"], 
+                 ImageSize -> {{108., Full}, Automatic}], Background -> 
+                GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    
+                    Style[{"Problem", "Answer"}, ShowStringCharacters -> 
+                    False], 
+                    Style[
+                    
+                    Style[{"Problem", "Answer"}, ShowStringCharacters -> 
+                    False], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059][{
+                    
+                    Key["Problem"]}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][
+                 
+                  GeneralUtilities`Slice[
+                   Key["Problem"]]], "Mouse"]]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  EventHandler[
+                   MouseAppearance[
+                    Mouseover["Geometry", 
+                    Style[
+                    "Geometry", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                   TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059][{
+                    
+                    Key["Geometry"]}]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][
+                   GeneralUtilities`Slice[
+                    Key["Geometry"]]], "Mouse"], 
+                 ImageSize -> {{108., Full}, Automatic}], Background -> 
+                GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Row[{"  { ", 
+                    Subscript["\[Ellipsis]", 9], " }  "}], 
+                    Style[
+                    Row[{"  { ", 
+                    Subscript["\[Ellipsis]", 9], " }  "}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059][{
+                    
+                    Key["Geometry"]}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][
+                 
+                  GeneralUtilities`Slice[
+                   Key["Geometry"]]], "Mouse"], BaseStyle -> {
+                  GrayLevel[0.5]}]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  EventHandler[
+                   MouseAppearance[
+                    Mouseover["Trigonometry", 
+                    Style[
+                    "Trigonometry", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                   TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059][{
+                    
+                    Key["Trigonometry"]}]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][
+                   GeneralUtilities`Slice[
+                    Key["Trigonometry"]]], "Mouse"], 
+                 ImageSize -> {{108., Full}, Automatic}], Background -> 
+                GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Style[{"Trig1", "Trig2"}, ShowStringCharacters -> False], 
+                    
+                    Style[
+                    Style[{"Trig1", "Trig2"}, ShowStringCharacters -> False], 
+                    FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059][{
+                    
+                    Key["Trigonometry"]}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][
+                 
+                  GeneralUtilities`Slice[
+                   Key["Trigonometry"]]], "Mouse"]]}, {
+               Item[
+                Pane[
+                 Annotation[
+                  EventHandler[
+                   MouseAppearance[
+                    Mouseover["Calculus", 
+                    Style[
+                    "Calculus", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                   TypeSystem`NestedGrid`PackagePrivate`updateState[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059][{
+                    
+                    Key["Calculus"]}]], 
+                  TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][
+                   GeneralUtilities`Slice[
+                    Key["Calculus"]]], "Mouse"], 
+                 ImageSize -> {{108., Full}, Automatic}], Background -> 
+                GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Style[{"Integration"}, ShowStringCharacters -> False], 
+                    Style[
+                    Style[{"Integration"}, ShowStringCharacters -> False], 
+                    FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059][{
+                    
+                    Key["Calculus"]}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][
+                 
+                  GeneralUtilities`Slice[
+                   Key["Calculus"]]], "Mouse"]]}}, BaseStyle -> {ContextMenu -> {
+                 MenuItem["Copy position to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Copy data to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], Delimiter, 
+                 MenuItem["Paste position in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Paste data in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic]}, FontFamily -> "Verdana", 
+               FontSize -> 12}, Alignment -> Left, RowMinHeight -> 1.5, 
+             Dividers -> All, FrameStyle -> GrayLevel[0.85], 
+             BaseStyle -> {FontFamily -> "Verdana", FontSize -> 12}], 
+            LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
+             ShowAutoStyles -> False]], 
+         TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
+         TypeSystem`NestedGrid`PackagePrivate`self = $Failed}, 
+        Dynamic[
+         TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+            Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+            
+            Module[{TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+              TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+              TypeSystem`NestedGrid`PackagePrivate`LookupCacheValue[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$["Data"]]}, 
+             TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = 
+              If[TypeSystem`NestedGrid`PackagePrivate`tmpData$ === 
+                TypeSystem`NestedGrid`PackagePrivate`$NotCached, 
+                TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059][
+                TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+               Not[
+                FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+               TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+               TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+          TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+          TypeSystem`NestedGrid`PackagePrivate`$pos$$; If[
+            FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+            TypeSystem`SparseGrid[
+             TypeSystem`H["(data no longer present)"]], 
+            If[GeneralUtilities`$DebugMode, 
+             Row[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid, "  ", 
+               TypeSystem`NestedGrid`PackagePrivate`formatState[
+               TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$pos$$]}], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid]]], 
+         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$pos$$}], 
+        DynamicModuleValues :> {}], 
+      TypeSystem`NestedGrid`PackagePrivate`$posCell$$, 
+      TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+        TypeSystem`NestedGrid`PackagePrivate`alignBar[
+        TypeSystem`NestedGrid`PackagePrivate`$state$$][
+         TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+          TypeSystem`PackageScope`Pathbar[
+          TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`updateState[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 848668059]]]], 
+        TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+      TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
+        Dynamic[
+         Replace[
+          MouseAnnotation[Null], {
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[848668059][
+             Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
+              Blank[]]] :> (
+            TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+             TypeSystem`NestedGrid`PackagePrivate`path; 
+            TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+             TypeSystem`NestedGrid`PackagePrivate`path, 
+              TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+           Spacer[10], Blank[] :> Spacer[10]}], TrackedSymbols :> {}], 
+        FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> 
+        Top, ImageSize -> {Automatic, 14}]}, 
+     DynamicBox[
+      ToBoxes[
+       Column[
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, {
+          TypeSystem`NestedGrid`PackagePrivate`displayScrollBar[
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$], 
+          TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`alignBar[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$][
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]]}, {
+         TypeSystem`NestedGrid`PackagePrivate`$topBar$$, 
+          TypeSystem`NestedGrid`PackagePrivate`displayScrollBar[
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$], 
+          TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`alignBar[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$][
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]]}], Spacings -> 
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+          0, {{}, {0, 0.05, 0}}]], StandardForm], 
+      ImageSizeCache -> {236., {55.134033203125, 60.865966796875}}, 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     BaseStyle -> {LineBreakWithin -> False}, Deinitialization :> 
+     TypeSystem`NestedGrid`PackagePrivate`deleteState[
+      TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+     DynamicModuleValues :> {}, Initialization :> 
+     Block[{$ContextPath = $ContextPath}, 
+       Needs["TypeSystem`"]]], Deploy, DefaultBaseStyle -> "Deploy"]},
+  "CopyTag",
+  DisplayFunction->(#& ),
+  InterpretationFunction->("Dataset[<>]"& )]], "Output",
+ CellLabel->"Out[7]=",ExpressionUUID->"b38b15b7-1165-463f-86ff-31908b106288"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TabView", "@", 
+  RowBox[{"Normal", "[", 
+   RowBox[{
+    RowBox[{"Query", "[", 
+     RowBox[{"All", ",", "Row", ",", "Button"}], "]"}], "@", " ", 
+    "categories"}], "]"}]}]], "Input",
+ CellLabel->"In[14]:=",ExpressionUUID->"57fd78e3-a629-424f-a5d2-04e05fd76eec"],
+
+Cell[BoxData[
+ TabViewBox[{{1,"\<\"Problem\"\>"->
+  TemplateBox[{
+   ButtonBox[
+    "\"Problem\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Answer\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}, {2,"\<\"Geometry\"\>"->
+  TemplateBox[{
+   ButtonBox[
+    "\"Step1\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Step2\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Step3\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Step4\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Step5\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Step6\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Step7\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Step8\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Answer\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}, {3,"\<\"Trigonometry\"\>"->
+  TemplateBox[{
+   ButtonBox[
+    "\"Trig1\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"],ButtonBox[
+    "\"Trig2\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}, {4,"\<\"Calculus\"\>"->
+  TemplateBox[{
+   ButtonBox[
+    "\"Integration\"", ButtonFunction :> {}, Evaluator -> None, Appearance -> 
+     Automatic, Method -> "Preemptive"]},
+   "RowDefault"]}}, 1]], "Output",
+ CellLabel->"Out[14]=",ExpressionUUID->"fae07232-7b37-4157-97c6-e70065f4e2c6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToExpression", "[", "\"\<x\>\"", "]"}]], "Input",
+ CellLabel->"In[42]:=",ExpressionUUID->"8b2b2761-f10e-432e-b98e-f370d5c67895"],
+
+Cell[BoxData["\<\"Step5\"\>"], "Output",
+ CellLabel->"Out[42]=",ExpressionUUID->"e850fea2-ed4b-4470-ae86-0b8f0c051186"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"TabView", "@", 
+    RowBox[{"Normal", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Column", "[", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"RadioButtonBar", "[", 
+           RowBox[{
+            RowBox[{"Dynamic", "[", "sol", "]"}], ",", "#"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Dynamic", "[", 
+           RowBox[{"solutions", "[", "sol", "]"}], "]"}]}], 
+         "\[IndentingNewLine]", "}"}], "]"}], "&"}], "/@", " ", 
+      "categories"}], "]"}]}], ",", 
+   RowBox[{"Dynamic", "@", 
+    RowBox[{"Head", "@", 
+     RowBox[{"ToExpression", "@", "sol"}]}]}]}], "}"}]], "Input",
+ CellLabel->"In[45]:=",ExpressionUUID->"e13b8b92-f39a-4ca7-9460-dd56d9e02db0"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TabViewBox[{{1,"\<\"Problem\"\>"->
+    TagBox[GridBox[{
+       {
+        InterpretationBox[
+         StyleBox[
+          RowBox[{GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Problem"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Problem\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Answer"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Answer\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}]}], "Deploy"],
+         RadioButtonBar[
+          Dynamic[$CellContext`sol], {"Problem", "Answer"}]]},
+       {
+        DynamicBox[ToBoxes[
+          $CellContext`solutions[$CellContext`sol], StandardForm],
+         ImageSizeCache->{193., {3., 10.}}]}
+      },
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     
+     "Column"]}, {2,"\<\"Geometry\"\>"->
+    TagBox[GridBox[{
+       {
+        InterpretationBox[
+         StyleBox[
+          RowBox[{GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Step1"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Step1\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Step2"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Step2\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Step3"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Step3\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Step4"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Step4\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Step5"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Step5\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Step6"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Step6\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Step7"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Step7\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Step8"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Step8\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Answer"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Answer\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}]}], "Deploy"],
+         RadioButtonBar[
+          Dynamic[$CellContext`sol], {
+          "Step1", "Step2", "Step3", "Step4", "Step5", "Step6", "Step7", 
+           "Step8", "Answer"}]]},
+       {
+        DynamicBox[ToBoxes[
+          $CellContext`solutions[$CellContext`sol], StandardForm],
+         ImageSizeCache->{193., {3., 10.}}]}
+      },
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     
+     "Column"]}, {3,"\<\"Trigonometry\"\>"->
+    TagBox[GridBox[{
+       {
+        InterpretationBox[
+         StyleBox[
+          RowBox[{GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Trig1"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Trig1\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}], "  ", GridBox[{
+             {
+              RadioButtonBox[Dynamic[$CellContext`sol], {"Trig2"},
+               DefaultBaseStyle->"RadioButtonBar"], 
+              StyleBox["\<\"Trig2\"\>", "RadioButtonBarLabel",
+               StripOnInput->False]}
+            },
+            AutoDelete->False,
+            BaselinePosition->{1, 2},
+            GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+            
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.21]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[0.4]}, 
+                Offset[0.2]}}]}], "Deploy"],
+         RadioButtonBar[
+          Dynamic[$CellContext`sol], {"Trig1", "Trig2"}]]},
+       {
+        DynamicBox[ToBoxes[
+          $CellContext`solutions[$CellContext`sol], StandardForm],
+         ImageSizeCache->{204., {3., 10.}}]}
+      },
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     
+     "Column"]}, {4,"\<\"Calculus\"\>"->
+    TagBox[GridBox[{
+       {
+        InterpretationBox[
+         StyleBox[GridBox[{
+            {
+             RadioButtonBox[Dynamic[$CellContext`sol], {"Integration"},
+              DefaultBaseStyle->"RadioButtonBar"], 
+             StyleBox["\<\"Integration\"\>", "RadioButtonBarLabel",
+              StripOnInput->False]}
+           },
+           AutoDelete->False,
+           BaselinePosition->{1, 2},
+           GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+           
+           GridBoxItemSize->{
+            "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+           GridBoxSpacings->{"Columns" -> {
+               Offset[0.27999999999999997`], {
+                Offset[0.21]}, 
+               Offset[0.27999999999999997`]}, "Rows" -> {
+               Offset[0.2], {
+                Offset[0.4]}, 
+               Offset[0.2]}}], "Deploy"],
+         RadioButtonBar[
+          Dynamic[$CellContext`sol], {"Integration"}]]},
+       {
+        DynamicBox[ToBoxes[
+          $CellContext`solutions[$CellContext`sol], StandardForm],
+         ImageSizeCache->{204., {3., 10.}}]}
+      },
+      DefaultBaseStyle->"Column",
+      GridBoxAlignment->{"Columns" -> {{Left}}},
+      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+     
+     "Column"]}}, 2], ",", 
+   DynamicBox[ToBoxes[
+     Head[
+      ToExpression[$CellContext`sol]], StandardForm],
+    ImageSizeCache->{47., {3., 10.}}]}], "}"}]], "Output",
+ CellLabel->"Out[45]=",ExpressionUUID->"d435c86d-0b49-4331-b959-c204228773e4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"sol", ",", " ", 
+     RowBox[{"Dynamic", "@", 
+      RowBox[{"Head", "@", 
+       RowBox[{"ToExpression", "@", 
+        RowBox[{
+         RowBox[{"StringReplace", "[", 
+          RowBox[{"WhitespaceCharacter", "\[Rule]", "\"\<\>\""}], "]"}], "@", 
+         "sol"}]}]}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"TabView", "@", 
+    RowBox[{"Normal", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"RadioButtonBar", "[", 
+        RowBox[{
+         RowBox[{"Dynamic", "[", "sol", "]"}], ",", "#"}], "]"}], "&"}], "/@",
+       " ", "categories"}], "]"}]}], ",", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"sol", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellLabel->"In[53]:=",ExpressionUUID->"2847bf99-a7a2-4369-885b-9a774d654b02"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`sol$$ = "Solution", Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[
+       TabView[{"Problem" -> RadioButtonBar[
+           Dynamic[$CellContext`sol$$], {"Problem", "Solution"}], "Geometry" -> 
+         RadioButtonBar[
+           Dynamic[$CellContext`sol$$], {
+           "Step 1", "Step 2", "Step3", "Step4", "Step5", "Step6", "Step7", 
+            "Step8", "Answer"}], "Trigonometry" -> RadioButtonBar[
+           Dynamic[$CellContext`sol$$], {"Trig 1", "Trig 2"}], "Calculus" -> 
+         RadioButtonBar[
+           Dynamic[$CellContext`sol$$], {"Integration"}]}]], 
+      Manipulate`Dump`ThisIsNotAControl}, {
+      Hold[$CellContext`sol$$]}}, Typeset`size$$ = {138., {3., 10.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
+    
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`sol$$ = Null}, 
+      "ControllerVariables" :> {}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> {$CellContext`sol$$, 
+        Dynamic[
+         Head[
+          ToExpression[
+           StringReplace[WhitespaceCharacter -> ""][$CellContext`sol$$]]]]}, 
+      "Specifications" :> {
+        TabView[{"Problem" -> RadioButtonBar[
+            Dynamic[$CellContext`sol$$], {"Problem", "Solution"}], "Geometry" -> 
+          RadioButtonBar[
+            Dynamic[$CellContext`sol$$], {
+            "Step 1", "Step 2", "Step3", "Step4", "Step5", "Step6", "Step7", 
+             "Step8", "Answer"}], "Trigonometry" -> RadioButtonBar[
+            Dynamic[$CellContext`sol$$], {"Trig 1", "Trig 2"}], "Calculus" -> 
+          RadioButtonBar[
+            Dynamic[$CellContext`sol$$], {
+            "Integration"}]}], {$CellContext`sol$$, ControlType -> None}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{516., {68., 74.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellLabel->"Out[53]=",ExpressionUUID->"cd649137-e103-444b-bd23-da8f62581087"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Dynamic", "[", "solution", "]"}]], "Input",
+ CellLabel->"In[26]:=",ExpressionUUID->"f790538c-402d-415b-99cb-1d7c57c28862"],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[$CellContext`solution, StandardForm],
+  ImageSizeCache->{55., {1., 10.}}]], "Output",
+ CellLabel->"Out[26]=",ExpressionUUID->"159ef6fe-31e0-41aa-ae94-d4cc3297f0af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"solutions", "[", "\"\<Problem\>\"", "]"}]], "Input",
+ CellLabel->"In[27]:=",ExpressionUUID->"dad3b0e6-8f77-4cf5-a530-5326bcdbae32"],
+
+Cell[BoxData["\<\"Dynamic[solution] world\"\>"], "Output",
+ CellLabel->"Out[27]=",ExpressionUUID->"303957c1-8a40-4426-83c5-55a7a97ed7fc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Dynamic", "[", "x", "]"}]], "Input",
+ CellLabel->"In[17]:=",ExpressionUUID->"fa8c4fad-2245-4a41-9a10-fad1cf976e1f"],
+
+Cell[BoxData[
+ DynamicBox[ToBoxes[$CellContext`x, StandardForm],
+  ImageSizeCache->{39., {3., 9.}}]], "Output",
+ CellLabel->"Out[17]=",ExpressionUUID->"7abe6c5a-cdef-4b8f-83d9-ac64fb54a603"]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{Automatic, 124}, {Automatic, 43}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 765, 19, 115, "Input",ExpressionUUID->"78f98e04-c0ee-4257-aee4-378b274c6311"],
+Cell[1348, 43, 623, 14, 37, "Output",ExpressionUUID->"9d34272f-786b-4668-82c0-740b59b85cd2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2008, 62, 986, 21, 157, "Input",ExpressionUUID->"fd41a5ac-727b-4ff2-b02e-72fa2788b001"],
+Cell[2997, 85, 845, 18, 80, "Output",ExpressionUUID->"8c27440b-c274-4109-9978-6dd945cba800"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3879, 108, 147, 2, 30, "Input",ExpressionUUID->"858067aa-9a53-4e7f-8137-a2ea00210941"],
+Cell[4029, 112, 18446, 353, 135, "Output",ExpressionUUID->"b38b15b7-1165-463f-86ff-31908b106288"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22512, 470, 289, 7, 30, "Input",ExpressionUUID->"57fd78e3-a629-424f-a5d2-04e05fd76eec"],
+Cell[22804, 479, 2126, 42, 89, "Output",ExpressionUUID->"fae07232-7b37-4157-97c6-e70065f4e2c6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24967, 526, 152, 2, 30, "Input",ExpressionUUID->"8b2b2761-f10e-432e-b98e-f370d5c67895"],
+Cell[25122, 530, 119, 1, 34, "Output",ExpressionUUID->"e850fea2-ed4b-4470-ae86-0b8f0c051186"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25278, 536, 786, 21, 94, "Input",ExpressionUUID->"e13b8b92-f39a-4ca7-9460-dd56d9e02db0"],
+Cell[26067, 559, 14012, 356, 136, "Output",ExpressionUUID->"d435c86d-0b49-4331-b959-c204228773e4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40116, 920, 1003, 26, 178, "Input",ExpressionUUID->"2847bf99-a7a2-4369-885b-9a774d654b02"],
+Cell[41122, 948, 2736, 56, 161, "Output",ExpressionUUID->"cd649137-e103-444b-bd23-da8f62581087"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43895, 1009, 146, 2, 30, "Input",ExpressionUUID->"f790538c-402d-415b-99cb-1d7c57c28862"],
+Cell[44044, 1013, 198, 3, 34, "Output",ExpressionUUID->"159ef6fe-31e0-41aa-ae94-d4cc3297f0af"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44279, 1021, 155, 2, 30, "Input",ExpressionUUID->"dad3b0e6-8f77-4cf5-a530-5326bcdbae32"],
+Cell[44437, 1025, 137, 1, 34, "Output",ExpressionUUID->"303957c1-8a40-4426-83c5-55a7a97ed7fc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44611, 1031, 139, 2, 30, "Input",ExpressionUUID->"fa8c4fad-2245-4a41-9a10-fad1cf976e1f"],
+Cell[44753, 1035, 190, 3, 34, "Output",ExpressionUUID->"7abe6c5a-cdef-4b8f-83d9-ac64fb54a603"]
+}, Open  ]]
+}
+]
+*)
+

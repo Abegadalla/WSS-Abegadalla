@@ -1,0 +1,243 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9237,        235]
+NotebookOptionsPosition[      8796,        218]
+NotebookOutlinePosition[      9134,        233]
+CellTagsIndexPosition[      9091,        230]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"p", ",", "SR", ",", "p2", ",", "SR2"}], "}"}], ",", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"TabView", "[", 
+    RowBox[{"{", " ", 
+     RowBox[{
+      RowBox[{"(", "\[IndentingNewLine]", 
+       RowBox[{"\"\<Problem\>\"", "\[Rule]", 
+        RowBox[{"Column", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"p", ",", "0.5", ",", "\"\<density\>\""}], "}"}], 
+                 ",", "0", ",", "1", ",", ".01", ",", 
+                 RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], 
+              ",", 
+              RowBox[{"Spacer", "[", "5", "]"}], ",", 
+              RowBox[{"Dynamic", "@", "p"}]}], "}"}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"SR", ",", "1", ",", "\"\<seed \>\""}], "}"}], ",", 
+                 "1", ",", "1000", ",", "1", ",", 
+                 RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], 
+              ",", 
+              RowBox[{"Spacer", "[", "5", "]"}], ",", 
+              RowBox[{"Dynamic", "@", "SR"}]}], "}"}], "]"}]}], "}"}], 
+         "]"}]}], ")"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"(", "\[IndentingNewLine]", 
+       RowBox[{"\"\<Trigonometry\>\"", "\[Rule]", 
+        RowBox[{"Column", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"p2", ",", "0.5", ",", "\"\<test\>\""}], "}"}], ",",
+                  "0", ",", "1", ",", ".01", ",", 
+                 RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], 
+              ",", 
+              RowBox[{"Spacer", "[", "5", "]"}], ",", 
+              RowBox[{"Dynamic", "@", "p"}]}], "}"}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Row", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"SR2", ",", "1", ",", "\"\<blah \>\""}], "}"}], ",",
+                  "1", ",", "1000", ",", "1", ",", 
+                 RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], 
+              ",", 
+              RowBox[{"Spacer", "[", "5", "]"}], ",", 
+              RowBox[{"Dynamic", "@", "p2"}]}], "}"}], "]"}]}], "}"}], 
+         "]"}]}], ")"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"p", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"SR", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"p2", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"SR2", ",", 
+     RowBox[{"ControlType", "\[Rule]", "None"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"ControlPlacement", "\[Rule]", "Left"}], ",", 
+   RowBox[{"TrackedSymbols", "\[Rule]", "True"}], ",", 
+   RowBox[{"FrameMargins", "\[Rule]", "0"}]}], "]"}]], "Input",
+ CellLabel->"In[3]:=",
+ CellID->268501739,ExpressionUUID->"fb078bc6-2709-418e-acc3-b705c2274bcb"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`p$$ = 0.5, $CellContext`p2$$ = 
+    0.5, $CellContext`SR$$ = 1, $CellContext`SR2$$ = 1, Typeset`show$$ = True,
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`p$$], 0.5, "density"}, 0, 1, 0.01}, {{
+       Hold[$CellContext`SR$$], 1, "seed "}, 1, 1000, 1}, {{
+       Hold[$CellContext`p2$$], 0.5, "test"}, 0, 1, 0.01}, {{
+       Hold[$CellContext`SR2$$], 1, "blah "}, 1, 1000, 1}, {
+      Hold[
+       TabView[{"Problem" -> Column[{
+            Row[{
+              Manipulate`Place[1], 
+              Spacer[5], 
+              Dynamic[$CellContext`p$$]}], 
+            Row[{
+              Manipulate`Place[2], 
+              Spacer[5], 
+              Dynamic[$CellContext`SR$$]}]}], "Trigonometry" -> Column[{
+            Row[{
+              Manipulate`Place[3], 
+              Spacer[5], 
+              Dynamic[$CellContext`p$$]}], 
+            Row[{
+              Manipulate`Place[4], 
+              Spacer[5], 
+              Dynamic[$CellContext`p2$$]}]}]}]], 
+      Manipulate`Dump`ThisIsNotAControl}, {
+      Hold[$CellContext`p$$]}, {
+      Hold[$CellContext`SR$$]}, {
+      Hold[$CellContext`p2$$]}, {
+      Hold[$CellContext`SR2$$]}}, Typeset`size$$ = {117., {3., 9.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`p$15502$$ = 0, $CellContext`SR$15503$$ = 
+    0, $CellContext`p2$15504$$ = 0, $CellContext`SR2$15505$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`p$$ = 0.5, $CellContext`p2$$ = 
+        0.5, $CellContext`SR$$ = 1, $CellContext`SR2$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`p$$, $CellContext`p$15502$$, 0], 
+        Hold[$CellContext`SR$$, $CellContext`SR$15503$$, 0], 
+        Hold[$CellContext`p2$$, $CellContext`p2$15504$$, 0], 
+        Hold[$CellContext`SR2$$, $CellContext`SR2$15505$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> {$CellContext`p$$, $CellContext`SR$$, $CellContext`p2$$, \
+$CellContext`SR2$$}, 
+      "Specifications" :> {{{$CellContext`p$$, 0.5, "density"}, 0, 1, 0.01, 
+         ImageSize -> Tiny, ControlPlacement -> 
+         1}, {{$CellContext`SR$$, 1, "seed "}, 1, 1000, 1, ImageSize -> Tiny, 
+         ControlPlacement -> 2}, {{$CellContext`p2$$, 0.5, "test"}, 0, 1, 
+         0.01, ImageSize -> Tiny, ControlPlacement -> 
+         3}, {{$CellContext`SR2$$, 1, "blah "}, 1, 1000, 1, ImageSize -> Tiny,
+          ControlPlacement -> 4}, 
+        TabView[{"Problem" -> Column[{
+             Row[{
+               Manipulate`Place[1], 
+               Spacer[5], 
+               Dynamic[$CellContext`p$$]}], 
+             Row[{
+               Manipulate`Place[2], 
+               Spacer[5], 
+               Dynamic[$CellContext`SR$$]}]}], "Trigonometry" -> Column[{
+             Row[{
+               Manipulate`Place[3], 
+               Spacer[5], 
+               Dynamic[$CellContext`p$$]}], 
+             Row[{
+               Manipulate`Place[4], 
+               Spacer[5], 
+               Dynamic[$CellContext`p2$$]}]}]}], {$CellContext`p$$, 
+         ControlType -> None}, {$CellContext`SR$$, ControlType -> 
+         None}, {$CellContext`p2$$, ControlType -> None}, {$CellContext`SR2$$,
+          ControlType -> None}}, 
+      "Options" :> {
+       ControlPlacement -> Left, TrackedSymbols -> True, FrameMargins -> 0}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{299., {54., 60.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellLabel->"Out[3]=",ExpressionUUID->"99edd462-5650-4d44-abdb-5cbe96eb10d3"]
+}, Open  ]]
+},
+WindowSize->{941, 930},
+WindowMargins->{{Automatic, 167}, {27, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3874, 96, 388, "Input",ExpressionUUID->"fb078bc6-2709-418e-acc3-b705c2274bcb",
+ CellID->268501739],
+Cell[4457, 120, 4323, 95, 133, "Output",ExpressionUUID->"99edd462-5650-4d44-abdb-5cbe96eb10d3"]
+}, Open  ]]
+}
+]
+*)
+
