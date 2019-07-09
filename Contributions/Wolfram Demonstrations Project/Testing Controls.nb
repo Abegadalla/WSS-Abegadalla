@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     51630,       1190]
-NotebookOptionsPosition[     48496,       1129]
-NotebookOutlinePosition[     48834,       1144]
-CellTagsIndexPosition[     48791,       1141]
+NotebookDataLength[     51524,       1188]
+NotebookOptionsPosition[     48390,       1127]
+NotebookOutlinePosition[     48728,       1142]
+CellTagsIndexPosition[     48685,       1139]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1002,7 +1002,7 @@ $CellContext`mode$$ = "Step 2", Typeset`show$$ = True,
   Manipulate`InterpretManipulate[1]]], "Output",
  CellLabel->"Out[12]=",ExpressionUUID->"ac39d976-43a9-4bb5-8d9b-9c91043cfd5f"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1058,12 +1058,11 @@ Cell[TextData[{
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`expression$$ = HoldForm[
-      Integrate[$CellContext`x^2, $CellContext`x]] == 
-    Rational[1, 3] $CellContext`x^3, $CellContext`mode$$ = "Integration", 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+   DynamicModuleBox[{$CellContext`expression$$ = $CellContext`integration, \
+$CellContext`mode$$ = "Integration", Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
       Hold[
        TabView[{"Problem" -> RadioButtonBar[
            Dynamic[$CellContext`mode$$], {"Question", "Solution"}], 
@@ -1077,9 +1076,8 @@ Cell[BoxData[
            "Integration", "Differentiation"}]}]], 
       Manipulate`Dump`ThisIsNotAControl}, {{
        Hold[$CellContext`mode$$], "Question"}}, {
-      Hold[$CellContext`expression$$]}}, Typeset`size$$ = {
-    84.68, {11.813573203125, 21.805036796875}}, Typeset`update$$ = 0, 
-    Typeset`initDone$$, Typeset`skipInitDone$$ = False}, 
+      Hold[$CellContext`expression$$]}}, Typeset`size$$ = {86., {3., 10.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`expression$$ = Null, $CellContext`mode$$ = 
@@ -1105,7 +1103,7 @@ Cell[BoxData[
             "Integration", "Differentiation"}]}], {{$CellContext`mode$$, 
           "Question"}, ControlType -> None}, {$CellContext`expression$$, 
          ControlType -> None}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{260., {76., 82.}},
+     ImageSizeCache->{260., {68., 74.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1124,7 +1122,7 @@ Cell[BoxData[
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellLabel->"Out[94]=",ExpressionUUID->"866cfebd-2f0f-4c6a-a0ec-02c212196baf"]
-}, Open  ]]
+}, Closed]]
 }, Open  ]]
 },
 WindowSize->{808, 911},
@@ -1180,17 +1178,17 @@ Cell[CellGroupData[{
 Cell[37745, 879, 2338, 55, 388, "Input",ExpressionUUID->"a031f950-3734-4964-8538-e19288fef3e4"],
 Cell[40086, 936, 3259, 66, 161, "Output",ExpressionUUID->"ac39d976-43a9-4bb5-8d9b-9c91043cfd5f"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[43394, 1008, 98, 0, 54, "Subsection",ExpressionUUID->"11233269-c96f-4b7e-ad7a-b699cd1c921c"],
+Cell[43394, 1008, 98, 0, 38, "Subsection",ExpressionUUID->"11233269-c96f-4b7e-ad7a-b699cd1c921c"],
 Cell[43495, 1010, 291, 5, 58, "Text",ExpressionUUID->"57966eaa-30e7-43f5-bb5f-6ea9b68efeb9"],
 Cell[43789, 1017, 174, 3, 30, "Input",ExpressionUUID->"b819b9ba-bed4-45cb-ab58-79eb59815efd"],
 Cell[43966, 1022, 302, 8, 30, "Input",ExpressionUUID->"b75909c3-3e66-4a1c-b357-2f48168e2435"],
 Cell[44271, 1032, 404, 11, 33, "Input",ExpressionUUID->"424e8ffb-569d-4a05-a67d-28d77034548d"],
 Cell[44678, 1045, 187, 3, 35, "Text",ExpressionUUID->"ef92d661-62e6-4589-9a32-6add8184d4e1"],
 Cell[44868, 1050, 220, 5, 35, "Text",ExpressionUUID->"4c69be4d-d99d-4e47-9f6a-875965b8a01d"],
-Cell[45091, 1057, 3377, 68, 177, "Output",ExpressionUUID->"866cfebd-2f0f-4c6a-a0ec-02c212196baf"]
-}, Open  ]]
+Cell[45091, 1057, 3271, 66, 161, "Output",ExpressionUUID->"866cfebd-2f0f-4c6a-a0ec-02c212196baf"]
+}, Closed]]
 }, Open  ]]
 }
 ]
