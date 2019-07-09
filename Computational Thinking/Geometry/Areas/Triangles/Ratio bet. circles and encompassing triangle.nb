@@ -1,0 +1,1105 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     47772,       1097]
+NotebookOptionsPosition[     46457,       1065]
+NotebookOutlinePosition[     46794,       1080]
+CellTagsIndexPosition[     46751,       1077]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[StyleBox["Ratio between areas of circles and area of the \
+encompassing triangle 6-8-2017 (using Table[Table])",
+ FontColor->RGBColor[0.5, 0, 0.5]]], "Section",
+ CellChangeTimes->{
+  3.550742311820698*^9, {3.705694813279101*^9, 3.705694818988061*^9}, {
+   3.7056959987916594`*^9, 3.705696012183133*^9}, 3.7060427311736107`*^9, 
+   3.714570106221449*^9},ExpressionUUID->"79ffa4c5-f2d5-4833-b8eb-\
+5aef919aa8f2"],
+
+Cell["\<\
+Based on a problem by Stewart (Early Transcendentals 5 e Thomson publisher, \
+2003, Ch. 11, Infinite Seq. and Series Problems Plus # 15 P. 791)\
+\>", "Text",
+ CellChangeTimes->{{3.702119182925543*^9, 3.7021191949816217`*^9}, {
+  3.702119300387582*^9, 3.702119320148575*^9}, {3.702119426892335*^9, 
+  3.7021194620096684`*^9}, {3.7021197256669083`*^9, 
+  3.702119809961071*^9}},ExpressionUUID->"180d363e-b8ef-4303-9af2-\
+d9a469106264"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.660431452999239*^9, 
+  3.6604314659997473`*^9}},ExpressionUUID->"99cbcee0-906e-4677-8be6-\
+f8d5727b07a0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"m", ",", "rc", ",", "answer"}], "}"}], ",", 
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"disk", "[", 
+        RowBox[{"center_", ",", "radius_"}], "]"}], ":=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"EdgeForm", "[", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+         RowBox[{"FaceForm", "[", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{"1", ",", "0", ",", "1"}], "]"}], "]"}], ",", 
+         RowBox[{"Disk", "[", 
+          RowBox[{"center", ",", "radius"}], "]"}], ",", 
+         RowBox[{"PointSize", "[", "0.015", "]"}], ",", 
+         RowBox[{"Point", "[", "center", "]"}]}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"radius", "[", "k_", "]"}], ":=", 
+       RowBox[{"1", "/", 
+        RowBox[{"(", 
+         RowBox[{"k", "-", "1", "+", 
+          SqrtBox["3"]}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"areaofcircles", "[", "m_", "]"}], ":=", 
+       RowBox[{"\[Pi]", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"radius", "[", "m", "]"}], ")"}], "2"], " ", "m", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"m", "+", "1"}], ")"}], "/", "2"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"areaoftriangle", ":=", 
+       SqrtBox["3"]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ratio", "[", "m_", "]"}], ":=", 
+       FractionBox[
+        RowBox[{"\[Pi]", " ", "m", " ", 
+         RowBox[{"(", 
+          RowBox[{"m", "+", "1"}], ")"}], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"radius", "[", "m", "]"}], ")"}], "2"]}], 
+        RowBox[{"2", " ", 
+         SqrtBox["3"]}]]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"limit", "=", 
+       RowBox[{"Limit", "[", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"\[Pi]", " ", "n", " ", 
+           RowBox[{"(", 
+            RowBox[{"n", "+", "1"}], ")"}], 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"radius", "[", "n", "]"}], ")"}], "2"]}], 
+          RowBox[{"2", " ", 
+           SqrtBox["3"]}]], ",", 
+         RowBox[{"n", "\[Rule]", "\[Infinity]"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Graphics", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{"answer", ",", "\[IndentingNewLine]", 
+            RowBox[{"Inset", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"TraditionalForm", "[", 
+                 RowBox[{"Row", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "\"\<\!\(\*FractionBox[\(Total\\\ area\\\ of\\\ Circles\), \
+\(Area\\\ of\\\ Triangle\)]\) = \>\"", ",", 
+                    RowBox[{"ratio", "[", "m", "]"}], ",", 
+                    "\"\<\\nLimit [ratio as No. Circles->\[Infinity]] = \>\"",
+                     ",", "limit"}], "}"}], "]"}], "]"}], ",", "16", ",", 
+                "Purple", ",", "Bold"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "2"}], "}"}]}], "]"}], ",", 
+            RowBox[{"Inset", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{
+               "\"\<\\nCalculate the ratio between \\nthe total area of disks \
+and the area of triangle\\n\>\"", ",", "16", ",", "Black", ",", "Italic"}], 
+               "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "2"}], "}"}]}], "]"}]}], "]"}], ",", " ", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"EdgeForm", "[", 
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Red"}], "}"}], "]"}], ",", "LightYellow",
+             ",", 
+            RowBox[{"Polygon", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"rc", " ", 
+                   SqrtBox["3"]}], "-", "1"}], ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"1", " ", "-", 
+                  RowBox[{
+                   SqrtBox["3"], "rc"}]}], ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"1", "-", 
+                  RowBox[{"0.5", " ", "rc", " ", 
+                   SqrtBox["3"]}]}], ",", 
+                 RowBox[{"3", " ", 
+                  RowBox[{"rc", "/", "2"}]}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  SqrtBox["3"], 
+                  RowBox[{"rc", "/", "2"}]}], ",", 
+                 RowBox[{
+                  SqrtBox["3"], "-", 
+                  RowBox[{"1.5", " ", "rc"}]}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "0.5"}], " ", "rc", " ", 
+                  SqrtBox["3"]}], ",", 
+                 RowBox[{
+                  SqrtBox["3"], "-", 
+                  RowBox[{"1.5", " ", "rc"}]}]}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"0.5", " ", "rc", " ", 
+                   SqrtBox["3"]}], "-", "1"}], ",", 
+                 RowBox[{"1.5", " ", "rc"}]}], "}"}]}], "}"}], "]"}]}], "}"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{"LightYellow", ",", 
+            RowBox[{"Disk", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"rc", " ", 
+                   SqrtBox["3"]}], "-", "1"}], ")"}], " ", ",", "rc"}], "}"}],
+               ",", "rc", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"5", 
+                 RowBox[{"\[Pi]", "/", "6"}]}], ",", 
+                RowBox[{"3", 
+                 RowBox[{"\[Pi]", "/", "2"}]}]}], "}"}]}], "]"}], ",", 
+            RowBox[{"Disk", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"1", "-", 
+                 RowBox[{"rc", 
+                  SqrtBox["3"]}]}], ",", "rc"}], "}"}], ",", "rc", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"3", 
+                 RowBox[{"\[Pi]", "/", "2"}]}], ",", 
+                RowBox[{"13", 
+                 RowBox[{"\[Pi]", "/", "6"}]}]}], "}"}]}], "]"}], ",", 
+            RowBox[{"Disk", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SqrtBox["3"], "-", 
+                  RowBox[{"2", " ", "rc"}]}], ")"}]}], " ", "}"}], ",", "rc", 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\[Pi]", "/", "6"}], ",", 
+                RowBox[{"5", 
+                 RowBox[{"\[Pi]", "/", "6"}]}]}], "}"}]}], "]"}]}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Red", ",", 
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"rc", " ", 
+                   SqrtBox["3"]}], "-", "1"}], ")"}], " ", ",", "rc"}], "}"}],
+               ",", "rc", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"5", 
+                 RowBox[{"\[Pi]", "/", "6"}]}], ",", 
+                RowBox[{"3", 
+                 RowBox[{"\[Pi]", "/", "2"}]}]}], "}"}]}], "]"}], ",", 
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"1", "-", 
+                 RowBox[{"rc", 
+                  SqrtBox["3"]}]}], ",", "rc"}], "}"}], ",", "rc", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"3", 
+                 RowBox[{"\[Pi]", "/", "2"}]}], ",", 
+                RowBox[{"13", 
+                 RowBox[{"\[Pi]", "/", "6"}]}]}], "}"}]}], "]"}], ",", 
+            RowBox[{"Circle", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SqrtBox["3"], "-", 
+                  RowBox[{"2", " ", "rc"}]}], ")"}]}], " ", "}"}], ",", "rc", 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\[Pi]", "/", "6"}], ",", 
+                RowBox[{"5", 
+                 RowBox[{"\[Pi]", "/", "6"}]}]}], "}"}]}], "]"}]}], "}"}], 
+          ",", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"Table", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"disk", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"m", "+", "i", "-", 
+                    RowBox[{"2", 
+                    RowBox[{"(", 
+                    RowBox[{"j", "+", "1"}], ")"}]}]}], ")"}], 
+                   RowBox[{"radius", "[", "m", "]"}]}], ",", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"1", "+", 
+                    RowBox[{
+                    SqrtBox["3"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}]}]}], ")"}], " ", 
+                   RowBox[{"radius", "[", "m", "]"}]}]}], "}"}], ",", 
+                RowBox[{"radius", "[", "m", "]"}]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"j", "+", "1"}]}], "}"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "0", ",", 
+              RowBox[{"m", "-", "1"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+        RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+        RowBox[{"AxesOrigin", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}]}], "]"}]}], ",", 
+     RowBox[{"Row", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"rc", ",", "0.07", ",", "\"\<roundingradius\>\""}], "}"}],
+            ",", "0.01", ",", "0.3", ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"m", ",", "7", ",", "\"\<number of circles\>\""}], "}"}], 
+           ",", "1", ",", "30", ",", "1", ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"answer", ",", "False", ",", "\"\<Answer\>\""}], "}"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"False", ",", "True"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+      "]"}], ",", 
+     RowBox[{"TrackedSymbols", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"m", ",", "rc", ",", "answer"}], "}"}]}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.705669138942437*^9, 3.705669289721118*^9}, {
+   3.7056693205832987`*^9, 3.705669398631914*^9}, {3.705669433595418*^9, 
+   3.705669571064905*^9}, {3.705669635908703*^9, 3.705669705014523*^9}, {
+   3.705669739725919*^9, 3.705669749778925*^9}, {3.705670122925201*^9, 
+   3.7056701555207644`*^9}, {3.705670202094461*^9, 3.705670215846987*^9}, {
+   3.705670757354743*^9, 3.705670805639081*^9}, {3.7056708406459513`*^9, 
+   3.705670886338664*^9}, {3.705670917083989*^9, 3.705670939361494*^9}, 
+   3.705670972891705*^9, {3.705671047974515*^9, 3.705671062146596*^9}, {
+   3.705671119716201*^9, 3.705671121569516*^9}, {3.705671599102435*^9, 
+   3.70567160328878*^9}, {3.705671702890704*^9, 3.7056717189292917`*^9}, {
+   3.705671834112949*^9, 3.705671914233202*^9}, {3.7056721289336433`*^9, 
+   3.705672160029183*^9}, {3.705672224418396*^9, 3.705672226454254*^9}, {
+   3.705672257619528*^9, 3.705672288507431*^9}, {3.7056728981868*^9, 
+   3.705673024039815*^9}, {3.7056731846503773`*^9, 3.705673187219328*^9}, {
+   3.705673225459235*^9, 3.705673281602579*^9}, {3.705673336043125*^9, 
+   3.7056733473896933`*^9}, {3.705673658061253*^9, 3.705673676381528*^9}, {
+   3.705673733980214*^9, 3.70567379675038*^9}, {3.705674017925723*^9, 
+   3.705674026861537*^9}, {3.705674064694667*^9, 3.705674087918583*^9}, {
+   3.705674118479257*^9, 3.705674163738669*^9}, 3.7056742023225307`*^9, {
+   3.705674332951498*^9, 3.705674421615447*^9}, {3.705674466367313*^9, 
+   3.705674520017789*^9}, {3.70567459797958*^9, 3.705674615200001*^9}, {
+   3.705675111074885*^9, 3.7056751137812853`*^9}, {3.705675151269619*^9, 
+   3.7056752073264427`*^9}, 3.705675237841662*^9, 3.7056753145147543`*^9, {
+   3.7056761374476423`*^9, 3.705676291984001*^9}, {3.705676326206751*^9, 
+   3.705676333142972*^9}, 3.705676393727037*^9, {3.705676506192977*^9, 
+   3.7056765814021883`*^9}, {3.705676705511359*^9, 3.7056767210627413`*^9}, 
+   3.7056767750661*^9, {3.705676805694458*^9, 3.7056768109802923`*^9}, {
+   3.705676873816598*^9, 3.7056768750346613`*^9}, {3.705676909280715*^9, 
+   3.705676919365449*^9}, {3.70567695105656*^9, 3.7056769545486193`*^9}, 
+   3.705676986264539*^9, {3.7056770248405113`*^9, 3.705677036230084*^9}, 
+   3.705677098783395*^9, 3.705677134887569*^9, {3.7056771892281446`*^9, 
+   3.705677236570031*^9}, {3.705677326277679*^9, 3.705677404303603*^9}, {
+   3.7056776821661787`*^9, 3.7056777281732903`*^9}, {3.705677769453084*^9, 
+   3.705677789123352*^9}, {3.705677841815267*^9, 3.705677919963705*^9}, {
+   3.705677984799844*^9, 3.705678004232504*^9}, {3.705678049076517*^9, 
+   3.705678067237238*^9}, {3.705678144795191*^9, 3.705678165360529*^9}, {
+   3.7056782127828493`*^9, 3.7056782849051733`*^9}, {3.705678451491942*^9, 
+   3.70567846847577*^9}, {3.705678528950976*^9, 3.705678536063878*^9}, {
+   3.705678598393614*^9, 3.705678697526578*^9}, {3.705678729765459*^9, 
+   3.705678752857093*^9}, {3.7056788056245728`*^9, 3.705678806788814*^9}, {
+   3.7056788420216837`*^9, 3.705678956506185*^9}, {3.705679057133066*^9, 
+   3.7056790690662394`*^9}, {3.705679155180475*^9, 3.7056791907815037`*^9}, {
+   3.7056814326129513`*^9, 3.70568153556814*^9}, {3.7056815919499407`*^9, 
+   3.7056816859704037`*^9}, 3.705681752813013*^9, {3.7056817987950563`*^9, 
+   3.705681805825626*^9}, {3.7056819565135717`*^9, 3.705682017521953*^9}, 
+   3.7056820688856277`*^9, {3.705682141621932*^9, 3.705682145624898*^9}, {
+   3.7056822058455963`*^9, 3.705682215107649*^9}, {3.7056822682798357`*^9, 
+   3.7056822827406883`*^9}, {3.705682395619875*^9, 3.705682399736251*^9}, {
+   3.705682485163817*^9, 3.705682486550941*^9}, {3.7056825735448513`*^9, 
+   3.7056826498820057`*^9}, {3.705682717373167*^9, 3.705682730474617*^9}, 
+   3.7056827938219137`*^9, {3.7056828597741756`*^9, 3.705682888129896*^9}, {
+   3.7056829238020906`*^9, 3.705682928198306*^9}, {3.705683169427855*^9, 
+   3.705683193360649*^9}, {3.705683287485261*^9, 3.705683400802977*^9}, {
+   3.705683481914897*^9, 3.705683487727669*^9}, {3.7056835418206863`*^9, 
+   3.705683547820693*^9}, 3.705683580157737*^9, {3.7056836237415113`*^9, 
+   3.705683671654332*^9}, {3.705691891901581*^9, 3.705691932229731*^9}, {
+   3.705692029570228*^9, 3.705692034024725*^9}, {3.705692221789331*^9, 
+   3.705692238576923*^9}, {3.705692293445249*^9, 3.705692377095977*^9}, {
+   3.7056925044836397`*^9, 3.7056925745619383`*^9}, {3.70569270950911*^9, 
+   3.705692738236978*^9}, {3.705692777830127*^9, 3.705692778389538*^9}, {
+   3.7056928833467903`*^9, 3.7056929592946033`*^9}, {3.70569300385784*^9, 
+   3.70569303768519*^9}, {3.7056930715948772`*^9, 3.705693077958952*^9}, {
+   3.70569310835314*^9, 3.705693132863022*^9}, {3.705693387000588*^9, 
+   3.705693389396044*^9}, {3.705693445281177*^9, 3.705693538237953*^9}, 
+   3.705693595071316*^9, {3.705693705438281*^9, 3.705693731874896*^9}, {
+   3.705693762924696*^9, 3.705693849860963*^9}, 3.705693889277355*^9, {
+   3.7056939451066637`*^9, 3.705694043645073*^9}, {3.7056941267625427`*^9, 
+   3.705694161831603*^9}, {3.7056941946758738`*^9, 3.705694222672214*^9}, {
+   3.7056942921201143`*^9, 3.7056943179008102`*^9}, {3.70569444163271*^9, 
+   3.7056947060834*^9}, {3.70569488502831*^9, 3.7056948996564207`*^9}, {
+   3.705694938242675*^9, 3.705695041132084*^9}, {3.705695124193953*^9, 
+   3.70569526965024*^9}, 3.705695363051152*^9, {3.705701073316627*^9, 
+   3.705701078786007*^9}, {3.7057011107959557`*^9, 3.705701137781309*^9}, {
+   3.705701173569173*^9, 3.705701177441506*^9}, {3.705701226110235*^9, 
+   3.705701288121217*^9}, {3.705701362306711*^9, 3.705701362929083*^9}, {
+   3.7057013963902683`*^9, 3.705701447919312*^9}, {3.705701552252915*^9, 
+   3.70570155349832*^9}, {3.705701656807836*^9, 3.705701682873666*^9}, {
+   3.705703009124794*^9, 3.705703034588504*^9}, {3.705703086361876*^9, 
+   3.705703104103962*^9}, 3.7060037372583227`*^9, {3.706003796506256*^9, 
+   3.706004042798058*^9}, {3.706004083007724*^9, 3.706004084237814*^9}, {
+   3.706004118146055*^9, 3.7060041216324177`*^9}, 3.706004294118828*^9, {
+   3.706004342889656*^9, 3.706004348231041*^9}, {3.7060043791782703`*^9, 
+   3.706004427078991*^9}, {3.706004945168792*^9, 3.706004979652917*^9}, {
+   3.706005009803546*^9, 3.706005011193976*^9}, {3.706041467765341*^9, 
+   3.706041587573579*^9}, {3.7060416181260557`*^9, 3.706041620653738*^9}, {
+   3.706041683123465*^9, 3.706041723077273*^9}, {3.706041808279505*^9, 
+   3.706041813368538*^9}, {3.7095499720467987`*^9, 3.709550000928011*^9}, {
+   3.709550591033594*^9, 3.7095506534762897`*^9}, {3.709550708039163*^9, 
+   3.709550841366871*^9}, {3.709551026549707*^9, 3.70955103959092*^9}, {
+   3.709551100866951*^9, 3.709551145364387*^9}, 
+   3.7095511803076878`*^9},ExpressionUUID->"69847801-a76d-4794-9324-\
+67a824915578"],
+
+Cell[BoxData[
+ DynamicModuleBox[{WolframBookTools`Private`m$$, 
+  WolframBookTools`Private`rc$$, WolframBookTools`Private`answer$$}, 
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{WolframBookTools`Private`answer$$ = False, 
+     WolframBookTools`Private`m$$ = 2, WolframBookTools`Private`rc$$ = 0.097, 
+     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+        Hold[WolframBookTools`Private`rc$$], 0.07, "roundingradius"}, 0.01, 
+       0.3}, {{
+        Hold[WolframBookTools`Private`m$$], 7, "number of circles"}, 1, 30, 
+       1}, {{
+        Hold[WolframBookTools`Private`answer$$], False, "Answer"}, {
+       False, True}}, {
+       Hold[
+        Row[{
+          Manipulate`Place[1], 
+          Manipulate`Place[2], 
+          Manipulate`Place[3]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+     Typeset`size$$ = {360., {209., 214.}}, Typeset`update$$ = 0, 
+     Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+     WolframBookTools`Private`rc$$$6961$$ = 0, 
+     WolframBookTools`Private`m$$$6962$$ = 0, 
+     WolframBookTools`Private`answer$$$6963$$ = False}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      2, StandardForm, 
+       "Variables" :> {
+        WolframBookTools`Private`answer$$ = False, 
+         WolframBookTools`Private`m$$ = 7, WolframBookTools`Private`rc$$ = 
+         0.07}, "ControllerVariables" :> {
+         Hold[
+         WolframBookTools`Private`rc$$, WolframBookTools`Private`rc$$$6961$$, 
+          0], 
+         Hold[
+         WolframBookTools`Private`m$$, WolframBookTools`Private`m$$$6962$$, 
+          0], 
+         Hold[
+         WolframBookTools`Private`answer$$, 
+          WolframBookTools`Private`answer$$$6963$$, False]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, 
+       "Body" :> (WolframBookTools`Private`disk[
+           Pattern[WolframBookTools`Private`center, 
+            Blank[]], 
+           Pattern[WolframBookTools`Private`radius, 
+            Blank[]]] := {
+           EdgeForm[{Thick, Blue}], 
+           FaceForm[
+            RGBColor[1, 0, 1]], 
+           Disk[
+           WolframBookTools`Private`center, WolframBookTools`Private`radius], 
+           
+           PointSize[0.015], 
+           Point[WolframBookTools`Private`center]}; 
+        WolframBookTools`Private`radius[
+           Pattern[WolframBookTools`Private`k, 
+            Blank[]]] := 1/(WolframBookTools`Private`k - 1 + Sqrt[3]); 
+        WolframBookTools`Private`areaofcircles[
+           Pattern[WolframBookTools`Private`m, 
+            Blank[]]] := ((Pi 
+            WolframBookTools`Private`radius[WolframBookTools`Private`m]^2) 
+           WolframBookTools`Private`m) ((WolframBookTools`Private`m + 1)/2); 
+        WolframBookTools`Private`areaoftriangle := Sqrt[3]; 
+        WolframBookTools`Private`ratio[
+           Pattern[WolframBookTools`Private`m, 
+            Blank[]]] := ((Pi WolframBookTools`Private`m) (
+            WolframBookTools`Private`m + 1)) (
+           WolframBookTools`Private`radius[WolframBookTools`Private`m]^2/(2 
+           Sqrt[3])); 
+        WolframBookTools`Private`limit = 
+         Limit[((Pi WolframBookTools`Private`n) (WolframBookTools`Private`n + 
+             1)) (WolframBookTools`Private`radius[
+              WolframBookTools`Private`n]^2/(2 Sqrt[3])), 
+           WolframBookTools`Private`n -> Infinity]; Graphics[{
+           If[WolframBookTools`Private`answer$$, 
+            Inset[
+             Style[
+              TraditionalForm[
+               
+               Row[{"\!\(\*FractionBox[\(Total\\ area\\ of\\ Circles\), \
+\(Area\\ of\\ Triangle\)]\) = ", 
+                 WolframBookTools`Private`ratio[WolframBookTools`Private`m$$],
+                  "\nLimit [ratio as No. Circles->\[Infinity]] = ", 
+                 WolframBookTools`Private`limit}]], 16, Purple, Bold], {0, 
+             2}], 
+            Inset[
+             Style[
+             "\nCalculate the ratio between \nthe total area of disks and the \
+area of triangle\n", 16, Black, Italic], {0, 2}]], {
+            EdgeForm[{Thick, Red}], LightYellow, 
+            
+            Polygon[{{WolframBookTools`Private`rc$$ Sqrt[3] - 1, 0}, {
+              1 - Sqrt[3] WolframBookTools`Private`rc$$, 0}, {
+              1 - (0.5 WolframBookTools`Private`rc$$) Sqrt[3], 
+               3 (WolframBookTools`Private`rc$$/2)}, {
+              Sqrt[3] (WolframBookTools`Private`rc$$/2), Sqrt[3] - 1.5 
+               WolframBookTools`Private`rc$$}, {((-0.5) 
+                WolframBookTools`Private`rc$$) Sqrt[3], Sqrt[3] - 1.5 
+               WolframBookTools`Private`rc$$}, {(0.5 
+                 WolframBookTools`Private`rc$$) Sqrt[3] - 1, 1.5 
+               WolframBookTools`Private`rc$$}}]}, {LightYellow, 
+            
+            Disk[{WolframBookTools`Private`rc$$ Sqrt[3] - 1, 
+              WolframBookTools`Private`rc$$}, WolframBookTools`Private`rc$$, {
+             5 (Pi/6), 3 (Pi/2)}], 
+            
+            Disk[{1 - WolframBookTools`Private`rc$$ Sqrt[3], 
+              WolframBookTools`Private`rc$$}, WolframBookTools`Private`rc$$, {
+             3 (Pi/2), 13 (Pi/6)}], 
+            
+            Disk[{0, Sqrt[3] - 2 WolframBookTools`Private`rc$$}, 
+             WolframBookTools`Private`rc$$, {Pi/6, 5 (Pi/6)}]}, {Thick, Red, 
+            
+            Circle[{WolframBookTools`Private`rc$$ Sqrt[3] - 1, 
+              WolframBookTools`Private`rc$$}, WolframBookTools`Private`rc$$, {
+             5 (Pi/6), 3 (Pi/2)}], 
+            
+            Circle[{1 - WolframBookTools`Private`rc$$ Sqrt[3], 
+              WolframBookTools`Private`rc$$}, WolframBookTools`Private`rc$$, {
+             3 (Pi/2), 13 (Pi/6)}], 
+            
+            Circle[{0, Sqrt[3] - 2 WolframBookTools`Private`rc$$}, 
+             WolframBookTools`Private`rc$$, {Pi/6, 5 (Pi/6)}]}, 
+           Table[
+            Table[
+             
+             WolframBookTools`Private`disk[{(WolframBookTools`Private`m$$ + 
+                WolframBookTools`Private`i - 
+                2 (WolframBookTools`Private`j + 1)) 
+               WolframBookTools`Private`radius[
+                WolframBookTools`Private`m$$], (1 + 
+                Sqrt[3] (WolframBookTools`Private`i - 1)) 
+               WolframBookTools`Private`radius[WolframBookTools`Private`m$$]}, 
+              WolframBookTools`Private`radius[
+              WolframBookTools`Private`m$$]], {
+             WolframBookTools`Private`i, WolframBookTools`Private`j + 1}], {
+            WolframBookTools`Private`j, 0, WolframBookTools`Private`m$$ - 
+             1}]}, Axes -> False, AxesOrigin -> {0, 0}]), 
+       "Specifications" :> {{{
+          WolframBookTools`Private`rc$$, 0.07, "roundingradius"}, 0.01, 0.3, 
+          Appearance -> "Labeled", ImageSize -> Tiny, ControlPlacement -> 
+          1}, {{WolframBookTools`Private`m$$, 7, "number of circles"}, 1, 30, 
+          1, Appearance -> "Labeled", ImageSize -> Tiny, ControlPlacement -> 
+          2}, {{WolframBookTools`Private`answer$$, False, "Answer"}, {
+          False, True}, ControlPlacement -> 3}, 
+         Row[{
+           Manipulate`Place[1], 
+           Manipulate`Place[2], 
+           Manipulate`Place[3]}]}, 
+       "Options" :> {
+        TrackedSymbols -> {
+          WolframBookTools`Private`m$$, WolframBookTools`Private`rc$$, 
+           WolframBookTools`Private`answer$$}}, "DefaultOptions" :> {}],
+      ImageSizeCache->{472., {252., 258.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{
+  3.705691954995487*^9, 3.705692256180048*^9, {3.705692308545486*^9, 
+   3.705692330368671*^9}, 3.7056923862752542`*^9, 3.7056925528379183`*^9, 
+   3.7056925876092243`*^9, {3.705692897151389*^9, 3.7056929388072863`*^9}, 
+   3.7056929745481567`*^9, 3.705693047486223*^9, 3.705693079295615*^9, {
+   3.705693120860799*^9, 3.705693139277514*^9}, 3.70569355869112*^9, 
+   3.7056935999902678`*^9, 3.705693736505678*^9, 3.705693797533387*^9, 
+   3.705693851220221*^9, 3.7056939013538647`*^9, {3.7056939530958967`*^9, 
+   3.705693966884581*^9}, {3.7056940060668297`*^9, 3.705694044606879*^9}, {
+   3.705694131208065*^9, 3.705694225257146*^9}, {3.705694303085895*^9, 
+   3.705694319603778*^9}, {3.705694449273671*^9, 3.705694592852453*^9}, 
+   3.705694659779203*^9, 3.7056947090807467`*^9, 3.705695368872287*^9, 
+   3.706042757027746*^9, 3.70604278942089*^9, 3.709550009466374*^9, 
+   3.709550861964856*^9, 3.709551048559704*^9, 3.70955115211915*^9, 
+   3.709551184392603*^9},ExpressionUUID->"3bf565db-5a05-43a8-b751-\
+f85f977c7501"]
+}, {2}]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Just for Fun", "Subtitle",
+ CellChangeTimes->{{3.770446827189721*^9, 
+  3.770446834668936*^9}},ExpressionUUID->"c46ba5bd-683d-4a4c-954d-\
+c1a3661bb085"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Ratio between areas of circles and area of the encompassing triangle 6-8-2017 \
+(using Table[Table])\
+\>", "Subsection",
+ CellChangeTimes->{
+  3.550742311820698*^9, {3.705694813279101*^9, 3.705694818988061*^9}, {
+   3.7056959987916594`*^9, 3.705696012183133*^9}, 3.7060427311736107`*^9, 
+   3.714570106221449*^9},ExpressionUUID->"c77cc9a5-2383-4757-af11-\
+1c1fddf4eab9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.770581474986537*^9, 3.770581486325635*^9}},
+ CellLabel->
+  "In[183]:=",ExpressionUUID->"f07420c5-6a0f-4d89-98bd-a90d5d58230b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"m", ",", "rc", ",", "n"}], "}"}], ",", 
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"mydisk", "[", 
+        RowBox[{"center_", ",", "radius_"}], "]"}], ":=", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"EdgeForm", "[", 
+          RowBox[{"{", 
+           RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+         RowBox[{"FaceForm", "[", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{"1", ",", "0", ",", "1"}], "]"}], "]"}], ",", 
+         RowBox[{"Disk", "[", 
+          RowBox[{"center", ",", "radius"}], "]"}], ",", 
+         RowBox[{"PointSize", "[", "0.015", "]"}], ",", 
+         RowBox[{"Point", "[", "center", "]"}]}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"radius", "[", "q_", "]"}], ":=", 
+       RowBox[{"1", "/", 
+        RowBox[{"(", 
+         RowBox[{"q", "-", "1", "+", 
+          SqrtBox["3"]}], ")"}]}]}], ";", 
+      RowBox[{"pooltable", "=", 
+       RowBox[{"Graphics", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"EdgeForm", "[", 
+              RowBox[{"{", 
+               RowBox[{"Thick", ",", "Red"}], "}"}], "]"}], ",", 
+             "LightYellow", ",", 
+             RowBox[{"Polygon", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"rc", " ", 
+                    SqrtBox["3"]}], "-", "1"}], ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"1", " ", "-", 
+                   RowBox[{
+                    SqrtBox["3"], "rc"}]}], ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"1", "-", 
+                   RowBox[{"0.5", " ", "rc", " ", 
+                    SqrtBox["3"]}]}], ",", 
+                  RowBox[{"3", " ", 
+                   RowBox[{"rc", "/", "2"}]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   SqrtBox["3"], 
+                   RowBox[{"rc", "/", "2"}]}], ",", 
+                  RowBox[{
+                   SqrtBox["3"], "-", 
+                   RowBox[{"1.5", " ", "rc"}]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "0.5"}], " ", "rc", " ", 
+                   SqrtBox["3"]}], ",", 
+                  RowBox[{
+                   SqrtBox["3"], "-", 
+                   RowBox[{"1.5", " ", "rc"}]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"0.5", " ", "rc", " ", 
+                    SqrtBox["3"]}], "-", "1"}], ",", 
+                  RowBox[{"1.5", " ", "rc"}]}], "}"}]}], "}"}], "]"}]}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"LightYellow", ",", 
+             RowBox[{"Disk", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"rc", " ", 
+                    SqrtBox["3"]}], "-", "1"}], ")"}], " ", ",", "rc"}], 
+                "}"}], ",", "rc", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"5", 
+                  RowBox[{"\[Pi]", "/", "6"}]}], ",", 
+                 RowBox[{"3", 
+                  RowBox[{"\[Pi]", "/", "2"}]}]}], "}"}]}], "]"}], ",", 
+             RowBox[{"Disk", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"1", "-", 
+                  RowBox[{"rc", 
+                   SqrtBox["3"]}]}], ",", "rc"}], "}"}], ",", "rc", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"3", 
+                  RowBox[{"\[Pi]", "/", "2"}]}], ",", 
+                 RowBox[{"13", 
+                  RowBox[{"\[Pi]", "/", "6"}]}]}], "}"}]}], "]"}], ",", 
+             RowBox[{"Disk", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SqrtBox["3"], "-", 
+                   RowBox[{"2", " ", "rc"}]}], ")"}]}], " ", "}"}], ",", "rc",
+                ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"\[Pi]", "/", "6"}], ",", 
+                 RowBox[{"5", 
+                  RowBox[{"\[Pi]", "/", "6"}]}]}], "}"}]}], "]"}]}], "}"}], 
+           ",", 
+           RowBox[{"{", 
+            RowBox[{"Thick", ",", "Red", ",", 
+             RowBox[{"Circle", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"rc", " ", 
+                    SqrtBox["3"]}], "-", "1"}], ")"}], " ", ",", "rc"}], 
+                "}"}], ",", "rc", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"5", 
+                  RowBox[{"\[Pi]", "/", "6"}]}], ",", 
+                 RowBox[{"3", 
+                  RowBox[{"\[Pi]", "/", "2"}]}]}], "}"}]}], "]"}], ",", 
+             RowBox[{"Circle", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"1", "-", 
+                  RowBox[{"rc", 
+                   SqrtBox["3"]}]}], ",", "rc"}], "}"}], ",", "rc", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"3", 
+                  RowBox[{"\[Pi]", "/", "2"}]}], ",", 
+                 RowBox[{"13", 
+                  RowBox[{"\[Pi]", "/", "6"}]}]}], "}"}]}], "]"}], ",", 
+             RowBox[{"Circle", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SqrtBox["3"], "-", 
+                   RowBox[{"2", " ", "rc"}]}], ")"}]}], " ", "}"}], ",", "rc",
+                ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"\[Pi]", "/", "6"}], ",", 
+                 RowBox[{"5", 
+                  RowBox[{"\[Pi]", "/", "6"}]}]}], "}"}]}], "]"}]}], "}"}], 
+           ",", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"mydisk", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"m", "+", "i", "-", 
+                    RowBox[{"2", 
+                    RowBox[{"(", 
+                    RowBox[{"j", "+", "1"}], ")"}]}]}], ")"}], 
+                    RowBox[{"radius", "[", "m", "]"}]}], ",", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"1", "+", 
+                    RowBox[{
+                    SqrtBox["3"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}]}]}], ")"}], " ", 
+                    RowBox[{"radius", "[", "m", "]"}]}]}], "}"}], ",", 
+                 RowBox[{"radius", "[", "m", "]"}]}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"i", ",", 
+                 RowBox[{"j", "+", "1"}]}], "}"}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"j", ",", "0", ",", 
+               RowBox[{"m", "-", "1"}]}], "}"}]}], "]"}]}], "}"}], ",", 
+         RowBox[{"Axes", "\[Rule]", "False"}]}], "]"}]}], ";", 
+      RowBox[{"rotPool", "=", 
+       RowBox[{"Show", "[", 
+        RowBox[{"pooltable", ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Graphics", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"Rotate", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"k", " ", 
+                   RowBox[{"\[Pi]", "/", "3"}]}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "]"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"k", ",", "1", ",", "n"}], "}"}]}], "]"}], "}"}], 
+             ",", 
+             RowBox[{"Axes", "\[Rule]", "False"}]}], "]"}], "&"}], "/@", 
+          "pooltable"}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "500"}]}], "]"}]}]}], ",", 
+     RowBox[{"Row", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"rc", ",", "0.07", ",", "\"\<roundingradius\>\""}], "}"}],
+            ",", "0.01", ",", "0.3", ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"m", ",", "3", ",", "\"\<number of circles\>\""}], "}"}], 
+           ",", "1", ",", "30", ",", "1", ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}], ",", 
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"n", ",", " ", "5", ",", "\"\<No Rot\>\""}], "}"}], ",", 
+           "1", ",", "5", ",", "1", ",", 
+           RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "Tiny"}]}], "}"}], "]"}]}], "}"}], 
+      "]"}], ",", 
+     RowBox[{"TrackedSymbols", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"m", ",", "rc", ",", "n"}], "}"}]}]}], "]"}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{
+  3.70604189711152*^9, {3.706041936676313*^9, 3.706041996942075*^9}, {
+   3.706042028397995*^9, 3.706042075150269*^9}, 3.70604211586078*^9, 
+   3.706042172398333*^9, {3.706042234603239*^9, 3.706042255219157*^9}, {
+   3.7060422911968613`*^9, 3.706042306430423*^9}, {3.706042340045556*^9, 
+   3.7060423768009443`*^9}, {3.706042407756999*^9, 3.706042463755581*^9}, 
+   3.706042835477367*^9, {3.770446739283533*^9, 3.770446749586431*^9}, 
+   3.770446889614871*^9, 3.770581458078209*^9, {3.7706686114047213`*^9, 
+   3.770668615889138*^9}, {3.7708304528013477`*^9, 3.7708305041353827`*^9}},
+ CellLabel->
+  "In[184]:=",ExpressionUUID->"9ac33d71-addf-4aa2-b447-b01c5f48aa50"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`m$$, $CellContext`rc$$, $CellContext`n$$}, 
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`m$$ = 3, $CellContext`n$$ = 
+     5, $CellContext`rc$$ = 0.07, Typeset`show$$ = True, 
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+     "\"untitled\"", Typeset`specs$$ = {{{
+        Hold[$CellContext`rc$$], 0.07, "roundingradius"}, 0.01, 0.3}, {{
+        Hold[$CellContext`m$$], 3, "number of circles"}, 1, 30, 1}, {{
+        Hold[$CellContext`n$$], 5, "No Rot"}, 1, 5, 1}, {
+       Hold[
+        Row[{
+          Manipulate`Place[1], 
+          Manipulate`Place[2], 
+          Manipulate`Place[3]}]], Manipulate`Dump`ThisIsNotAControl}}, 
+     Typeset`size$$ = {500., {221., 225.}}, Typeset`update$$ = 0, 
+     Typeset`initDone$$, Typeset`skipInitDone$$ = 
+     True, $CellContext`rc$$$42875$$ = 0, $CellContext`m$$$42876$$ = 
+     0, $CellContext`n$$$42877$$ = 0}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      2, StandardForm, 
+       "Variables" :> {$CellContext`m$$ = 3, $CellContext`n$$ = 
+         5, $CellContext`rc$$ = 0.07}, "ControllerVariables" :> {
+         Hold[$CellContext`rc$$, $CellContext`rc$$$42875$$, 0], 
+         Hold[$CellContext`m$$, $CellContext`m$$$42876$$, 0], 
+         Hold[$CellContext`n$$, $CellContext`n$$$42877$$, 0]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, 
+       "Body" :> ($CellContext`mydisk[
+           Pattern[$CellContext`center, 
+            Blank[]], 
+           Pattern[$CellContext`radius, 
+            Blank[]]] := {
+           EdgeForm[{Thick, Blue}], 
+           FaceForm[
+            RGBColor[1, 0, 1]], 
+           Disk[$CellContext`center, $CellContext`radius], 
+           PointSize[0.015], 
+           Point[$CellContext`center]}; $CellContext`radius[
+           Pattern[$CellContext`q, 
+            Blank[]]] := 
+         1/($CellContext`q - 1 + Sqrt[3]); $CellContext`pooltable = Graphics[{{
+             EdgeForm[{Thick, Red}], LightYellow, 
+             
+             Polygon[{{$CellContext`rc$$ Sqrt[3] - 1, 0}, {
+               1 - Sqrt[3] $CellContext`rc$$, 0}, {
+               1 - (0.5 $CellContext`rc$$) Sqrt[3], 
+                3 ($CellContext`rc$$/2)}, {
+               Sqrt[3] ($CellContext`rc$$/2), Sqrt[3] - 
+                1.5 $CellContext`rc$$}, {((-0.5) $CellContext`rc$$) Sqrt[3], 
+                Sqrt[3] - 
+                1.5 $CellContext`rc$$}, {(0.5 $CellContext`rc$$) Sqrt[3] - 1, 
+                1.5 $CellContext`rc$$}}]}, {LightYellow, 
+             
+             Disk[{$CellContext`rc$$ Sqrt[3] - 
+               1, $CellContext`rc$$}, $CellContext`rc$$, {
+              5 (Pi/6), 3 (Pi/2)}], 
+             
+             Disk[{1 - $CellContext`rc$$ 
+               Sqrt[3], $CellContext`rc$$}, $CellContext`rc$$, {
+              3 (Pi/2), 13 (Pi/6)}], 
+             
+             Disk[{0, Sqrt[3] - 2 $CellContext`rc$$}, $CellContext`rc$$, {
+              Pi/6, 5 (Pi/6)}]}, {Thick, Red, 
+             
+             Circle[{$CellContext`rc$$ Sqrt[3] - 
+               1, $CellContext`rc$$}, $CellContext`rc$$, {
+              5 (Pi/6), 3 (Pi/2)}], 
+             
+             Circle[{1 - $CellContext`rc$$ 
+               Sqrt[3], $CellContext`rc$$}, $CellContext`rc$$, {
+              3 (Pi/2), 13 (Pi/6)}], 
+             
+             Circle[{0, Sqrt[3] - 2 $CellContext`rc$$}, $CellContext`rc$$, {
+              Pi/6, 5 (Pi/6)}]}, 
+            Table[
+             Table[
+              $CellContext`mydisk[{($CellContext`m$$ + $CellContext`i - 
+                 2 ($CellContext`j + 
+                  1)) $CellContext`radius[$CellContext`m$$], (1 + 
+                 Sqrt[3] ($CellContext`i - 
+                   1)) $CellContext`radius[$CellContext`m$$]}, 
+               $CellContext`radius[$CellContext`m$$]], {$CellContext`i, \
+$CellContext`j + 1}], {$CellContext`j, 0, $CellContext`m$$ - 1}]}, Axes -> 
+           False]; $CellContext`rotPool = Show[$CellContext`pooltable, 
+           Map[Graphics[{
+              Table[
+               
+               Rotate[#, $CellContext`k (Pi/3), {-1, 0}], {$CellContext`k, 
+                1, $CellContext`n$$}]}, Axes -> 
+             False]& , $CellContext`pooltable], ImageSize -> 500]), 
+       "Specifications" :> {{{$CellContext`rc$$, 0.07, "roundingradius"}, 
+          0.01, 0.3, Appearance -> "Labeled", ImageSize -> Tiny, 
+          ControlPlacement -> 1}, {{$CellContext`m$$, 3, "number of circles"},
+           1, 30, 1, Appearance -> "Labeled", ImageSize -> Tiny, 
+          ControlPlacement -> 2}, {{$CellContext`n$$, 5, "No Rot"}, 1, 5, 1, 
+          Appearance -> "Labeled", ImageSize -> Tiny, ControlPlacement -> 3}, 
+         
+         Row[{
+           Manipulate`Place[1], 
+           Manipulate`Place[2], 
+           Manipulate`Place[3]}]}, 
+       "Options" :> {
+        TrackedSymbols -> {$CellContext`m$$, $CellContext`rc$$, \
+$CellContext`n$$}}, "DefaultOptions" :> {}],
+      ImageSizeCache->{570., {262., 268.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{3.7715299922021637`*^9},
+ CellLabel->
+  "Out[184]=",ExpressionUUID->"68a59485-4163-4fe4-a1dd-e115b7952c5d"]
+}, {2}]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 911},
+WindowMargins->{{68, Automatic}, {80, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 424, 7, 105, "Section",ExpressionUUID->"79ffa4c5-f2d5-4833-b8eb-5aef919aa8f2"],
+Cell[1007, 31, 443, 8, 58, "Text",ExpressionUUID->"180d363e-b8ef-4303-9af2-d9a469106264"],
+Cell[1453, 41, 222, 5, 30, "Input",ExpressionUUID->"99cbcee0-906e-4677-8be6-f8d5727b07a0"],
+Cell[CellGroupData[{
+Cell[1700, 50, 18235, 395, 70, "Input",ExpressionUUID->"69847801-a76d-4794-9324-67a824915578"],
+Cell[19938, 447, 9168, 185, 529, "Output",ExpressionUUID->"3bf565db-5a05-43a8-b751-f85f977c7501"]
+}, {2}]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29152, 638, 158, 3, 53, "Subtitle",ExpressionUUID->"c46ba5bd-683d-4a4c-954d-c1a3661bb085"],
+Cell[CellGroupData[{
+Cell[29335, 645, 380, 8, 81, "Subsection",ExpressionUUID->"c77cc9a5-2383-4757-af11-1c1fddf4eab9"],
+Cell[29718, 655, 243, 5, 30, "Input",ExpressionUUID->"f07420c5-6a0f-4d89-98bd-a90d5d58230b"],
+Cell[CellGroupData[{
+Cell[29986, 664, 10624, 270, 739, "Input",ExpressionUUID->"9ac33d71-addf-4aa2-b447-b01c5f48aa50"],
+Cell[40613, 936, 5807, 124, 549, "Output",ExpressionUUID->"68a59485-4163-4fe4-a1dd-e115b7952c5d"]
+}, {2}]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
